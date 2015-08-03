@@ -5,6 +5,7 @@
 #
 # Accessible filesystems, by reference, are maintained under '/dev/disk'
 # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+ # also changed by vm
 #
 /dev/mapper/luks-39c6fc8a-fe59-4e30-a556-8f35000cd377 /                       ext4    defaults,x-systemd.device-timeout=0 1 1
 UUID=a36e6738-ec0d-404c-b06d-f3036c307901 /boot                   ext4    defaults        1 2
