@@ -13,6 +13,4 @@ UUID=a36e6738-ec0d-404c-b06d-f3036c307901 /boot                   ext4    defaul
 /dev/mapper/luks-3862f3c5-51ce-43ec-9fd8-257ea0216c39 /var                    ext4    defaults,x-systemd.device-timeout=0 1 2
 /dev/mapper/luks-3e66a7c5-0225-494c-8e6e-32fdd8f7a4e0 swap                    swap    defaults,x-systemd.device-timeout=0 0 0
 
-# adding by host
-this is added by host
-vmtest 1
+1 2 3
