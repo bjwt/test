@@ -114,7 +114,13 @@ linux
       i n h H
     awk
   git:
-    push pull clone add commit reset rebase log reflog 
+    push pull clone add commit reflog 
+	git tag
+	git reset --soft --mixed --hard
+    git fetch -v
+	git merge 
+	git rebase
+	git log --pretty=oneline --author --since
 	git stash pop/list/apply (use git add . first)
 	git shortlog -s -n (sort authors by commit)
 
