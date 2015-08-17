@@ -1,0 +1,166 @@
+1. Self introducion
+   education back ground
+   work experience
+   projects: blivet
+   technichs: languages, linux, etc
+   
+2. Projects
+   user-order system: using ines protocol
+   blivet
+3. Programming language: 
+    Python 
+    C
+    Shell sed awk
+4. Data structure and Algorithms:
+	 LList:
+     String
+	 Bitree:
+     Sort
+     Search
+5. Design Pattern
+6. Linux *
+  common tools: gprof, gcov, make, gdb, gcc
+* familiar with linux system api
+  file:	open(), read()
+  question:  why fail to create a file with other write authority by open() and set S_IWOTH
+  answer: it also rely on the umask configure, which is defined in /etc/profile
+* multiply thread programming
+* socket programming
+
+others:
+6. The most impressive challenge
+7. The greatest contribution/ excellent work
+8. Describe the procedure of booting
+9. The plan for the next few years?
+   A: Make personal technic and interest most match with department goal
+
+C -> C++
+Python
+[Shell, Sed and Awk]
+Linux API
+[Git, gdb, make]
+Data Structure
+Network
+
+
+Write programs:
+implement some built in functions in c or in python
+  implement strcpy() in c
+data structure
+  list:
+    revert a link list in python
+    determine whether a link-list has a loop
+    how to judge whether two linklists will cross?
+  tree:
+    in-order reverse of bi-tree
+    pre-order reverse of bi-tree
+    post-order reverse of bi-tree
+  sort:
+    insertion sort
+	shell sort
+	bubble sort
+	fast sort
+	selection sort
+	heap sort
+  string:
+     implement strcpy, strstr
+	KMP and BM
+
+Design Pattern:
+  six principles
+  tweenty three patterns
+
+C:
+	The C programming language, pointers on c, Expert C programming, C traps and pitfalls
+	1. Data
+	short: 2 Byte  -32768 ~ 32767
+	int : 4 Byte -2147483648 ~ 2147483647	
+	long: 8 Byte -9223372036854775808 ~ 9223372036854775807
+	long long: 8 Byte
+	float : 4 Byte
+	double: 8 Byte
+	char:	1Byte
+	unsigned
+	signed
+	_Bool
+	_Complex
+	_Imaginary
+	sizeof()
+  stack
+  heap
+  static
+
+python:
+	Learning Python, Core python programming, python cookbook
+  list
+  dict
+  tuple
+  copy- deep copy and shalow copy
+  decorator
+  class
+
+
+linux 
+  bash:
+	system administration
+    cp a.txt{,2}
+    tricks:
+    cd /var/log || { echo "Cannot change to necessary directory." >&2 ; exit $E_XCD;}
+    cd may fail
+    use { code block} > file   to redirect all output
+    command &>filename redirects both the stdout and the stderr of command to filename.
+    type bogus_command &>/dev/null
+    sed
+      i n h H
+    awk
+  git:
+    push pull clone add commit reset rebase log reflog 
+	git stash pop/list/apply (use git add . first)
+	git shortlog -s -n (sort authors by commit)
+
+  api:
+
+
+projects:
+  user ording system
+  blivet - a python program to manage partition.
+
+
+English:
+	rebel stuffy stumble patriot traitor impede tamper condemn scandal stun
+	tragedy overtake distraught inconsolable honest farewell repatriate intact
+	bond sole decline recline cosy dispute standoff evacuate reformer dictator
+	sanction separatist unrest religion regional condolence casualty
+
+	lash out at-	stay put-
+
+cmd:
+	as bc dig objdump hexdump readelf strace cal df du ls date touch who last w
+	whoami yum uname
+
+	system managerment:
+		sysctl	
+	others:
+		grep -r abc *       #grep from all the sub directories
+		bc: obase=16;ibase=16 tips:must set obase first.
+			obase=16;ibase=A	  should be 'A' rather than '10'
+			scale=5				  3/5=.60000
+		pdftk nce4.pdf cat 1 5 output 2.pdf #extracting page 1 and page 5 from
+											#nce4.pdf into a new 2.pdf
+		netstat -natp
+		lsof -i :80
+    tshark:
+    	tshark -i br0 -w a.cap -f 'port 8080'
+    	tshark -xVr a.cap | less
+    vi:
+    	<C-o> + zz  "quickly draw screen to the middle"
+    screen
+        set screen under `gnu screen' refresh after quitting from vim and some other tools.
+       	    uncomment the `altscreen on' in the `/etc/screenrc' file.
+        pageup in gnu screen
+        	C-A Esc
+    man-pages:
+       if can not `man 2 open` etc, can exectue `sudo yum install man-pages`.
+
+
+C primer plus
