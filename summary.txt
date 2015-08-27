@@ -120,9 +120,14 @@ linux
     git fetch -v
 	git merge 
 	git rebase
+	git add .
+	git add -A
 	git log --pretty=oneline --author --since
 	git stash pop/list/apply (use git add . first)
 	git shortlog -s -n (sort authors by commit)
+	git clean -f
+	git clean -f -d (clean dirs)
+	git rev-parse HEAD (display commit id)
 
   api:
 
