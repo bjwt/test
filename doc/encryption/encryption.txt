@@ -1,0 +1,41 @@
+There are two schemes of encrypting swap partition:
+
+A: Encrypt the partition underlying the file system, which works on the block
+level. This can be done by some libs/utilities such as blivet. Through this we
+can protect sensitive data on the disks which were swapped from memory.
+
+B. Encrypt the partition during running time. In this scheme, the cycle of
+encryption begins when system boots and ends when system shuts down. This can
+prevent some user processes to access sensitive data on swap partition which
+they have no authority.
+
+Scheme B is which we are seeking to implement.
+
+Example of solution for B:
+1. configure /etc/fstab
+/dev/mapper/abc		swap	swap	defaults	0 0
+2. configure /etc/crypttab
+abc	/dev/sdb2	/dev/urandom	swap
+3. reboots
+
+There is no requirement to the partition, it does not even need to be set as
+'swap' when it is created. So this solution has nothing to do with blivet. Any
+existing partition can be used here, but once it is configured as above, any
+data on it will be destroyed when system reboots.
+
+In these two configure files, you change only two strings: "abc" and
+"/dev/sdb2". 
+1. "abc" can be replaced by any regular string, just making sure the consistency
+between the two files. 
+2. Replace the "/dev/sdb2" with the path of the partition which you want to use
+as an encrypted swap.
+
+How to verify the result?
+1. check it is used as a swap
+use `swapon -s`
+	/dev/dm-2		partition	102396	0	-1
+use ` ls -l /dev/mapper/`
+	lrwxrwxrwx. 1 root root       7 Apr 22 02:10 abc -> ../dm-2
+2. check it is encrypted
+use `dmsetup ls --target=crypt`
+	abc	(253, 2)
