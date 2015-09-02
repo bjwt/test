@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %} 订单列表 {% endblock %} 
+
+{% autoescape on %}
+{% block content %}
+   <div class="row-fluid">
+      {%include "pagenav.html"%}
+   </div>
+    <div class="row-fluid">      
+      <table class="table table-striped" align="center">
+         <thead>
+            <tr>
+               <th scope="col" >
+                 <div class="text"><span>订单</span></div>
+                 <div class="clear"></div>
+              </th>
+              <th scope="col" >
+                 <div class="text"><span>名称</span></div>
+                 <div class="clear"></div>
+              </th>
+              <th scope="col" >
+                 <div class="text"><span>分类</span></div>
+                 <div class="clear"></div>
+              </th>
+              <th scope="col" >
+                 <div class="text"><span>价格</span></div>
+                 <div class="clear"></div>
+              </th>
+              <th scope="col" >
+                 <div class="text"><span>日期</span></div>
+                 <div class="clear"></div>
+              </th>
+            </tr>
+         </thead>
+         <tbody>
+         {% for order in page.object_list %}   
+            <tr class="{%cycle row1,row2%}">
+               <th>
+                  <a href="/order/info/{{order.id}}">{{order.id}}</a>
+               </th>
+               <th>
+                  {{order.product.name}}
+               </th>
+               <th>
+                  {{order.product.ptype.name}}
+               </th>
+               <th>
+                  {{order.product.pric}}
+               </th>
+               <th>
+                  {{order.odate|date:'Y-m-d h:m:s'}}
+               </th>
+            </tr>
+         {% endfor%}
+         </tbody>
+      </table>
+   </div><!--  -->
+   <div class="row-fluid">
+      {%include "pagenav.html"%}
+   </div>
+{%endblock%}
+{% endautoescape %}
+

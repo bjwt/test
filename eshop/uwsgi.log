@@ -1,0 +1,82 @@
+*** Starting uWSGI 1.9.19 (64bit) on [Wed Sep  2 15:55:21 2015] ***
+compiled with version: 4.8.2 20131017 (Red Hat 4.8.2-1) on 12 November 2013 18:46:10
+os: Linux-3.11.10-301.fc20.x86_64 #1 SMP Thu Dec 5 14:01:17 UTC 2013
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/twu/eshop
+detected binary path: /usr/sbin/uwsgi
+chdir(): Permission denied [core/uwsgi.c line 2435]
+*** Starting uWSGI 1.9.19 (64bit) on [Wed Sep  2 15:56:48 2015] ***
+compiled with version: 4.8.2 20131017 (Red Hat 4.8.2-1) on 12 November 2013 18:46:10
+os: Linux-3.11.10-301.fc20.x86_64 #1 SMP Thu Dec 5 14:01:17 UTC 2013
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/twu/eshop
+detected binary path: /usr/sbin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir(): No such file or directory [core/uwsgi.c line 2435]
+*** Starting uWSGI 1.9.19 (64bit) on [Wed Sep  2 16:12:53 2015] ***
+compiled with version: 4.8.2 20131017 (Red Hat 4.8.2-1) on 12 November 2013 18:46:10
+os: Linux-3.11.10-301.fc20.x86_64 #1 SMP Thu Dec 5 14:01:17 UTC 2013
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/twu/eshop
+detected binary path: /usr/sbin/uwsgi
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:9090 fd 3
+Python version: 2.7.5 (default, Nov 12 2013, 16:45:54)  [GCC 4.8.2 20131017 (Red Hat 4.8.2-1)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1e0f560
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291200 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+ImportError: No module named django_wsgi
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 8182, cores: 1)
+spawned uWSGI worker 2 (pid: 8187, cores: 1)
+spawned uWSGI worker 3 (pid: 8188, cores: 1)
+spawned uWSGI worker 4 (pid: 8189, cores: 1)
+ImportError: No module named django_wsgi
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 8189|app: -1|req: -1/1] 127.0.0.1 () {44 vars in 794 bytes} [Wed Sep  2 16:13:08 2015] GET /order/buy/order/index => generated 21 bytes in 0 msecs (HTTP/1.1 500) 1 headers in 57 bytes (0 switches on core 0)
+ImportError: No module named django_wsgi
+unable to load app 0 (mountpoint='') (callable not found or import error)
+--- no python application found, check your startup logs for errors ---
+[pid: 8187|app: -1|req: -1/2] 127.0.0.1 () {42 vars in 721 bytes} [Wed Sep  2 16:13:20 2015] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 1 headers in 57 bytes (0 switches on core 0)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1e0f560 pid: 8187 (default app)
+/usr/lib/python2.7/site-packages/django/conf/urls/defaults.py:3: DeprecationWarning: django.conf.urls.defaults is deprecated; use django.conf.urls instead
+  DeprecationWarning)
+
+[pid: 8187|app: 0|req: 1/3] 127.0.0.1 () {44 vars in 752 bytes} [Wed Sep  2 16:15:16 2015] GET / => generated 4048 bytes in 258 msecs (HTTP/1.1 200) 3 headers in 195 bytes (1 switches on core 0)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1e0f560 pid: 8189 (default app)
+/usr/lib/python2.7/site-packages/django/conf/urls/defaults.py:3: DeprecationWarning: django.conf.urls.defaults is deprecated; use django.conf.urls instead
+  DeprecationWarning)
+
+[pid: 8189|app: 0|req: 1/4] 127.0.0.1 () {44 vars in 762 bytes} [Wed Sep  2 16:15:16 2015] GET /media/product/c.jpg => generated 48039 bytes in 215 msecs (HTTP/1.1 200) 3 headers in 114 bytes (210 switches on core 0)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1e0f560 pid: 8188 (default app)
+/usr/lib/python2.7/site-packages/django/conf/urls/defaults.py:3: DeprecationWarning: django.conf.urls.defaults is deprecated; use django.conf.urls instead
+  DeprecationWarning)
+
+[pid: 8188|app: 0|req: 1/5] 127.0.0.1 () {44 vars in 752 bytes} [Wed Sep  2 16:15:19 2015] GET / => generated 4048 bytes in 229 msecs (HTTP/1.1 200) 3 headers in 195 bytes (1 switches on core 0)
+[pid: 8189|app: 0|req: 2/6] 127.0.0.1 () {48 vars in 848 bytes} [Wed Sep  2 16:15:19 2015] GET /media/product/c.jpg => generated 0 bytes in 1 msecs (HTTP/1.1 304) 1 headers in 48 bytes (0 switches on core 0)
+[pid: 8189|app: 0|req: 3/7] 127.0.0.1 () {44 vars in 752 bytes} [Wed Sep  2 16:16:15 2015] GET / => generated 4048 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 195 bytes (1 switches on core 0)
+[pid: 8189|app: 0|req: 4/8] 127.0.0.1 () {48 vars in 848 bytes} [Wed Sep  2 16:16:16 2015] GET /media/product/c.jpg => generated 0 bytes in 1 msecs (HTTP/1.1 304) 1 headers in 48 bytes (0 switches on core 0)

@@ -1,0 +1,8 @@
+<uwsgi>
+<socket>127.0.0.1:9090</socket>
+<chdir>/home/twu/eshop</chdir>
+<module>django_wsgi</module>
+<plugin>python</plugin>
+<processes>4</processes>
+<daemonize>uwsgi.log</daemonize>
+</uwsgi>

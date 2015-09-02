@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <title>{% block title %} {% endblock %}</title>
+    
+    <style type="text/css">
+        body {
+          padding-top: 60px;
+          padding-bottom: 40px;
+        }
+        .sidebar-nav {
+          padding: 9px 0;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />  
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.css" />  
+   
+    {% block css %} {% endblock %}
+    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+    
+    <script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
+    <meta name="robots" content="NONE,NOARCHIVE" />
+</head>
+<body>
+{%include "nav.html"%}
+<div class="container-fluid">  
+   <div class="row-fluid">
+       <div class="span3">
+            <div class="well sidebar-nav">
+               <ul class="nav nav-list">
+                    <li class="nav-header">test</li>
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="nav-header">test</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="nav-header">test</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                  </ul>
+            </div><!--/.well -->
+       </div><!--/span3-->
+       <div class="span9">
+        <!--conetnt-->
+        {%block content%}
+            
+        {%endblock%}
+        <!--end conetnt-->
+        </div><!--/span9-->
+   </div>
+</div>
+</body>
+</html>
