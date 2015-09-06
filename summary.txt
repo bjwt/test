@@ -166,6 +166,9 @@ cmd:
     	tshark -xVr a.cap | less
     vi:
     	<C-o> + zz  "quickly draw screen to the middle"
+		display  at the end of files:
+			:e ++ff=unix %
+			or `cat -v file'
     screen
         set screen under `gnu screen' refresh after quitting from vim and some other tools.
        	    uncomment the `altscreen on' in the `/etc/screenrc' file.
