@@ -99,6 +99,8 @@ python:
   decorator
   class
   yum install python-pip
+  libs:
+      blivet,django,scrapy
 
 
 linux 
@@ -126,7 +128,7 @@ linux
 	git log --pretty=oneline --author --since
 	git stash pop/list/apply (use git add . first)
 	git shortlog -s -n (sort authors by commit)
-	git clean -f
+	git clean -f -x/-X/-e/-q
 	git clean -f -d (clean dirs)
 	git rev-parse HEAD (display commit id)
 
@@ -169,6 +171,11 @@ cmd:
 		display  at the end of files:
 			:e ++ff=unix %
 			or `cat -v file'
+		g0,g^,gm,gj,gk,n$,%,f,F,t,T,ctrl-o,ctrl-t,ctrl-],(,)
+		zz,zt,zb
+		H,M,L
+		ge,gE
+        :TOhtml
     screen
         set screen under `gnu screen' refresh after quitting from vim and some other tools.
        	    uncomment the `altscreen on' in the `/etc/screenrc' file.
