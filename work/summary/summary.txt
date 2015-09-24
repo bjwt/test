@@ -134,6 +134,11 @@ linux
 
   api:
 
+    list the contents of rpm:
+		rpm -qpl *.rpm
+    extract rpm:
+		rpm2cpio *.rpm | cpio -div
+
 
 projects:
   user ording system
