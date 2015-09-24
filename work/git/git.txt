@@ -1,1 +1,20 @@
 git init abc
+
+git config 
+git config --global
+git config --system
+
+git config --unset --global
+git config --unset --system
+
+git log --pretty=fuller
+
+git checkout .
+git chekcout -- file
+
+git checkout HEAD .
+git checkout HEAD file
+
+# to display files in staged:
+git show -p :file
+git cat-file -p :file
