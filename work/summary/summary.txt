@@ -132,6 +132,13 @@ linux
 	git clean -f -d (clean dirs)
 	git rev-parse HEAD (display commit id)
 
+  tar: 
+	extract to other dir:   tar zxvf a.tar.gz -C path/to/dir
+
+  shell:
+    cursor jump back a word: Esc+B 
+    cursor jump forward a word: Esc+F 
+
   api:
 
     list the contents of rpm:
