@@ -1,0 +1,18 @@
+
+#
+# /etc/fstab
+# this is changed by vm Created by anaconda on Thu Oct 30 01:44:02 2014
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+ # also changed by vm
+#
+/dev/mapper/luks-39c6fc8a-fe59-4e30-a556-8f35000cd377 /                       ext4    defaults,x-systemd.device-timeout=0 1 1
+UUID=a36e6738-ec0d-404c-b06d-f3036c307901 /boot                   ext4    defaults        1 2
+/dev/mapper/luks-666b64a6-f51d-4314-9831-c4f2045b91c2 /home                   ext4    defaults,x-systemd.device-timeout=0 1 2
+/dev/mapper/luks-3862f3c5-51ce-43ec-9fd8-257ea0216c39 /var                    ext4    defaults,x-systemd.device-timeout=0 1 2
+/dev/mapper/luks-3e66a7c5-0225-494c-8e6e-32fdd8f7a4e0 swap                    swap    defaults,x-systemd.device-timeout=0 0 0
+
+1 2 3
+
+aaa
