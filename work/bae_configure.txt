@@ -1,0 +1,12 @@
+sudo yum install python-pip
+ pip install bae
+ bae login
+
+Access Key ID: fa990781e67f42b0b3b813c4f7ab398a
+Secret Access Key: edd5fcf75e0c4090a91668df84e80b4f
+
+git clone https://git.duapp.com/appid4aa7frkod0
+id: 13811803528
+pswd: wutaosa...
+
+mysqldump -uroot eshop > creat.sql
