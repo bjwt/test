@@ -1,4 +1,4 @@
-#  401 Finding fossil man
+401 Finding fossil man
 
 We can read of things that happened 5,000 years ago in the Near East, where
 people first learned to write. But there are some parts of the world where even
@@ -20,7 +20,7 @@ and skins, but these have rotted away. Stone does not decay, and so the tools of
 long ago have remained when even the bones of the man who made them have
 disappeared without trace.
 
-#  402 Spare that spider
+402 Spare that spider
 
 Why, you may wonder, should spiders be our friends? Because they destroy so many
 insects, and insects include some the greatest enemies of human race. Insects
@@ -46,7 +46,7 @@ weight of all the insects destroyed by spiders in Britain in one year would be
 greater than the total weight of all the human beings in the country.
 
 
-#  403 Matterhorn man
+403 Matterhorn man
 
 Modern alpinists try to climb mountains by a route which will give them good
 sport, and the more difficult it is, the more highly it is regarded. In the
@@ -72,7 +72,7 @@ dinners and sleeping between fine linen sheets at home, the change to the Alps
 must have been very hard indeed.
 
 
-#  404 Seeing hands
+404 Seeing hands
 
 Several cases have been reported in Russia recently of people who can read and
 detect colours with their fingers, and even see through solid doors and walls.
@@ -98,7 +98,7 @@ although she could perceive things with her fingers, this ability ceased the
 moment her hands were wet.
 
 
-#  411 How to grow old
+411 How to grow old
 
 Some old people are oppressed by the fear of death. In the young there is a
 justification for this feeling. Young men who have reason to fear that they will
@@ -121,7 +121,7 @@ still at work, knowing that others will carry on what I can no longer do, and
 content in the thought that what was possible has been done.
 
 
-#  412 Banks and their customers
+412 Banks and their customers
 
 When anyone opens a current account at a bank, he is lending the bank money,
 repayment of which he may demand at any time, either in cash or by drawing
@@ -145,7 +145,7 @@ adopted by banks, of printing the customer's name on his checks. If this
 facilitates forgery, it is the bank which will lose, not the customer.
 
 
-#  419 The stuff of dreams
+419 The stuff of dreams
 
 It is fairly clear that the sleeping period must have some function, and
 because there is so much of it the function would seem to be important.
@@ -178,7 +178,7 @@ less unaffected. The implications from all this were that it was not the
 disturbance of sleep that mattered, but the disturbance of dreaming.
 
 
-#  424 Beauty
+424 Beauty
 
 A young man sees a sunset and, unable to understand or to express the emotion
 that it rouses in him, concludes that it must the gate way to a world that lies
@@ -206,7 +206,7 @@ significance that which we can not grasp. Beauty in terms of our human meanings
 is meaningless.
 
 
-#  425 Non-auditory effects of noise
+425 Non-auditory effects of noise
 
 Many people in industry and the Services, who have practical experience of
 noise, regard any investigation of this question as a waste of time; they are
@@ -244,7 +244,7 @@ mean that noise is less dangerous than, say, being brought up in an
 orphanage -- which really is a mental health hazard.
 
 
-#  426 The past life of the earth
+426 The past life of the earth
 
 It is animals and plants which lived in and near water whose remains are most
 likely to be preserved, for one of the necessary conditions of preservation is

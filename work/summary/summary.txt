@@ -1,16 +1,16 @@
 1. Self introducion
    education back ground
    work experience
-   projects: blivet
-   technichs: languages, linux, etc
+   projects: frobisher eshop
+   technichs: python, linux, etc
    
 2. Projects
-   user-order system: using ines protocol
-   blivet
+	frobisher
+	eshop
 3. Programming language: 
     Python 
-    C
-    Shell sed awk
+    Shell esp:sed awk
+	SQL
 4. Data structure and Algorithms:
 	 LList:
      String
@@ -195,6 +195,48 @@ cmd:
         	C-A Esc
     man-pages:
        if can not `man 2 open` etc, can exectue `sudo yum install man-pages`.
+	calibre:
+		ebook-convert nce.html nce.mobi --authors 'Wu Tao' --cover nce4.jpg --level1-toc '//h:h1' --level2-toc '//h:h2'
+		ebook-viewer nce.mobi
 
 
 C primer plus
+sudo yum install python-pip
+ pip install bae
+ bae login
+
+Access Key ID: fa990781e67f42b0b3b813c4f7ab398a
+Secret Access Key: edd5fcf75e0c4090a91668df84e80b4f
+
+git clone https://git.duapp.com/appid4aa7frkod0
+id: 13811803528
+pswd: wutaosa...
+yum install git-email 
+
+git config --global user.name "Tao Wu"
+git config --global user.email bjwt@linux.vnet.ibm.com
+git config --global sendemail.smtpserver ap.relay.ibm.com
+git config --list
+
+git help reset
+git reset --help
+man git reset
+
+#git or #github channel on the Freenode IRC server
+
+git clone git@git.linux.ibm.com:zfrobisher/zfrobisher-installer.git
+git clone git://github.com/schacon/grit.git mygrit
+git checkout -b zfrobisher origin/zfrobisher
+
+git rm --ceched
+
+git format-patch -M master
+
+git format-patch -M remotes/origin/zfrobisher
+
+git commit -v
+
+#git send-email --to zfrobisher@linux.vnet.ibm.com 0002-fix-the-path-problem.patch 
+git commit -s -m "fix the path problem"
+git format-patch -M remotes/origin/zfrobisher
+git send-email --to  zfrobisher@lists.linux.ibm.com 0002-fix-the-path-problem.patch 
