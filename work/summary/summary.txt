@@ -196,7 +196,7 @@ cmd:
     man-pages:
        if can not `man 2 open` etc, can exectue `sudo yum install man-pages`.
 	calibre:
-		ebook-convert nce.html nce.mobi --authors 'Wu Tao' --cover nce4.jpg --level1-toc '//h:h1' --level2-toc '//h:h2'
+		ebook-convert nce.html nce.mobi --authors 'Wu Tao' --cover nce4.jpg --share-not-sync --title "New Concept Englist" --mobi-toc-at-start --level1-toc '//h:h1' --level2-toc '//h:h2'
 		ebook-viewer nce.mobi
 
 
