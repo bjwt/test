@@ -1,0 +1,35 @@
+screen -rd aws
+screen -ls
+ssh -i twu.pem ec2-user@ec2-52-77-215-120.ap-southeast-1.compute.amazonaws.com
+wget https://pypi.python.org/pypi/ez_setup
+
+
+wget https://pypi.python.org/packages/source/e/ez_setup/ez_setup-0.9.tar.gz
+tar zxvf ez_setup-0.9.tar.gz 
+cd ez_setup-0.9
+python ez_setup.py 
+sudo python ez_setup.py 
+wget https://pypi.python.org/packages/source/p/pip/pip-7.1.2.tar.gz#md5=3823d2343d9f3aaab21cf9c917710196
+tar zxvf pip-7.1.2.tar.gz 
+cd pip-7.1.2
+git checkout -b 1.6 remotes/origin/stable/1.6.x
+sudo pip install -e django/
+
+
+
+
+sudo yum install wget
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+sudo yum install mariadb mariadb-devel MySQL-python libjpeg-devel gcc python-devel python-pip python-django
+sudo pip install Pillow
+
+git clone https://git.duapp.com/appid4aa7frkod0
+sudo mkdir /root/log
+sudo python manage.py runserver 0.0.0.0:8001
+
+
+change timezone:
+    1.tzselect
+    2.TZ='Asia/Shanghai'; export TZ  append this to .bashrc
+    3.ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
