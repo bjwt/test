@@ -1,5 +1,0 @@
-Jan 12 11:23:15 host=smtp.qq.com tls=off auth=on user=fedosu85 from=fedosu85@qq.com recipients=fedosu85@163.com errormsg='cannot connect to smtp.qq.com, port 25: Connection refused' exitcode=EX_TEMPFAIL
-Jan 12 11:24:07 host=smtp.qq.com tls=off auth=on user=fedosu85 from=fedosu85@qq.com recipients=fedosu85@163.com errormsg='cannot use a secure authentication method' exitcode=EX_UNAVAILABLE
-Jan 12 11:24:49 host=smtp.qq.com tls=off auth=on user=fedosu85 from=fedosu85@qq.com recipients=fedosu85@163.com errormsg='cannot use a secure authentication method' exitcode=EX_UNAVAILABLE
-Jan 12 11:26:25 host=smtp.qq.com tls=off auth=off from=fedosu85@qq.com recipients=fedosu85@163.com smtpstatus=530 smtpmsg='530 Must issue a STARTTLS command first.' errormsg='envelope from address fedosu85@qq.com not accepted by the server' exitcode=EX_DATAERR
-Jan 12 11:29:26 host=smtp.qq.com tls=off auth=off from=fedosu85@qq.com recipients=fedosu85@163.com smtpstatus=530 smtpmsg='530 Must issue a STARTTLS command first.' errormsg='envelope from address fedosu85@qq.com not accepted by the server' exitcode=EX_DATAERR

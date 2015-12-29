@@ -1,9 +1,9 @@
 [retriever]
-type = SimpleIMAPSSLRetriever
-server = imap.linux.ibm.com
-port = 993
-username = bjwt
-password = 2wsx#EDC4rfv
+type = SimplePOP3SSLRetriever
+server = pop.163.com
+port = 995
+username = fedosu85
+password = wutaosailor
 mailboxes=("Inbox",)
 #
 [destination]
