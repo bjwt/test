@@ -1,0 +1,41 @@
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+SHELL=/bin/bash
+MAILDIR=$HOME/Mail
+DEFAULT=$MAILDIR/inbox
+LOGFILE=$MAILDIR/.procmaillog
+
+:0 
+* ^.*anaconda-devel-list
+anaconda-devel
+
+:0
+* ^.*anaconda-patches
+anaconda-patches
+
+:0
+* ^.*kickstart-list
+kickstart-list
+
+:0 
+* ^.*python-list
+python-list
+
+:0
+* ^.*tutor
+python-tutor
+
+:0
+* ^.*django-users
+django-users
+
+:0
+* ^.*django-developers
+django-developers
+
+:0   #最后的这个配置就是指如果上面分类剩下的信件全扔到inbox里
+* .* inbox
+
+# 黑名单（垃圾邮件）
+# :0:
+# * ^From.*badguy
+# /dev/null

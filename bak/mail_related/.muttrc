@@ -1,0 +1,267 @@
+set hostname = 'twu'
+set realname="Tao Wu"
+set use_from=yes 
+
+set editor="vim" #设置默认编辑器
+set menu_scroll=yes
+set mbox="~/Mail/inbox"
+set mbox_type=maildir
+set spoolfile="~/Mail/inbox"
+set postponed="~/Mail/postponed"
+set record="~/Mail/sent"
+set sendmail="/usr/bin/msmtp"
+#多帐号选择
+#macro generic "1" ":set from=twu@redhat.com"
+#macro generic "2" ":set from=fedosu85@gmail.com"
+#macro generic "3" ":set from=XXX@sina.com"
+set use_from=yes
+set from=bjwt@linux.vnet.ibm.com
+set envelope_from=yes
+
+# Note that these expandos are supported in
+# ``save-hook'', ``fcc-hook'' and ``fcc-save-hook'', too.
+# 
+# 
+save-hook . ~/Mail/backup/%F
+#fcc-hook twu@redhat.com +ssent
+set ispell="/usr/bin/hunspell"
+#set ispell="/usr/bin/hunspell -d en_US"
+#
+# Name: ispell
+# Type: path
+# Default: "/usr/bin/hunspell"
+# 
+#set alternates=" usr@gmail.com"
+# 这是一个格式字符串，用来控制你的index的列表显示。它的缺省定义是
+#set index_format="%4C %Z [%{%y-%m-%d %H:%M}] [%X] %-15.15L (%4c) %s"
+#set date_format="!%a, %b %d, %Y at %I:%M:%S%p %Z"
+set date_format="%y-%m-%d %H:%M"
+#set index_format="%4C %Z [%[%b %d %H:%M]] %e/%E %X %-15.15L (%4c) %s"
+set index_format="%4C %Z [%[%b %d %H:%M]] att(%X) %-15.15L (%4c) %s"
+#set index_format="%4C %Z %{%b %d} %-15.15L %2X (%4l) %s"
+#指定你有哪 些信箱文件。当你按 "c" 切换信箱时，再按 Tab 键，这些信箱就可供你选择
+#mailboxes Mailbox sent-mail
+#mailboxes index important Mailbox sent-mail
+# 这是一个 bool 型变量。它表明你在回信时引用原文是否加入原文的邮件头。
+set header=no
+# 可以设置为 yes, no, ask-yes, 或者 ask-no.
+# 这是说，当你按q退出时，是否提示你(ask-yes,ask-no)，
+# 还是直接就退出了(yes)，还是根本不理你(no)。
+set quit=ask-yes
+# 那些类型的附件是允许直接通过 .mailcap 浏览的？
+auto_view text/html
+set mailcap_path=~/.mailcap
+# 这也是一个提示性变量。它是确定当你退出时，是否提示你把信件
+#从spool 移动到的mbox 文件。
+set move=no
+# 当 Mutt 用 thread 方式显示时，是否用纯 ascii 表示树状列表。
+set ascii_chars=yes
+# 回信时是否包含原文。
+set include
+# 回信的引文之前插入那个符号？
+set indent_str="> "
+# 设置你自己的邮件头。
+
+#my_hdr From: fedosu85@gmail.com
+# 打分
+# 新信件+4分,主题包含"通知"的+2，主题包含 "Circulation" +3, 已经标记
+# 删除的 -5，上次没有读的 +1，包含 "believe"的 -10(垃圾广告！)。
+score "~N" +4
+score "~s 通知" +2
+score "~s Circulation" +3
+score "~D" -5
+score "~O" +1
+score "~s believe" -10
+# 排序方式。
+set sort=reverse-threads            # 新的在最上面，按thread归档
+set sort_aux=last-date-received     # 同一个thread里面，最新的在最上面
+#set sort=reverse-date
+# 当用 thread 排序方式时，我们对各个 thread 的相对排序顺序。
+#set sort_aux=date
+# 如果翻到最后，再按往下翻也不会翻到下一封信件
+set pager_stop
+# 如果设置，当你按 "r"
+# 回信时，就不会再提示你输入回信地址和主题，直接进入编辑
+#模式。
+set fast_reply
+# 当你按 "t" 或者 "D" 之类的标记操作时，是否自动把光标移动到下一封信件。
+set resolve=yes
+# 地址簿
+source ~/.mutt.alias
+# 当你在 index 里按 "a"
+# 为来信者取别名时，使用哪一个别名文件保存这个别名。
+set alias_file=~/.mutt.alias
+# 你发出的邮件保存到那个信箱文件？比如可以像我这样每个月发出的信件放在不同的文件里。
+#set record="~/Mail/=sent-mail-`date +%Y-%m`"
+set record="~/Mail/sent-mail"
+#set record="imaps://mail.corp.redhat.com:993/Sent"
+# 你的终端支持哪一种编码的显示？这个必须和你的终端编码一样。
+#注意这个如果设置不正确的话会导致在写邮件时出现一个"bad IDN"的错误信息
+set charset="utf-8"
+# send_charset
+set send_charset="gb2312:utf-8:us-ascii:iso-8859-1"
+# 外部程序退出时，是否要求用户按一个键才返回。这在察看某些shell命令输出时是比要>的，
+# 否则它们一下就消失了。
+set wait_key=yes
+# 当你要把信件存到另一个信箱，而这个信箱已经存在时，是否提示附加？
+set noconfirmappend
+# 是否把邮件头也放在编辑器里可以修改？
+set edit_headers=no
+# 当你在用 pager 看信件时，在 index 留出多少行显示邮件列表？
+set pager_index_lines=6
+# 告诉 Mutt 你已经订阅了那些邮件列表(mailing-list).
+subscribe 	china-list-bounces@redhat.com
+subscribe 	bugzilla@redhat.com
+subscribe	test-bounces@lists.fedoraproject.org
+subscribe	autoqa-devel@lists.fedorahosted.org
+subscribe 	tutor@python.org
+subscribe 	python-help@python.org
+subscribe 	python-list@python.org
+subscribe	python-announce-list@python.org
+subscribe 	libguestfs@redhat.com	
+
+
+set signature = ~/mutt/.signature
+#macro pager G "!/usr/bin/getmail -n" "Invoke getmail"
+macro index gg "<Home>"
+macro index G "*"
+macro index \cb |urlview\n
+macro pager \cb |urlview\n
+
+macro pager d "<delete-message>"
+macro index d "<delete-message>"
+#macro index D "<save-message>=Trash"
+#macro pager D "<save-message>=Trash"
+folder-hook ~/Mail/Trash 'bind index d delete-message'
+#unignore cc
+
+charset-hook us-ascii gb2312
+charset-hook ^iso-8859-1$ gb2312
+
+#颜色设置
+color normal brightblue default
+color normal magenta default
+color attachment blue default
+color error red white
+color status white blue
+color hdrdefault magenta default
+color indicator black cyan
+color signature red default
+
+color underline red default
+#color tree red default
+color markers red default
+#set folder_format="%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %f"
+#set folder_format="%2C %t %8s %d %N %f"
+set folder_format="| %2C | %t %N | %8s | %d | %f" 
+set sort=threads #这两行是邮件排序方法
+set sort_aux=reverse-last-date-sent
+
+#set print_command="lpr -H s01.nay.redhat.com -P NAY_7F_Thunderbird"
+set recall=no
+
+macro index,pager A "!~/.abook/abook-autoexport\n:source ~/.mutt/aliases\n" "Start abook"
+macro index,pager a \
+    "|~/.abook/abook-autoexport --add-email-quiet\n:source ~/.mutt/aliases\n" \
+    "Create new alias from the actual message"
+
+#set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]----%>-(%P)---'|"
+
+
+ #color configs
+ color attachment black magenta
+ color body cyan default "ftp://[^ ]*"
+ color body cyan default "www.[^ ]*"
+ color body brightgreen default "[[:alnum:]][-+.#_[:alnum:]]*@[-+.[:alnum:]]*[[:alnum:]]"
+ color body cyan default "<URL:[^ ]*>"
+ color bold green default
+ color error red default
+ color header yellow default "^cc: "
+ color header green default "^date: "
+ color header yellow default "^from "
+ color header cyan default "^from: "
+ color header yellow default "^newsgroups: "
+ color header yellow default "^reply-to: "
+ color header cyan default "^subject: "
+ color header green default "^to: "
+ color header yellow default "^x-mailer: "
+ color header yellow default "^message-id:"
+ color header yellow default "^Organization:"
+ color header yellow default "^Organisation:"
+ color header yellow default "^User-Agent:"
+ color header yellow default "^message-id: .*pine"
+ color indicator black green
+ color markers brightred default
+ color message white blue
+ color normal white default
+ color quoted cyan default
+ color quoted1 yellow default
+ color quoted2 red default
+ color quoted3 green default
+ color quoted4 cyan default
+ color quoted5 yellow default
+ color quoted6 red default
+ color quoted7 green default
+ color signature brightred default
+ color status brightgreen blue
+ color tilde blue default
+ color tree brightmagenta default
+ color underline yellow default
+ # word/sentence "attribitions"
+ color body brightblue default "(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$)"
+ # *Bold* text.
+ color body brightblue default "(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)"
+ # _Underlined_ text.
+ color body brightblue default "(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)"
+ # /Italic/ text.
+ # Various smilies and the like
+ color body yellow default "[;:]-[)/(|]"
+ color body yellow default "[8][-\^][)|]"
+ color body yellow default "[;:][)/(|]"
+ color body brightblue default "(http|https|rsync|ftp|news|telnet|finger|gopher)://[^ ]*"
+ color body brightblue default "<(http|https|rsync|ftp|news|telnet|finger|gopher)://[^ ]*>"
+ color index green default ~N
+ color index red default ~O
+ color index magenta default ~F
+ color index blue default ~T
+ color index yellow default ~D
+ color header red cyan "^X-Spam-Status:"
+ mono header bold "^(From|Subject|X-Spam-Status):"
+#
+# set up the sidebar, default not visible
+set sidebar_width=30
+set sidebar_visible=yes
+set sidebar_delim='|'
+set sidebar_sort=no
+
+# which mailboxes to list in the sidebar
+mailboxes =inbox =important =sent-mail =anaconda-devel =anaconda-patches =kickstart-list =python-list =python-tutor 
+
+# color of folders with new mail
+color sidebar_new yellow default
+
+# ctrl-n, ctrl-p to select next, prev folder
+# ctrl-o to open selected folder
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+bind index J next-thread
+bind pager J next-thread
+bind index l display-message
+bind pager h exit
+bind pager H display-toggle-weed
+bind index L limit
+
+bind index B bounce-message
+bind pager B bounce-message
+bind pager b previous-page
+
+#
+# Mario Holbe suggests:
+macro index b "<enter-command>toggle sidebar_visible<enter><refresh>"
+#macro pager b "<enter-command>toggle sidebar_visible<enter><redraw-screen>"
+#
+#charset-hook ^us-ascii$ gb2312

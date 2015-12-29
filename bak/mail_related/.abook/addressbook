@@ -1,0 +1,170 @@
+# abook addressbook file
+
+[format]
+program=abook
+version=0.6.0pre2
+
+
+[0]
+name=Adam Williamson
+email=awilliam@redhat.com
+
+[1]
+name=autoqa-devel@list
+email=autoqa-devel@lists.fedorahosted.org
+nick=autoqa-devel
+
+[2]
+name=Ben Levenson
+email=benl@redhat.com
+nick=ben
+
+[3]
+name=Grace Liu
+email=yal@redhat.com
+
+[4]
+name=Hongqing Yang
+email=hoyang@redhat.com
+nick=hongqing
+
+[5]
+name=Irina Zuo
+email=yzuo@redhat.com
+
+[6]
+name=James Laska
+email=jlaska@redhat.com
+nick=jlaska
+
+[7]
+name=Kamil Paral
+email=kparal@redhat.com
+
+[8]
+name=Tim Flink
+email=tflink@redhat.com
+
+[9]
+name=wutao
+email=fedosu85@gmail.com
+pager=https://fedoraproject.org/wiki/User:Wutao85
+phone=+86 13811803528
+workphone=62608293
+nick=wutao
+
+[10]
+name=xiaoliangli04409
+email=xiaoliangli04409@gmail.com
+nick=xiaoliangli
+
+[11]
+name=zhaoyan
+email=zhaoyan@ciic.com.cn
+address_lines=beijing
+nick=zhaoyan
+
+[12]
+name=Brian C. Lane
+email=bcl@redhat.com
+
+[13]
+name=Tao Wu
+email=twu@redhat.com
+
+[14]
+name=xiaoli
+email=xtian@redhat.com
+
+[15]
+name=Hangbin Liu
+email=haliu@redhat.com
+
+[16]
+name=huodong@ciic.com.cn
+email=huodong@ciic.com.cn
+
+[17]
+name=hlliu
+email=hlliu@corp.netease.com
+
+[18]
+name=Zupeng Wang
+email=zuwang@redhat.com
+
+[19]
+name=Miao Zeng
+email=mzeng@redhat.com
+
+[20]
+name=Wei Chang
+email=wchang@redhat.com
+
+[21]
+name=HoHo Zhao
+email=hzhao@redhat.com
+
+[22]
+name=JBOSS - I - NAY
+email=jboss-i-nay@redhat.com
+
+[23]
+name=Weiping Pan
+email=wpan@redhat.com
+
+[24]
+name=Sarah Liang
+email=sliang@redhat.com
+
+[25]
+name=Mermaid Shang
+email=jshang@redhat.com
+
+[26]
+name=CAI Qian
+email=caiqian@redhat.com
+
+[27]
+name=Yu Shao
+email=yshao@redhat.com
+
+[28]
+name=Máirín Duffy
+email=duffy@redhat.com
+
+[29]
+name=Docspace Administrator
+email=no-reply@redhat.com
+
+[30]
+name=David Kovalsky
+email=dkovalsk@redhat.com
+
+[31]
+name=Qian Cai
+email=qcai@redhat.com
+
+[32]
+name=Spike White
+email=spikewhitetx@gmail.com
+
+[33]
+name=Ian Kelly
+email=ian.g.kelly@gmail.com
+
+[34]
+name==?gb18030?B?4+vCug==?=
+email=50123758@qq.com
+
+[35]
+name=Yan
+email=zhangyan@linux.vnet.ibm.com
+
+[36]
+name=baidu
+email=passport@baidu.com
+
+[37]
+name=Wenyi Gao
+email=wenyi@linux.vnet.ibm.com
+

@@ -1,0 +1,17 @@
+[retriever]
+type = SimplePOP3SSLRetriever
+server = pop.qq.com
+port = 995
+username = fedosu85
+password = fedoratt1234
+mailboxes=("Inbox",)
+#
+[destination]
+type = MDA_external
+path = /usr/bin/procmail
+unixfrom = true
+#
+[options]
+verbose = 1
+delete = false
+message_log = ~/.getmail/getmail.log

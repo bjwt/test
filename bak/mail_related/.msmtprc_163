@@ -1,0 +1,11 @@
+account 163
+tls on
+tls_certcheck off
+tls_starttls off
+auth on
+host smtp.163.com
+user fedosu85
+from fedosu85@163.com
+password wutaosailor
+port 465
+account default : 163

@@ -1,0 +1,72 @@
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+SHELL=/bin/bash
+MAILDIR=$HOME/Mail
+DEFAULT=$MAILDIR/inbox
+LOGFILE=$MAILDIR/.procmaillog
+:0
+* .*compass@redhat.com
+important
+:0
+* ^From.*Fancy
+/dev/null
+:0
+* ^From.*benl@redhat.com
+important
+:0
+* ^From.*jlaska@redhat.com
+important
+:0
+* ^From.*rhe@redhat.com
+important
+:0
+* ^From.*yshao@redhat.com
+important
+:0
+* .*Payroll*
+important
+:0
+* ^To.*twu@redhat.com
+important
+:0
+* ^CC.*twu@redhat.com
+important
+:0
+* .*bugzilla@redhat.com
+bugzilla
+:0
+* .*eng-china-leave-list@redhat.com
+leave-list
+:0
+* .*china-list-bounces@redhat.com
+eng-china
+:0
+* .*eng-china-bounces@redhat.com
+eng-china
+:0
+* .*qe-fedora-list-bounces@redhat.com
+qe-int
+:0
+* .*anaconda-devel-list@redhat.com
+anaconda-devel
+:0
+* .*kickstart-list@redhat.com
+anaconda-devel
+:0
+* .*test@lists.fedoraproject.org
+fedora-qa
+:0
+* .*test-bounces@lists.fedoraproject.org
+fedora-qa
+:0
+* .*autoqa-devel@lists.fedorahosted.org
+fedora-qa
+:0
+* ^From.*awilliam@redhat.com
+important
+:0   #最后的这个设置就是指如果上面分类剩下的信件全扔到inbox里
+* .* 
+inbox
+# 黑名单（垃圾邮件）
+# :f0:
+# * ^From.*badguy
+# /dev/null

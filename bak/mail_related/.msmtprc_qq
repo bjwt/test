@@ -1,0 +1,34 @@
+defaults
+logfile ~/.msmtp/msmtp.log
+
+#Gmail
+
+#tls on
+#tls_starttls on
+#account gmail
+#host smtp.gmail.com
+#from fedosu85@gmail.com
+#auth on
+#user fedosu85
+#password wutaosailor
+#port 587
+#tls_trust_file  /home/user/mail/.certs/Equifax_Secure_CA.pem 
+
+#Redhat
+#tls on
+#tls_trust_file  /home/user/mail/.certs/Equifax_Secure_CA.pem 
+account qq
+#tls on
+#tls_starttls on
+#tls_fingerprint 67:BE:93:E1:0F:F7:66:FD:72:1A:93:1E:BB:CA:15:53:B9:70:2C:99
+#tls_trust_file  /etc/ssl/certs/ca-bundle.crt
+#host smtp.corp.redhat.com
+host smtp.qq.com
+from fedosu85@qq.com
+#auth on
+auth login
+user fedosu85@qq.com
+password fedoratt1234
+port 465
+
+account default : qq

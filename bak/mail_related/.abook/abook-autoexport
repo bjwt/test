@@ -1,0 +1,7 @@
+#! /bin/sh
+abook ${@}
+abook --convert \
+	--informat abook --infile $HOME/.abook/addressbook \
+	--outformat mutt --outfile $HOME/.mutt/aliases.new
+mv $HOME/.mutt/aliases $HOME/.mutt/aliases.bak
+mv $HOME/.mutt/aliases.new $HOME/.mutt/aliases

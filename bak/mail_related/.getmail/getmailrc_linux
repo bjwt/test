@@ -1,0 +1,17 @@
+[retriever]
+type = SimpleIMAPSSLRetriever
+server = imap.linux.ibm.com
+port = 993
+username = bjwt
+password = 1qaz2wsx#EDC
+mailboxes=("Inbox",)
+#
+[destination]
+type = MDA_external
+path = /usr/bin/procmail
+unixfrom = true
+#
+[options]
+verbose = 1
+delete = false
+message_log = ~/.getmail/getmail.log

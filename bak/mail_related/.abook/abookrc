@@ -1,0 +1,64 @@
+# Auto save when exit
+set autosave=true
+ 
+# Declare a few custom fields
+field pager = Pager
+field address_lines = Address, list
+field birthday = Birthday, date
+
+# Define how fields should be displayed in tabs
+view CONTACT = name, email
+view ADDRESS = address_lines, city, state, zip, country
+view PHONE = phone, workphone, pager, mobile, fax
+view OTHER = url, birthday
+
+# All email of a contact are shown in main list
+set show_all_emails=true
+
+# Format of entries lines in list
+set index_format=" {name:32} {email:40} {phone:20|workphone|mobile} {workphone:15} {pager:60}"
+ 
+# Display email from which column of screen
+#set email_pos=25
+ 
+# Which field is to display in main list view as the third column
+# frequently used values:
+#	-1          disabled
+#	phone       Home Phone
+#	workphone   Work Phone
+#	fax         Fax
+#	mobile      Mobile Phone
+#	nick        Nickname/Alias
+#	url         URL
+#	notes		Notes 
+#set extra_column=mobile
+ 
+# If extra_column have no data, display this instead
+#set extra_alternative=workphone
+ 
+# Extra field display from which column of screen
+#set extrapos=55
+ 
+# Command used to start mutt
+set mutt_command=mutt
+ 
+# Return all email addresses to a mutt query
+set mutt_return_all_emails=true
+ 
+# Command used to print the addressbook
+set print_command=lpr
+ 
+# Command used to start the web browser to view a contact's URL
+set www_command=lynx
+ 
+# Address formatting used when export or print(eu,uk,us)
+set address_style=eu
+ 
+# Use only ascii in abook file
+set use_ascii_only=false
+ 
+# Drop duplicate address in data?
+set add_email_prevent_duplicates=true
+ 
+# Sort addresses sort by which field?
+set sort_field=nick
