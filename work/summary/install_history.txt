@@ -28,6 +28,7 @@ git clone https://git.duapp.com/appid4aa7frkod0
 sudo mkdir /root/log
 sudo python manage.py runserver 0.0.0.0:8001
 
+sudo yum install getmail mutt procmail msmtp irssi
 
 change timezone:
     1.tzselect
