@@ -34,7 +34,8 @@ change timezone:
     2.TZ='Asia/Shanghai'; export TZ  append this to .bashrc
     3.ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-
+# INSTALL IPYTHON
+sudo pip install ipython
 
 
 
