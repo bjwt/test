@@ -37,6 +37,7 @@ change timezone:
 # INSTALL IPYTHON
 sudo pip install ipython
 
+uncomment the `altscreen on' in the `/etc/screenrc' file
 
 
 wget https://pypi.python.org/pypi/ez_setup
