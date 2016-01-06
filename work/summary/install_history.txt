@@ -37,6 +37,8 @@ change timezone:
 # INSTALL IPYTHON
 sudo pip install ipython
 
+sudo yum install wireshark lsof
+
 uncomment the `altscreen on' in the `/etc/screenrc' file
 
 

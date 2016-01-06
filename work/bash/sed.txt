@@ -1,0 +1,4 @@
+/I
+sed -n '/aBc/Ip' t.txt
+
+sed -n 's_/usr/bin/ls_abc_' t.txt
