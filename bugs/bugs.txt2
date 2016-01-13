@@ -1,0 +1,77 @@
+Bug list to be discussed:
+
+1  134362	upgrade		P1	2016-01-08 00:00:00		ship issue	ASSIGNED	13	Tue 04:41	kvmibm-system-upgrade script hang / crash during execution
+---> Patch is ready.
+
+2  126365	kernel	P2		ship issue	ASSIGNED	203		Wed 05:44	Default Network Performance is less than half of line speed
+---> Patch is ready, under testing.
+
+3  134365	KVM		P1		ship issue	NEEDINFO	13	2015-12-24	SLES 12 SP1 ECKD install fails
+--->Jen, can you look into this?
+
+4  127406	libvirt		P1		high	ASSIGNED	180		2015-12-18	CPU shares are reset to 1024 default when a guest is rebooted.
+---> It is related to systemd, probably not be fixed in vulcan since systemd will not be updated in vulcan. Should we move it to metis?
+
+5  133917	kernel	P2		high	ASSIGNED	27	2015-12-11	[JPT 645802] zKVM SCSI IPL fails with LPAR dump when image has 6TB of storage or greater on z13
+---> Jens, any update on this?
+
+6  133979	BaseOS	P2	2016-01-15 00:00:00		high	REOPENED	25	03:30:17	[zKVM GTP1412] Hyptop doesn't support SMT
+---> Jens, can you look into this?
+
+7  132203	Document	P3		normal	ASSIGNED	73	2015-12-22	default libvirtd network virbr0 is enabled after installation, but not documented
+---> Will this be documented or not?
+
+8  133662	kernel	P2		high	FIXEDAWAITINGTEST	38	02:37:17	rcu_sched error on Kronos GM+FP1 host running autoframework test
+--->William, can yo verify this?
+
+9  125709	libvirt		P2		high	NEEDINFO	217		2015-12-16	Migration of a busy guest via p2p-tunnelled was hanging and "paused" VM on target host disappeared.
+---> Can not reproduce it?
+
+10  132333	kernel	P2		high	FIXEDAWAITINGTEST	70	00:17:18	FCP: automatic port rescan disabled via zfcp.no_auto_port_rescan=1 in zipl.conf
+--->Walter Niklaus , can you verify this?
+
+11  124922	kernel	P2		high	NEEDINFO	238		Wed 02:59	[Limit-Test] Unable to boot Host with over 8TB Memory defined
+---> Frank R. Lefevre, can you verify this?
+
+12  131393	network		P3	normal	ASSIGNED	91	Tue 01:55	Unable to ssh into host with multiple network interfaces
+--->Gerhard, can you give some update?
+
+13  126364	network		P3		normal	ASSIGNED	203		2015-12-28	uperf throughput on Kronos beta3.6 and beta6.6 degrades as nprocs increased from 50 to 250
+--->Gerhard, can you test the patch in the BZ?
+
+14  134021	Build	P2		high	FIXEDAWAITINGTEST	24	00:13:38	kvmibm-upgrade-system script outputs 'command not found'
+--->RYAN, can you verify the fix?
+
+15  134081	KVM		P2	2016-01-18 00:00:00		high	NEEDINFO	20	Wed 03:47	Concurrent Migrations >=45 Fail to Vulcan RC1 with: error: End of file while reading data: Ncat: Invalid argument.: Input/output error
+--->Johanna Husta, can you verify this?
+
+16  132737	Build	P3		normal	ASSIGNED	61	2015-11-27	Move disable of sendmail.service in post changes to rpm
+--->Klaus, any update?
+
+17  133422	HPM		P2		high	ASSIGNED	45	Tue 02:22	zHPM restarted with many request failure message
+---> Heidi, any update?
+
+18  134227	HPM		P2		normal	ASSIGNED	19	Tue 02:46	Bug in zHPM virtual server state handling when a VS migrates
+---> Tabari, can you look into this?
+
+19 130061	libvirt		P3		normal	NEEDINFO	117		2015-12-16	[zKVM GTP1503] Unable to virsh start a KVM guest from the disk which was created by a iscsi target defining ECKD device as backstore
+---> Jens, any update?
+
+20 134272	kernel	P2		normal	NEEDINFO	18	Mon 04:05	SIE block info in /sys/kernel/debug/s390dbf/kvm-*/sprintf gets overwritten with 2 or more guest VCPUs 
+---> Jens, any update?
+
+21 126976	Installe	P3		normal	FIXEDAWAITINGTEST	191		2015-12-28	Corrupted ftp server repository when ISO9660 Joliet extension is used
+---> Klaus, can you verify this?
+
+22 133711	kernel	P3		normal	FIXEDAWAITINGTEST	33	Mon 03:21	Storage key optimization request for Vulcan
+---> Jens Markwardt, can you verify this?
+
+23 133478	Installe	P3	2016-01-15 00:00:00		normal	FIXEDAWAITINGTEST	42	Mon 02:34	exported VG makes installer fail with KVMIBMCO03013 
+---> Michael, can you verify this?
+
+
+Tao Wu
+Software Engineer
+IBM China System & Technology Lab(CSTL)
+Tel:86-10-82451520
+Email:bjwt@cn.ibm.com 

@@ -1,0 +1,105 @@
+127406	BaseOS	P1		high	ASSIGNED	188		Mon 07:58	CPU shares are reset to 1024 default when a guest is rebooted.
+	systemd upgrade, defer to metis?
+131898	BaseOS	P3		normal	ASSIGNED	88	2016-01-04	GDB does not display the vector registers when info all-registers command is issued
+	gdb upgrade, defer?
+133687	BaseOS	P3	2016-01-08 00:00:00		normal	ASSIGNED	43	03:09:26	ksvalidator fails on 'kdump' keyword 
+	patch ready
+134249	BaseOS	P3		normal	ASSIGNED	26	Tue 01:36	GDB core dumps when trying to debug a KVM guest (Vulcan)
+	gdb upgrade, defer?
+133999	BaseOS	P3		normal	ASSIGNED	33	2016-01-06	When zhpm starts get: cca_specific.c token_specific_init: Error loading library: [libcsulcca.so: cannot open shared object file: No suc
+	patch ready
+133979	BaseOS	P2	2016-01-28 00:00:00		high	ASSIGNED	33	22:19:21	[zKVM GTP1412] Hyptop doesn't support SMT
+	Jens, do you have any plan?
+135030	BaseOS	P2	2016-01-28 00:00:00		ship issue	ASSIGNED	1	22:16:23	Vulcan RC1.4 Installer boot fails with dracut: FATAL: Invalid value for interface in ip= opts. When using VLAN 
+	patch ready
+
+
+124922	kernel	P2		high	ASSIGNED	247		17:33:16	[Limit-Test] Unable to boot Host with over 8TB Memory defined
+	patch ready
+126365	kernel	P2		ship issue	ASSIGNED	212		09:41:02	Default Network Performance is less than half of line speed
+	patch for test is provided, working for the final patch
+	Michael, Could you test the rpm referred in comment 41?  Thanks!
+133852	kernel	P3		normal	REOPENED	40	00:26:40	uperf 30K stream tests performance regresses ~8% in Vulcan beta3.5 
+	does Tomas' patch solve the problem?
+
+
+
+134362	upgrade		P1	2016-01-08 00:00:00		block	FIXEDAWAITINGTEST	22	Tue 01:45	kvmibm-system-upgrade script hang / crash during execution
+134439	upgrade		P2	2016-01-08 00:00:00		ship issue	FIXEDAWAITINGTEST	9	Tue 01:45	Starting zhpmd on system upgraded from Kronos to Vulcan gets: 'Error while loading shared libraries: libjvm.so'
+134237	upgrade		P1	2016-01-15 00:00:00		ship issue	FIXEDAWAITINGTEST	27	10:52:08	Upgrade is missing licence acceptance logic required by legal 
+	needs to decide whether to improve. qingyuan works on it.
+
+
+134074	HVM		P3		high	ASSIGNED	29	Mon 05:09	HVM requires at least the package python-augeas-0.5.0
+	waiting for MCP providing package
+134238	HVM		P3		high	ASSIGNED	27	2015-12-29	HVM requires at least the package python-netaddr-0.7.11
+	waiting for MCP providing package
+134994	HVM		P3		normal	ASSIGNED	2	Tue 08:37	PFIXes for starting HVM GUI SVT on Vulcan RC1.4 
+	track bug
+
+133917	firmware	P2		high	ASSIGNED	36	Thu 04:41	[JPT 645802] zKVM SCSI IPL fails with LPAR dump when image has 6TB of storage or greater on z13 
+	nothing to do
+
+134306	Build	P3		low		ASSIGNED	26	Mon 05:13	perl compilation problems in dracut for lsmem chmem and lsluns
+	patch ready
+134307	Build	P4		low		ASSIGNED	26	Mon 05:00	initrd contains s390-tools but some dependencies for them are missing 
+	patch ready
+
+
+133047	HPM		P3		low		FIXEDAWAITINGTEST	62	Tue 01:14	Improve warning message on insecure CLI commands
+133422	HPM		P2		high	ASSIGNED	54	Tue 01:06	zHPM restarted with many request failure message
+	waitting for Scott to check with zhpm-1.2.3 in rc1.4
+134227	HPM		P2		normal	FIXEDAWAITINGTEST	28	Tue 00:43	Bug in zHPM virtual server state handling when a VS migrates
+134496	HPM		P3		high	FIXEDAWAITINGTEST	8	Tue 00:41	WAS liberty upgrade for CVE-2015-2017 
+
+
+134081	KVM		P2	2016-01-18 00:00:00		high	ASSIGNED	29	12:33:38	Concurrent Migrations >=45 Fail to Vulcan RC1 with: error: End of file while reading data: Ncat: Invalid argument.: Input/output error
+	Jason, From Johanna's migrate commands, do you get any clues?
+135127	KVM		P3		normal	ASSIGNED	1	21:58:16	Guest Dump triggered by watchdog action not memory-only, so can't be processed by crash on the guest 
+	Jens, can you have a look at this?
+
+
+125768	libvirt		P3		normal	REOPENED	225		2016-01-07	VIrsh shutdown gets journal message: “nl_recv returned with error: No buffer space available”
+	patch has been sent upstream, waiting for merge
+130061	libvirt		P3		normal	NEEDINFO	126		Tue 03:32	[zKVM GTP1503] Unable to virsh start a KVM guest from the disk which was created by a iscsi target defining ECKD device as backstore
+	if the ticket wont gather more comments in a week, I'll close it as "not-a-bug".
+132012	libvirt		P3		normal	ASSIGNED	86	Tue 09:15	managedsave: kvm ignores signal, fails to exit
+	Christian has been debugging this and his best guess so far is a race condition in Qemu 2.4. So it seems possible. Christian, where do you think we should go from here?
+134076	libvirt		P3		high	FIXEDAWAITINGTEST	29	Tue 02:40	CVE-2015-5313: storage: don't allow '/' in filesystem volume names
+	Stefan, Can you verify this fix, please?
+134500	libvirt		P2		high	NEEDINFO	8	11:03:56	Concurrent Migration of 42 vms running DayTrader workload hung for a couple of hours 
+	Johanna, Can you give some feedback to Jason's questions in comment #8? Thanks!
+
+132475	QEMU	P3		normal	ASSIGNED	76	Tue 01:49	fio random read test (8K, 1 job) regresses ~5% from beta2.3 to beta3.2
+	Michael, Can you help to work with ALEXANDER to reproduce the problem? Thanks!
+133401	QEMU	P3		normal	ASSIGNED	54	Mon 00:02	using watchdog-action=none nothing happens, after the watchdog bites, I cannot execute the watchdog-test code anymore, until I end the watchdog and restart it
+	Bo Tu, what is the update?
+133998	QEMU	P3		normal	ASSIGNED	34	15:33:45	Requirements for booting a qemu image from a mounted cifs/smb share 
+	MATTHEW, Do you have any update on this?
+
+126976	Installe	P3		normal	FIXEDAWAITINGTEST	200		2015-12-28	Corrupted ftp server repository when ISO9660 Joliet extension is used
+	Klaus, Can you verify the solution?
+129359	Installe	P3		normal	FIXEDAWAITINGTEST	142		2015-12-10	Installer cannot install on DASD devices used by z/OS before
+	si bo, what is the status of the fix?
+133478	Installe	P3	2016-01-15 00:00:00		normal	FIXEDAWAITINGTEST	51	2016-01-04	exported VG makes installer fail with KVMIBMCO03013
+	Michael, Can you verify this fix?
+133663	Installe	P2	2016-01-08 00:00:00		high	FIXEDAWAITINGTEST	47	Tue 02:22	kdump option in kickstart installation
+	Vsevolod, Can you verify this fix?
+134058	Installe	P3	2016-01-15 00:00:00		low		FIXEDAWAITINGTEST	30	Tue 01:42	Installer Panel does not specify the units during manual partitioning
+	Ryan, Can you verify this fix?
+134624	Installe	P3		normal	ASSIGNED	6	00:07:28	vlan interface created by installer loses IP address during reboot from conflicting MAC address 
+	zhao shuai is working on it.
+
+
+126364	network		P3		normal	ASSIGNED	212		00:50:08	uperf throughput on Kronos beta3.6 and beta6.6 degrades as nprocs increased from 50 to 250
+	patch ready, transmiting the patch to installer code, shengli
+131393	network		P3		normal	ASSIGNED	100		Tue 02:11	Unable to ssh into host with multiple network interfaces
+	Wenyi will document this workaround in the installation user guide in the second around eReview.
+132672	network		P3		normal	ASSIGNED	71	04:07:07	Network throughput is reduced by ~20% when nf_conntrack_ipv4 nf_defrag_ipv4 modules are loaded
+	Gerhard, Thanks for the reply, so do you have any idea on how to solve this problem? Thanks!
+134293	network		P3		normal	NEEDINFO	27	Tue 00:54	During Kronos to Vulcan RC1 upgrade, get RTNL: assertion failed at net/core/dev.c (4577) 
+	Michael, The relevant issue https://bugzilla.linux.ibm.com/show_bug.cgi?id=134362 is marked as fixed, could you please verify how does that fixing  improved this issue? The fix has been included in Vulcan RC1.4 driver. Thanks!
+
+
+132203	Document	P3		normal	ASSIGNED	82	Tue 01:39	default libvirtd network virbr0 is enabled after installation, but not documented
+	MATTHEW, Seems that we have reached one accord on how to document this, so do you have some plan to complete this?
