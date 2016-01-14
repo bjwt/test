@@ -37,9 +37,15 @@ change timezone:
 # INSTALL IPYTHON
 sudo pip install ipython
 
-sudo yum install wireshark lsof
+sudo yum install wireshark lsof man man-pages
 
 uncomment the `altscreen on' in the `/etc/screenrc' file
+
+# INSTALL DOCKER
+cd /etc/yum.repos.d
+sudo wget http://www.hop5.in/yum/el6/hop5.repo
+
+sudo pip install virtualenv
 
 
 wget https://pypi.python.org/pypi/ez_setup
