@@ -1,3 +1,72 @@
+Mon Jan 18 12:56:09 CST 2016
+
+1 133979	BaseOS	P2	high	ASSIGNED	[zKVM GTP1412] Hyptop doesn't support SMT	Fri 06:20
+	Michael, According to comment 5, the patch seems not fix the problem. Can you check if we need some extra patches?
+2 131898	BaseOS	P3	normal	ASSIGNED	GDB does not display the vector registers when info all-registers command is issued		Thu 09:49
+	Klaus, is this version of gdb without this issue?  If so, can we use this version in Vulcan?
+3 127406	BaseOS	P1	high	ASSIGNED	CPU shares are reset to 1024 default when a guest is rebooted.	Wed 15:48
+	Has the specific version of systemd been recognized?
+4 130716	BaseOS	P3	normal	OPEN	zipl command when 1st path to scsi is offline gets: Use of uninitialized value $blocksize in scalar chomp at /lib/s390-tools/zipl_helper.device-mapper line 518.	Wed 14:37
+	Michael, Can you verify this issue in vulcan?
+5 133047	HPM		P3	low		FIXEDAWAITINGTEST	Improve warning message on insecure CLI commands	Wed 10:57
+	Scott, can you verify this?
+6 134227	HPM		P2	normal	FIXEDAWAITINGTEST	Bug in zHPM virtual server state handling when a VS migrates	Wed 09:35
+	Scott, can you verify this?
+7 133422	HPM		P2	high	ASSIGNED	zHPM restarted with many request failure message	Wed 09:31
+	Scott, have you checked zhpm-1.2.3? 
+8 134496	HPM		P3	high	FIXEDAWAITINGTEST	WAS liberty upgrade for CVE-2015-2017	Tue 00:41
+	Yuksel, can you verify this?
+9 133478	Installe	P3	normal	FIXEDAWAITINGTEST	exported VG makes installer fail with KVMIBMCO03013		2016-01-04
+	Michael, Can you verify this fix?
+10 126976	Installe	P3	normal	FIXEDAWAITINGTEST	Corrupted ftp server repository when ISO9660 Joliet extension is used	2015-12-28
+	Klaus, Can you verify the solution?
+
+	Michael J. Sullivan, the following three bugs seems can be fixed by the patch provided by Jens. When will the patch be included in the driver?
+11 133852	kernel	P3	normal	REOPENED	uperf 30K stream tests performance regresses ~8% in Vulcan beta3.5	Fri 10:29
+12 126365	kernel	P2	ship issue	ASSIGNED	Default Network Performance is less than half of line speed		Wed 14:30
+13 132672	network		P3	normal	ASSIGNED	Network throughput is reduced by ~20% when nf_conntrack_ipv4 nf_defrag_ipv4 modules are loaded	Wed 15:10
+
+14 135287	kernel	P3	normal	ASSIGNED	NFSv4 mandatory locking is not working	Thu 21:53
+	Srikar, Could have a look at this and judge if it is a kernel related issue?
+15 135428	KVM		P3	high	FIXEDAWAITINGTEST	SCA must not cross page boundaries	Fri 06:27
+	Stefan, who will verify this fix?
+16 135127	KVM		P3	normal	ASSIGNED	Guest Dump triggered by watchdog action not memory-only, so can't be processed by crash on the guest	Wed 04:16
+	Boris, what is the status of the patch? Can it be included in the next driver- RC2.1 ?
+17 134081	KVM		P2	high	ASSIGNED	Concurrent Migrations >=45 Fail to Vulcan RC1 with: error: End of file while reading data: Ncat: Invalid argument.: Input/output error	Tue 12:33
+	Jason, do you have any update?
+18 134500	libvirt		P2	high	ASSIGNED	Concurrent Migration of 42 vms running DayTrader workload hung for a couple of hours	Thu 22:13
+	Jason, do you have any update?
+19 132012	libvirt		P3	normal	ASSIGNED	managedsave: kvm ignores signal, fails to exit	Wed 11:00
+	William, can you test Stefan's rpm in comment #28?
+20 134293	network		P3	normal	NEEDINFO	During Kronos to Vulcan RC1 upgrade, get RTNL: assertion failed at net/core/dev.c (4577)	Fri 08:51
+	Srikar, can you help debugging this problem? Are we missing some patches in this area?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20160114:
+
 1 127406	BaseOS	P1		high	ASSIGNED	188		Mon 07:58	CPU shares are reset to 1024 default when a guest is rebooted.
 	systemd upgrade, defer to metis?
 2 131898	BaseOS	P3		normal	ASSIGNED	88	2016-01-04	GDB does not display the vector registers when info all-registers command is issued
