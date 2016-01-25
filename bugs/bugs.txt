@@ -1,3 +1,68 @@
+1 130716	BaseOS	P3	normal	OPEN	zipl command when 1st path to scsi is offline gets: Use of uninitialized value $blocksize in scalar chomp at /lib/s390-tools/zipl_helper.device-mapper line 518.
+	Michael, Can you verify this issue in vulcan? Thanks!
+2 131898	BaseOS	P3	normal	ASSIGNED	GDB does not display the vector registers when info all-registers command is issued
+	Defer or not?
+3 134249	BaseOS	P3	normal	ASSIGNED	GDB core dumps when trying to debug a KVM guest (Vulcan)
+	Defer or not?
+4 134496	HPM		P3	high	FIXEDAWAITINGTEST	WAS liberty upgrade for CVE-2015-2017
+	Haven't been verified for two weeks, a mail has been sent to push  Yuksel Gunal to verify.
+5 126976	Installe	P3	normal	FIXEDAWAITINGTEST	Corrupted ftp server repository when ISO9660 Joliet extension is used
+	Klaus, Can you verify this?
+6 133478	Installe	P3	normal	FIXEDAWAITINGTEST	exported VG makes installer fail with KVMIBMCO03013
+	Michael Mueller, can you verify this?
+7 126365	kernel	P2	ship issue	ASSIGNED	Default Network Performance is less than half of line speed
+	The official fix patch need to be upstreamed and more testing, so it won't be delivered in Vulcan GA driver. 
+	Michael J. Sullivan, Can you check on the 1.1.1-rc2.1 driver if the workaround can do some help for the network performance?
+8 135876	kernel	P3	high	ASSIGNED	A potential host hang due to "BUG: sleeping function called from invalid context at mm/slub.c:1266" for guests using vector support
+	Stefan, do you have any update?
+9 135883	kernel	P3	high	ASSIGNED	PSIRT #4576: SECURITY: COMMUNITY: kernel CVE-2016-0728
+	Stefan, will this patch be included in the GM driver?
+10 135287	kernel	P3	normal	ASSIGNED	NFSv4 mandatory locking is not working
+	Gerhard, do you agree to reject this as not a bug?
+11 134081	KVM		P2	high	ASSIGNED	Concurrent Migrations >=45 Fail to Vulcan RC1 with: error: End of file while reading data: Ncat: Invalid argument.: Input/output error
+	Stefan, any update?
+12 135127	KVM		P3	normal	ASSIGNED	Guest Dump triggered by watchdog action not memory-only, so can't be processed by crash on the guest
+	Stefan, any feedback from upstream?
+13 134076	libvirt		P3	high	FIXEDAWAITINGTEST	CVE-2015-5313: storage: don't allow '/' in filesystem volume names
+	Holger, Could you team verify this fix? Thanks.
+14 134500	libvirt		P2	high	NEEDINFO	Concurrent Migration of 42 vms running DayTrader workload hung for a couple of hours
+	Johanna, any progress on this? is there any relationship with the hardware?
+15 125768	libvirt		P3	normal	REOPENED	VIrsh shutdown gets journal message: “nl_recv returned with error: No buffer space available”
+	Stefan, the patch has been upstreamed, do we need to build a test rpm for verifying?
+16 132012	libvirt		P3	normal	ASSIGNED	managedsave: kvm ignores signal, fails to exit
+	Stefan, any update?
+17 128119	network		P1	high	OPEN	starting 50 guests in parallel on ovs-osa config results in: internal error: Unable to add port vnet<x> to OVS bridge ovsbridge<x>
+	Gerhard, seems this has been verified, can we close it now?
+18 126364	network		P3	normal	ASSIGNED	uperf throughput on Kronos beta3.6 and beta6.6 degrades as nprocs increased from 50 to 250
+	The new workaround mentioned in comment 17 and  comment 18 has been included in 1.1.1-rc2.1 driver.  We will also check if the fix for Bug "126365 - Default Network Performance is less than half of line speed" can fix this issue.
+19 132672	network		P3	normal	ASSIGNED	Network throughput is reduced by ~20% when nf_conntrack_ipv4 nf_defrag_ipv4 modules are loaded
+	Gerhard, what is the status of the patch?
+20 134293	network		P3	normal	ASSIGNED	During Kronos to Vulcan RC1 upgrade, get RTNL: assertion failed at net/core/dev.c (4577)
+	Stefan, any update on this?
+21 132475	QEMU	P3	normal	ASSIGNED	fio random read test (8K, 1 job) regresses ~5% from beta2.3 to beta3.2
+	Stefan, what is the status of the patch?
+22 133401	QEMU	P3	normal	ASSIGNED	using watchdog-action=none nothing happens, after the watchdog bites, I cannot execute the watchdog-test code anymore, until I end the watchdog and restart it
+	Stefan, what is the status of the patch?
+23 133998	QEMU	P3	normal	ASSIGNED	Requirements for booting a qemu image from a mounted cifs/smb share
+	Stefan, any update?
+24 135513	QEMU	P3	normal	ASSIGNED	PSIRT #4549: SECURITY: COMMUNITY: qemu CVE-2015-8558 CVE-2015-7504 CVE-2015-7295 CVE-2015-7549 CVE-2015-8504 CVE-2015-8567 CVE-2015-8568 CVE-2015-8345
+	Stefan, will this patch be included in the GM driver?
+
+
+1 134237	upgrade		P1	ship issue	FIXEDAWAITINGTEST	Upgrade is missing licence acceptance logic required by legal 
+2 127406	BaseOS	P1	high	FIXEDAWAITINGTEST	CPU shares are reset to 1024 default when a guest is rebooted.
+3 134074	BaseOS	P3	high	FIXEDAWAITINGTEST	HVM requires at least the package python-augeas-0.5.0
+4 134238	BaseOS	P3	high	FIXEDAWAITINGTEST	HVM requires at least the package python-netaddr-0.7.11
+5 133687	BaseOS	P3	normal	FIXEDAWAITINGTEST	ksvalidator fails on 'kdump' keyword
+6 134306	Build	P3	low		FIXEDAWAITINGTEST	perl compilation problems in dracut for lsmem chmem and lsluns
+7 134307	Build	P4	low		FIXEDAWAITINGTEST	initrd contains s390-tools but some dependencies for them are missing
+8 134624	Installe	P3	normal	FIXEDAWAITINGTEST	vlan interface created by installer loses IP address during reboot from conflicting MAC address
+9 135415	Installe	P3	normal	FIXEDAWAITINGTEST	Remove repo from installer in Vulcan-RC2.1 release
+10 135694	Installe	P3	normal	FIXEDAWAITINGTEST	Set "SMT=2" in the zipl.conf by default
+11 124922	kernel	P2	high	FIXEDAWAITINGTEST	[Limit-Test] Unable to boot Host with over 8TB Memory defined
+
+
+
 Mon Jan 18 12:56:09 CST 2016
 
 1 133979	BaseOS	P2	high	ASSIGNED	[zKVM GTP1412] Hyptop doesn't support SMT	Fri 06:20
