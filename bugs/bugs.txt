@@ -1,3 +1,71 @@
+1 127406	BaseOS	FIXEDAWAITINGTEST	P1	high	CPU shares are reset to 1024 default when a guest is rebooted.
+	Comment from Michael:
+	-  Verified Fixed in RC2 - now regression testing.
+2 134390	BaseOS	ASSIGNED	P1	ship issue	SCSI_Dump: Impossible to install the dump tool
+	Stefan, Can you help to confirm the things mentioned by Michael Holzheu?
+3 135473	BaseOS	ASSIGNED	P1	high	Story 71322: PCR 71322 : including lsb_release support
+	This will be included in FP1.
+4 134237	upgrade		FIXEDAWAITINGTEST	P1	ship issue	Upgrade is missing licence acceptance logic required by legal
+	Bernd, the improved text has been included in the GM driver, could you verify this?
+5 136100	BaseOS	FIXEDAWAITINGTEST	P1	normal	Add audispd-plugins and liberation-mono-fonts packages to Vulcan and Metis
+	Klaus, Could you please verify this fix in GM driver?
+6 126365	kernel	ASSIGNED	P2	high	Default Network Performance is less than half of line speed
+	Workaround is included, and waiting for the official fix.
+7 134500	libvirt		NEEDINFO	P2	high	Concurrent Migration of 42 vms running DayTrader workload hung for a couple of hours
+	Johanna, do you have any update?
+8 135658	network		NEEDINFO	P2	high	Getting Tainted Kernel messages against openvswitch - specific to ovs-gre guests
+	Johanna, Could you please give some feedback to Dirk?
+9 135910	HPM		ASSIGNED	P2	normal	zhpm process uses high CPU on zKVM hypervisor host with CPU mgmt enabled with 1024 guests under heavy CPU stress.
+	Under investigation, no much update.
+10 131888	BaseOS	REOPENED	P2	high	Change SCLP_TYPE and SCLP_SYSLEVEL to identifier KVM for IBM z Systems
+	Reopened because this fix doesn't work with the Vulcan GM driver.
+11 134081	KVM		ASSIGNED	P2	high	Concurrent Migrations >=45 Fail to Vulcan RC1 with: error: End of file while reading data: Ncat: Invalid argument.: Input/output error
+	Problem recreated and the dump was taken, Jason, do you have any progress?
+12 125768	libvirt		ASSIGNED	P3	normal	VIrsh shutdown gets journal message: “nl_recv returned with error: No buffer space available”
+	Please backport this patch. The upstream commit ID is 8c70d04bab7278c96390a913fa949a17cd3124f9.
+13 126976	Installe	FIXEDAWAITINGTEST	P3	normal	Corrupted ftp server repository when ISO9660 Joliet extension is used
+	Klaus, the improved error message has been fixed in vulcan 1.1.1-160129 release, can you verify it?
+14 130716	BaseOS	OPEN	P3	normal	zipl command when 1st path to scsi is offline gets: Use of uninitialized value $blocksize in scalar chomp at /lib/s390-tools/zipl_helper.device-mapper line 518.
+	Michael, Can you verify this issue in vulcan? Thanks!
+15 131393	network		NEEDINFO	P3	normal	Unable to ssh into host with multiple network interfaces
+	William, have you tested it by installing from ISO?
+16 132475	QEMU	ASSIGNED	P3	normal	fio random read test (8K, 1 job) regresses ~5% from beta2.3 to beta3.2
+	Stefan, what is the status of the patch?
+17 133401	QEMU	ASSIGNED	P3	normal	using watchdog-action=none nothing happens, after the watchdog bites, I cannot execute the watchdog-test code anymore, until I end the watchdog and restart it
+	Stefan, what is the status of the patch?
+18 134293	network		ASSIGNED	P3	normal	During Kronos to Vulcan RC1 upgrade, get RTNL: assertion failed at net/core/dev.c (4577)
+	Stefan, do you have any progress?
+19 135513	QEMU	FIXEDAWAITINGTEST	P3	normal	PSIRT #4549: SECURITY: COMMUNITY: qemu CVE-2015-8558 CVE-2015-7504 CVE-2015-7295 CVE-2015-7549 CVE-2015-8504 CVE-2015-8567 CVE-2015-8568 CVE-2015-8345
+	Stefan, can this bug be closed now?
+20 135883	kernel	FIXEDAWAITINGTEST	P3	high	PSIRT #4576: SECURITY: COMMUNITY: kernel CVE-2016-0728
+	Stefan, can this bug be closed now?
+21 136145	upgrade		ASSIGNED	P3	normal	kvmibm-upgrade-system -y upgrading Kronos FP1 to Vulcan RC2, hangs running: lvm lvs --noheadings -o vg_name /dev/mapper/s93kvh--fp--zkvmvg-root
+	Comments from Michael:
+	-  Installed ICM on a Kronos FP1 system,   upgraded to FP4 to verify bug Bug 132516 - yum Repository conflict between FIXPACK & ICM,
+	-  and then upgraded to Vulcan GM and did not hit 136145.
+22 128119 - starting 50 guests in parallel on ovs-osa config results in: internal error: Unable to add port vnet<x> to OVS bridge ovsbridge<x>
+	Marked Closed,  but Michael hit it again doing Vulcan  LGM testing (and Kronos FP4 LGM testing - Bug 135974 - SVT/ST FP4_TESTING: VM missing from both Hosts after Migratio)
+23 136104	Unknown		OPEN	P3	normal	systemd: Failed to register to bus: Did not receive a reply - when booting Vulcan RC2 in 9TB LPAR using eckd
+	Comment from Michael:
+	-  Hit this on eckd system after verifying boot of Vulcan RC2 in 9TB LPAR.     Requires borrowing a machine from Engineering System Test to recreate - so wondering next step.
+
+136214	KVM		OPEN	P3	normal	[R-Test] rcu sched timeouts with huge guests during managedsave
+136219	Installe	OPEN	P3	low		[R-Test] kickstart file is a little bit messy after manual installation of Vulcan
+136303	QEMU	OPEN	P3	normal	[R-Test] qemu constantly rebooting if there is no bootable disk
+136241	Installe	OPEN	P3	low		[R-Test] confusing configuration of multipathed zFCP disks
+136332	upgrade		OPEN	P3	low		[R-Test] kvmibm-upgrade-system outputs 'RuntimeError: Could not find the license: license/LI_en'
+136349	upgrade		OPEN	P3	low		[R-Test] kvmibm-upgrade-system failed when '/mnt' folder was occupied by other applications
+136356	upgrade		OPEN	P3	normal	[R-Test]Guest installation fails, and reports errors.
+136353	BaseOS	OPEN	P3	normal	[R-Test] Couldn't set the scsi device successfully
+136085	Installe	FIXEDAWAITINGTEST	P3	normal	Update license files for GM driver 
+
+
+
+
+
+
+
+
 1 130716	BaseOS	P3	normal	OPEN	zipl command when 1st path to scsi is offline gets: Use of uninitialized value $blocksize in scalar chomp at /lib/s390-tools/zipl_helper.device-mapper line 518.
 	Michael, Can you verify this issue in vulcan? Thanks!
 2 131898	BaseOS	P3	normal	ASSIGNED	GDB does not display the vector registers when info all-registers command is issued

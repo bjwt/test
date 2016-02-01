@@ -1,0 +1,366 @@
+125768 131888 126976 
+132438 132461 133359 
+133395 133478 133711 
+133919 133943
+133979 133981 134021
+133047 133400 133663 
+134050 134058 134076 
+134227 134326 134362 
+134378 134439
+134444 134496
+124922 127406 133687 
+133852 133999 134074 
+134237 134238 134306 
+134307 134446
+134624 135030 135193 
+135212 135213 135415 
+135694 135254 126976 
+134237 135417 135469 
+135513 135682 135876 
+135883 136085 136100 136233
+
+
+ID▲		Comp▲	Resolution	Summary
+132438	libvirt		FIX_BY_IBM	Soltest: Vulcan Beta3.3: internal error: Device alias was not set for scsi controller with index 0
+132461	BaseOS	FIX_BY_IBM	after zipl and reboot, the number of cpus reported by lscpu and cat /proc/cpuinfo on the host differs from maxcpus= value in /etc/zipl.conf
+133359	BaseOS	FIX_BY_IBM	Switching CPUs leads to error message - nl_recv returned with error: No buffer space available
+133395	Installe	FIX_BY_IBM	installer kdump is not enabled for 8GB dump size
+133478	Installe	FIX_BY_IBM	exported VG makes installer fail with KVMIBMCO03013
+133711	kernel	FIX_BY_IBM	Storage key optimization request for Vulcan
+133919	Installe	DUPLICATE	installer kdump upper limit in Size scope not working for dump
+133979	BaseOS	FIX_BY_IBM	[zKVM GTP1412] Hyptop doesn't support SMT
+133981	BaseOS	FIX_BY_IBM	[zKVM GTP1412] zgetdump doesn't support SMT
+134021	Build	FIX_BY_IBM	kvmibm-upgrade-system script outputs 'command not found'
+133047	HPM		FIX_BY_IBM	Improve warning message on insecure CLI commands
+133400	Installe	FIX_BY_IBM	installer allows to start installation on a system having not enough memory
+133663	Installe	FIX_BY_IBM	kdump option in kickstart installation
+134050	BaseOS	FIX_BY_IBM	Wrong definition in ip parameter of generic.prm stops LPAR installation
+134058	Installe	FIX_BY_IBM	Installer Panel does not specify the units during manual partitioning
+134076	libvirt		FIX_BY_IBM	CVE-2015-5313: storage: don't allow '/' in filesystem volume names
+134227	HPM		FIX_BY_IBM	Bug in zHPM virtual server state handling when a VS migrates
+134326	QEMU	FIX_BY_IBM	[54664,070,724] 3390-77 DASD causes QEMU error: cyls must be between 1 and 65535
+134362	upgrade		FIX_BY_IBM	kvmibm-system-upgrade script hang / crash during execution
+134439	upgrade		FIX_BY_IBM	Starting zhpmd on system upgraded from Kronos to Vulcan gets: 'Error while loading shared libraries: libjvm.so'
+134444	HPM		FIX_BY_IBM	zhpm package update for vulcan-rc1.4
+134496	HPM		FIX_BY_IBM	WAS liberty upgrade for CVE-2015-2017
+124922	kernel	FIX_BY_IBM	[Limit-Test] Unable to boot Host with over 8TB Memory defined
+133687	BaseOS	FIX_BY_IBM	ksvalidator fails on 'kdump' keyword
+133852	kernel	FIX_BY_IBM	uperf 30K stream tests performance regresses ~8% in Vulcan beta3.5
+133999	BaseOS	FIX_BY_IBM	When zhpm starts get: cca_specific.c token_specific_init: Error loading library: [libcsulcca.so: cannot open shared object file: No suc
+134074	BaseOS	FIX_BY_IBM	HVM requires at least the package python-augeas-0.5.0
+134238	BaseOS	FIX_BY_IBM	HVM requires at least the package python-netaddr-0.7.11
+134306	Build	FIX_BY_IBM	perl compilation problems in dracut for lsmem chmem and lsluns
+134307	Build	FIX_BY_IBM	initrd contains s390-tools but some dependencies for them are missing
+134624	Installe	FIX_BY_IBM	vlan interface created by installer loses IP address during reboot from conflicting MAC address
+135030	BaseOS	FIX_BY_IBM	Vulcan RC1.4 Installer boot fails with dracut: FATAL: Invalid value for interface in ip= opts. When using VLAN
+135193	Installe	FIX_BY_IBM	IPv6 Installation failure
+135415	Installe	FIX_BY_IBM	Remove repo from installer in Vulcan-RC2.1 release
+135694	Installe	FIX_BY_IBM	Set "SMT=2" in the zipl.conf by default
+
+
+
+
+
+131061	Installe	FIX_BY_IBM	Installer couldn't parse kickstart file
+125930	libvirt		FIX_BY_IBM	An error about "User process fault: interruption code 0x4003B in libvirt.so.0.1002.12" happened while running multiple live guest migration
+125252	kernel	FIX_BY_IBM	Unable to virsh start a KVM guest defined with 5G or more memory starting with zFrob 6.3 and above
+126424	BaseOS	FIX_BY_IBM	Sosreport fails: NameError: global name 'tempfile' is not defined
+126316	Installe	FIX_BY_IBM	using F3 to display disk details not working
+126349	Installe	FIX_BY_IBM	Unable to change from installer into shell or debug mode
+132329	Installe	NOTABUG		After installation system is not bootable in VULCAN Beta 3.3
+128981	KVM		NOTABUG		[zKVM GTP1503] iSCSI initiator can’t login to iSCSI target via IPv6.
+131591	Unknown		NOTABUG		Noticeable delay in interactive (ssh) sessions with the vulcan host
+128502	BaseOS	DUPLICATE	libc fault during bzip2 of results
+125931	BaseOS	FIX_BY_IBM	Package selinux-policy-devel required for customizing SELinux policies
+127064	BaseOS	FIX_BY_IBM	kdump/kexec does not work with big systems (e.g. 600GB)
+131905	HPM		FIX_BY_IBM	zHPM isn't starting.
+125209	kernel	FIX_BY_IBM	[Limit-Test] Unable to boot Host with over 8TB Memory defined
+131415	kernel	FIX_BY_IBM	Qemu doesn't support aes-key-wrap and dea-key-wrap
+129617	Unknown		FIX_ALREADY_AVAIL	SUSE944347- SLES 12 SP1 - Impossible to identify a network interface in Linuxrc (network configuration, 3 interfaces with the same name) (running on zKVM) (was: necessary information at installation missing)
+125929	BaseOS	FIX_BY_IBM	abrt OpenGPGCheck = yes setting prevents coredump of libvirtd segv from being saved
+125585	QEMU	FIX_BY_IBM	Host allows 8208 virtio block disks, virsh start fails when attempting more.
+129646	BaseOS	FIX_BY_IBM	Additional packages to support opencryptoki, perl, nagios and other tools
+131327	BaseOS	FIX_BY_IBM	Need additional packages to support Kimchi/Ginger (HVM)
+123484	Build	FIX_BY_IBM	Swap throughput on multiple targets gets slower than on single ones
+123485	Build	NOTABUG		Swap targets are exhausted in priority pairs after the first one
+123486	Build	FIX_BY_IBM	perf patches missing on zFrobisher driver
+123787	Build	FIX_BY_IBM	ifconfig RX bytes value for macvtap0 is twice the value it should be
+123788	Build	FIX_BY_IBM	fanotify: -EOVERFLOW with large files on 64-bit
+123781	Build	FIX_BY_IBM	CPU utilization problem
+123783	Build	FIX_BY_IBM	vhost triggers "page allocation failure", guest does not startup
+123784	Build	FIX_BY_IBM	workqueue: WARN at at kernel/workqueue.c:2163
+123789	Build	FIX_BY_IBM	macvtap: suspicious RCU usage
+123790	Build	WILL_NOT_FIX	network performance very bad due to macvtap changes
+123791	Build	FIX_BY_IBM	Scheduler updates for Transactional Workload CPU Share Improvements.
+123792	Build	NOTABUG		Add patch: perf tool fails with "failed to process type: 9"
+123988	Build	INSUFFICIENT_DATA	openvswitch: possible deadlock and lockdep warning
+123989	Build	FIX_BY_IBM	Running perf tracepoints on a guest process for a while causes qemu: qemu_thread_create: Operation not permitted
+124640	Build	FIX_BY_IBM	Please help to back port patches for Kronos NET1404 Shipment
+126356	Build	FIX_BY_IBM	Add package:opencryptoki-icatok for crypto install enablement
+131015	Build	FIX_BY_IBM	File missing in kvmibm1_1_1-release-8-1.1603.el7_1.kvmibm1_1_1.7.noarch.rpm
+131058	Build	FIX_BY_IBM	Kernel module certification
+131129	Build	FIX_BY_IBM	Change BUILD_ID and release version for vulcan-beta3.3
+131328	Build	FIX_BY_IBM	Need packages to support OpenStack Storage Nodes
+125932	HPM		FIX_BY_IBM	New zHPM rpm for vulcan
+129612	HPM		FIX_BY_IBM	New zHPM package for vulcan beta3
+132321	HPM		NOTABUG		Keystore password stored in plain text in zhpmd-ssl.conf
+128648	Installe	FIX_BY_IBM	[R-Test] Dialogues with a single choice should be skipped
+128912	Installe	FIX_BY_IBM	[R-Test] Installer Language Selection doesn't react to SPACE
+128980	Installe	NOTABUG		Kickstart Installation documentation doesn't provide enough information
+129145	Installe	FIX_BY_IBM	[R-Test] Installation to SCSI zFCP device failed
+129499	Installe	UNREPRODUCIBLE	LPAR was not available to login or SSH
+130819	Installe	NOTABUG		[R-Test] Dialog Configure Volume Group contains unneeded label
+132319	Installe	DUPLICATE	Java Config Changes Required to Use Crypto Hardware
+125260	kernel	DUPLICATE	memory management bugs under host paging when exiting KVM guests
+125936	kernel	FIX_BY_IBM	Build warning for ‘builtin-timechart.c’
+126397	kernel	FIX_BY_IBM	SECURITY: COMMUNITY: kernel CVE-2014-3690 CVE-2014-3940 CVE-2014-7825 CVE-2014-7826 CVE-2014-8086 CVE-2014-8160 CVE-2014-8172 CVE-2014-8173 CVE-2014-8709 CVE-2014-8884 CVE-2015-0274 CVE-2014-8159 CVE-2015-1421 CVE-2015-3331
+129586	kernel	FIX_BY_IBM	SECURITY: kernel CVE-2014-9715 CVE-2015-2666 CVE-2015-2922 CVE-2015-3636
+129788	kernel	FIX_BY_IBM	8.1 kernel missing xmlto and asciidoc BR
+131687	kernel	FIX_BY_IBM	Kernel module certification
+132092	kernel	DUPLICATE	Kernel in Beta3.3 load a centos signing key
+131999	libvirt		FIX_BY_IBM	on z13, virsh attach-device of a scsi lun fails and subsequent virsh list --all or virsh dumpxml domain hangs
+129473	QEMU	DUPLICATE	Guest hangs after dd to ramdisk backed qemu-img
+131381	QEMU	ENHANCEMENT		Guest crashes after migration from z13 to zEC12 while running SIMD workloads
+123288	RAS		FIX_BY_IBM	Request to build kexec-tools with kexec-tools patches based on RHEL7.1
+123399	RAS		FIX_BY_IBM	Please help rebase kronos patch to vulcan
+126433	Unknown		NOTABUG		Cannot yum install SVN on Vulcan beta 1.1.
+129618	Unknown		FIX_BY_DISTRO	SUSE944348- wrong udev rules after installation boot
+132091	Unknown		NOTABUG		Required compiler support (-march=z13) for SIMD was not found on guest OS distributions
+128343	Document	FIX_BY_IBM	dummy/test bug for ebcops
+128913	Installe	FIX_BY_IBM	[R-test] Non informative message box during installation
+130817	Installe	NOTABUG		[R-Test] manual enabled devices not applicable for installation
+128589	QEMU	FIX_BY_IBM	Migration between Kronos 6.8/RC and upstream is broken
+126314	BaseOS	FIX_BY_IBM	Error message when adding via "add zFCP"
+127062	QEMU	FIX_BY_IBM	[Limit-Test] Virsh Start / Stop Guest with over 1000 virtio block disks defined takes over 10 minutes.
+127063	network		NOTABUG		macvtap ifconfig on host does not reflect the same error/dropped info on guest ethxx interface
+129501	kernel	NOTABUG		KVMIBM-1.1.1-beta2.3 acceptance Test failed
+124102	BaseOS	FIX_BY_IBM	scrub package missing
+125652	Build	FIX_BY_IBM	back port for net1404 shipment dev patch
+125744	Build	DUPLICATE	Host allows 8208 virtio block disks, virsh start fails when attempting more.
+127720	Installe	FIX_BY_IBM	Replace zKVM with the official short name "KVM for IBM z"
+130021	Installe	FIX_BY_IBM	Auto installer does not support kdump command
+127864	kernel	FIX_BY_IBM	Enable CONFIG_EFI_PARTITION in kernel-kdump configuration
+126207	libvirt		FIX_BY_IBM	Change default qemu.conf and default libvirtd.conf values to the zKVM recommended values
+127449	libvirt		FIX_BY_IBM	Error msg: systemd-sysctl: Overwriting earlier assignment of fs/aio-max-nr
+127606	QEMU	FIX_BY_IBM	Change QEMU specfile to built with --enable-trace-backend=none
+126484	Installe	FIX_BY_IBM	Enhancement: When using rd.dasd=autodetect option with a large number of DASD the list is not in numeric order.
+127899	Installe	FIX_BY_IBM	Adding zfcp disks failed
+127789	QEMU	FIX_BY_IBM	virsh start fails intermittently with fault in libc-2.17.so
+130119	QEMU	FIX_BY_IBM	Migration between Kronos 6.8/RC and upstream is broken
+129993	RAS		FIX_BY_IBM	The sos package in vulcan does not include our KVM required changes
+131570	upgrade		NOTABUG		script for installer upgrade tool is delivered in wrong directory
+127380	BaseOS	NOTABUG		Network Interface doesn't come up after install via TP4 because NetworkManager isn't enabled and started.
+127691	Installe	NOTABUG		Error message when adding via "add zFCP" ( 1.2.0-Beta2.1)
+129496	Installe	FIX_BY_IBM	issue for "Configure network" screen
+128578	BaseOS	FIX_BY_IBM	[R-TEST] installer and target system is running with a tainted kernel
+126123	BaseOS	FIX_BY_IBM	nmcli con show reports version mismatch
+127969	QEMU	FIX_BY_IBM	[Limit] Attempting to start max supported guests, receiving abrt-hook-ccpp: Not saving repeating crash in '/usr/bin/qemu-system-s390x'
+131574	upgrade		DUPLICATE	installer upgrade tool fails to ugrade Kronos to Vulcan
+124864	BaseOS	FIX_BY_IBM	Running lsluns causing rootfs to go into read-only mode
+127641	BaseOS	FIX_BY_IBM	Add kernel-kdump and kernel-kdump-debuginfo package
+131725	Build	FIX_BY_IBM	[RHEL1243401] Failed to start domain continually due to virDBusCall() during concurrent jobs
+129444	HPM		FIX_BY_IBM	zHPM restarted - NullPointerException
+132389	HVM		FIX_BY_IBM	Need additional package (python-magic) to support Ginger
+128779	Installe	FIX_BY_IBM	[R-Test] Host : Install Timezone choice get lost after reboot
+127648	QEMU	FIX_BY_IBM	Patch for compatibility with the upcoming 2.4 qemu
+129150	Installe	FIX_BY_IBM	The installer log contains ftp server user credentials in clear text
+125169	BaseOS	FIX_BY_IBM	Installer crash after creating partitions
+129104	Build	FIX_BY_IBM	zfcp related tools cannot run in install.img
+129490	Build	FIX_BY_IBM	Add "BUILD_ID" in /etc/os-release
+131683	Build	FIX_BY_IBM	Change rpm signing key for vulcan with the new email address
+132370	Build	FIX_BY_IBM	Add additional admin tools and packages
+132482	Build	FIX_BY_IBM	Add MCP base packages for RHEL7 defined groups: perl, php, Font ect
+132549	Build	FIX_BY_IBM	Change java package to JIM 7.1.3
+128910	HPM		FIX_BY_IBM	zHPM restarted
+132528	HPM		FIX_BY_IBM	HPM does not start when libvirt uses UNIX socket-based security
+129832	HVM		DUPLICATE	Firewall and SE policies rules for Ginger
+129831	HVM		FIX_BY_IBM	Frobisher Installer changes to install Ginger
+127270	Installe	FIX_BY_IBM	Update license files for product release
+128520	Installe	NOTABUG		[R-Test] copying log files during installation fails
+128519	Installe	FIX_BY_IBM	[R-Test] Disagree should not render the installation process unusable
+128563	Installe	FIX_BY_IBM	[R-Test] Changing device type does not reflect desired capacity
+128827	Installe	FIX_BY_IBM	[R-Test] After formatting a DASD in the installer, it still asks if one is sure to install
+128781	Installe	ENHANCEMENT		[R-Test] Installer doesn't remember some of the entries when going back
+128924	Installe	FIX_BY_IBM	[R-Test] Misleading wording in "Consistency Check for
+129026	Installe	FIX_BY_IBM	[R-Test] Size Policy not changeable
+129407	Installe	FIX_BY_IBM	Improve description on "VG Consistency Check for Deletion"
+129497	Installe	FIX_BY_IBM	Fix MAC address for IPv6 configuration
+129786	Installe	FIX_BY_IBM	Display one more additional license file LI_en.
+129992	Installe	FIX_BY_IBM	Need a help screen for kdump.
+130029	Installe	NOTABUG		Removing installer rpm pops up warning message
+130028	Installe	FIX_BY_IBM	Device type field can only be STD after switching filesystem to swap and back for root partition
+131571	Installe	FIX_BY_IBM	help option of installer upgrade tool show wrong info
+131572	Installe	FIX_BY_IBM	misleading error message from installer upgrade tool
+132346	Installe	FIX_BY_IBM	kvmibm-installer rpm packages uses still IBM_zKVM product name
+132382	Installe	FIX_BY_IBM	Installer: local time not being set correctly
+132847	Installe	FIX_BY_IBM	Kickstart installation failure with FTP LOGIN error
+126919	kernel	FIX_BY_IBM	Backport needed: RH1214403- module: Clean up ro/nx after early module load failures [rhel-7.1.z]
+127732	kernel	FIX_BY_IBM	"CentOS Linux" and "IBM Linux 8" show up in the boot log
+102873	libvirt		NOTABUG		virsh cpu compare not matching with output of virsh capabilities
+127104	libvirt		UNREPRODUCIBLE	listAllDevices(libvirt.VIR_CONNECT_LIST_NODE_DEVICES_CAP_NET) list eth0 devices which are not present on system under /sys/class/net/
+126650	OpenStac	NOTABUG		iothreads with ICM
+127607	QEMU	DUPLICATE	Change QEMU specfile to built with --enable-trace-backend=none
+126114	QEMU	FIX_BY_IBM	[zKVM VS1235] Virsh setmem not working after migration of the guest
+127108	Build	FIX_BY_IBM	PSIRT #3407: SECURITY: kexec-tools CVE-2015-0267
+128994	Installe	FIX_BY_IBM	Typos in installer help panels
+128995	Installe	FIX_BY_IBM	help panel explanation is not clear enough
+128996	Installe	FIX_BY_IBM	help panel referring to UTC
+130820	Installe	DUPLICATE	[R-Test] Resizing terminal breaks installer rendering
+127967	libvirt		FIX_BY_IBM	[zKVM VS1235] journal: internal error: Cannot determine balloon device path
+127830	BaseOS	FIX_BY_IBM	"iptables" configuration file recommends to use an unsupported tool
+128093	BaseOS	FIX_BY_IBM	[zKVM NET1404] OSA card generation is undefined.
+131573	upgrade		FIX_BY_IBM	installer upgrade tool output hard to read
+135922	HVM		FIX_BY_IBM	HVM: "Add FCP Devices" gives parsing error if /etc/zipl.conf has indented text.
+135754	HVM		NOTABUG		NW: cfginterface GET does not gives IPv4 addresses present in ifcfg file, if bootpro is dhcp
+135763	HVM		DUPLICATE	NW: cfginterface for ipv4 address, GET after PUT operation with multiple DNS address is not getting all the values.
+135691	HVM		FIX_BY_IBM	FCP disks deletion fails in multithreaded environment
+135721	HVM		FIX_BY_IBM	Incorrect multipath count for DASD devices
+135757	HVM		FIX_ALREADY_AVAIL	Swaps API returns code 500 when accessing invalid swap
+135783	HVM		FIX_ALREADY_AVAIL	GET /plugins/ginger/stgdevs fails with 500
+135702	HVM		FIX_BY_IBM	Enabling ECKD decive does not add in Storage device listing
+135704	HVM		FIX_BY_IBM	FCP SAN Adapter Enable does not auto refresh the data in parent record
+135710	HVM		FIX_ALREADY_AVAIL	FCP Device not listing properly
+135720	HVM		DUPLICATE	bringing interface up gave an error, UI didn't forward it to the user
+135732	HVM		FIX_ALREADY_AVAIL	Missing "device_name" in /filesystems
+135736	HVM		NOTABUG		Page data and add option items are mismatch
+135739	HVM		ALT_SOLUTION_AVAIL	Not able to bring network Down
+135740	HVM		DUPLICATE	Not able to bring network UP
+135784	HVM		FIX_ALREADY_AVAIL	GET /plugins/ginger/partitions fails if dev mapper has device ending with an integer
+135785	HVM		NOTABUG		GET on /plugins/ginger/network/cfginterfaces/<interfacename> fails with 500
+135798	HVM		DUPLICATE	Network interface file has value in quotes, then rest API call return the attribute value in quotes inside quotes
+135712	HVM		FIX_ALREADY_AVAIL	Storage-> FCP Tape devices. The URI for tape devices is incorrect.
+135713	HVM		FIX_ALREADY_AVAIL	Storage →FCP Tape Devices API does not return any data
+135790	HVM		FIX_ALREADY_AVAIL	GET on /plugins/ginger/filesystems/<mount point> fails with 500
+135693	HVM		FIX_BY_IBM	[UI] Add → FCP SAN Adapter Device does not update SAN Adapters listing
+123796	Unknown		FIX_BY_IBM	[Limit-Test] The Hypervisor OS goes into a 'read-only' state when adding 2048 DS8K FCP devices
+135701	HVM		FIX_BY_IBM	[UI] SAN Adapters Listing is not proper on UI
+135707	HVM		FIX_BY_IBM	[UI] add all / LUN Scan no proper message and operation look confusing on UI
+134272	kernel	FIX_BY_IBM	SIE block info in /sys/kernel/debug/s390dbf/kvm-*/sprintf gets overwritten with 2 or more guest VCPUs
+132203	Document	FIX_BY_IBM	default libvirtd network virbr0 is enabled after installation, but not documented
+133488	HPM		FIX_BY_IBM	zhpm sosreport does not collect data
+135538	HVM		FIX_BY_IBM	HVM: Adding a new ECKD device does not refresh into the "Storage Device' panel
+135782	HVM		FIX_ALREADY_AVAIL	GET /plugins/ginger/dasdpartitions/dasdi fails with 500
+136025	Installe	NOTABUG		IPv6 installation fails with vlan tagging
+135799	HVM		FIX_BY_IBM	Documentation on network interface file, does not have any details on sub channels in case of s390x architecture.
+131832	upgrade		FIX_BY_IBM	Installer upgrade tool: y/N prompt default N doesn't work
+132164	BaseOS	ENHANCEMENT		lsluns is returning a lot of garbage if iSCSI (initiator) is configured on the system
+134015	HPM		DUPLICATE	zHPM startup error due to missing ws-config.xml in /var/lib/zhpm/wlp/usr/servers/zhpm
+134365	KVM		DUPLICATE	SLES 12 SP1 ECKD install fails
+133915	Build	FIX_BY_IBM	Installer upgrade tool is missing in the Vulcan RC1.1 iso
+135148	Installe	NOTABUG		Vulcan RC1.4 Install to ECKD disk, reboots into emergency mode
+133923	BaseOS	FIX_BY_IBM	JRE symlink is broken; points to Java 1.7
+132555	Installe	FIX_BY_IBM	Error KVMIBMCO03013 when no rd.dasd parameter is specified
+129098	BaseOS	FIX_BY_IBM	[R-Test] Logs may contain password
+133422	HPM		FIX_BY_IBM	zHPM restarted with many request failure message
+132333	kernel	FIX_BY_IBM	FCP: automatic port rescan disabled via zfcp.no_auto_port_rescan=1 in zipl.conf
+132935	kernel	FIX_BY_IBM	Virsh Start / Stop Guest with macvtap interface causes severe system performance degradation
+132998	libvirt		NOTABUG		Live guest migration receives error: Unsupported machine type
+133080	libvirt		FIX_BY_IBM	Virsh migrate --undefinesource broken
+133338	QEMU	FIX_BY_IBM	Reenable address space layout randomization for QEMU binary (reenable pie)
+131377	BaseOS	NOTABUG		FQDN is required for network communication
+131373	BaseOS	FIX_BY_IBM	Python linux_distribution interface is broken
+132128	Installe	FIX_BY_IBM	zKVM install does not configure java.security properly when crypto card is present
+132904	Installe	FIX_BY_IBM	installer kdump proceed with using wrong memory size
+133225	Installe	FIX_BY_IBM	SSH vulnerability during driver installation
+133802	Installe	NOTABUG		Installer doesn't show error messages. Using kickstart
+134214	Installe	FIX_BY_IBM	installer kdump can not disable "Kdump feature"
+132747	kernel	FIX_BY_IBM	Update mcpsource to ibmsource
+135261	kernel	NOTABUG		Error attempting to load xpram module
+132905	KVM		FIX_BY_IBM	Guest crashes while executing pfault managed save test
+135428	KVM		FIX_BY_IBM	SCA must not cross page boundaries
+133069	Installe	FIX_BY_IBM	Network device configurations are saved when click "Back" on the Network Device Configuration Screen
+127133	BaseOS	FIX_BY_IBM	Improve zFCP device parameter check
+128094	BaseOS	FIX_BY_IBM	Wrong definition of OSA device in generic.prm stops LPAR installation without an error code
+129117	BaseOS	DOCUMENTED	[zKVM GTP1503] ISCSI initiator can write to the write-protected ECKD device
+131308	BaseOS	FIX_BY_IBM	Yum does not recognize the distro version. $releasever var is empty.
+131578	BaseOS	NOTABUG		Dependency Problems for Devstack on Vulcan
+131607	BaseOS	FIX_BY_IBM	Replace kvmibm1_1_1-release package with kvmibm-release package
+131894	BaseOS	FIX_BY_IBM	Crash tool on Vulcan driver does not support SIMD
+132113	BaseOS	FIX_BY_IBM	Create a symlink pointing to the path of the installed JRE
+133993	BaseOS	WILL_NOT_FIX	No samba service for KVM host
+134448	BaseOS	NOTABUG		Strange OS Type/Level in HMC panel of rc1.3
+131004	Build	FIX_BY_IBM	Java 1.8 needs to be packaged by Frobisher build, because MCP does not package and support any Java for Vulcan and follow on releases
+132560	Build	FIX_BY_IBM	Move post changes of rngd.service to rng-tools package
+132554	Build	FIX_BY_IBM	Add vim editor the the installer image
+132703	Build	FIX_BY_IBM	Remove package fonttools and perl-String-ShellQuot from the Vulcan project
+133167	Build	FIX_BY_IBM	Add yum-plugin-aliases, man-pages-overrides and oprofile
+133479	Build	FIX_BY_IBM	Key size and digest algorithm of rpm signing key should be changed for vulcan
+133518	Build	FIX_BY_IBM	Add 'sdk' repo in /etc/yum.repos.d/ibm_zkvm.repo
+133998	Document	FIX_BY_IBM	Requirements for booting a qemu image from a mounted cifs/smb share
+133678	HPM		FIX_BY_IBM	Update zhpm package for vulcan-rc.1 release
+133922	HPM		DUPLICATE	Due to VulcanRC1.1 using Java1.8 zhpm2 no longer starts correctly
+132509	Installe	FIX_BY_IBM	[PMR: 44299,693,693] manual partitioning creates double fstab entries
+132570	Installe	FIX_BY_IBM	installer kdump Size scope high limit not correct
+132622	Installe	FIX_BY_IBM	Include the new key file because new signature can not be verified by old key in system
+132708	Installe	FIX_BY_IBM	installer kdump Memory Size field accepts character input
+132711	Installe	FIX_BY_IBM	installer kdump no log files in /tmp
+132897	Installe	FIX_BY_IBM	Update license files for Vulcan
+133227	Installe	FIX_BY_IBM	Installer does not allow complete dynamic zFCP specification
+133801	Installe	NOTABUG		Installer doesn't use dracut values
+134420	Installe	NOTABUG		rngd doesn't start if there is no crypto coprocessor online
+135490	Installe	NOTABUG		Missing encryption screen
+127683	kernel	FIX_BY_IBM	Identifier for Cryptocards on LPAR is wrong CEX4..... instead CEX5.....
+132139	kernel	FIX_BY_IBM	PSIRT #3925: SECURITY: kernel CVE-2014-9585 CVE-2014-9715 CVE-2015-1333 CVE-2015-2666 CVE-2015-2922 CVE-2015-3212 CVE-2015-3636 CVE-2015-4700 CVE-2015-5364 CVE-2015-5366
+132366	kernel	FIX_BY_IBM	macvtap: unbreak receiving of gro skb with frag list
+132961	kernel	FIX_BY_IBM	Kernel signing key need to be changed from 4096 bits to 3072 bits
+133341	kernel	FIX_BY_IBM	Disable CONFIG_SCLP_CPI in kernel config
+135287	kernel	WILL_NOT_FIX	NFSv4 mandatory locking is not working
+132355	KVM		DUPLICATE	KVM guest became unresponsive after displaying kernel BUG message on console session
+132473	KVM		WILL_NOT_FIX	sysbench threads test for single large guest regresses on Beta3.2 vs Beta2.3
+132717	KVM		WILL_NOT_FIX	sysbench memwrite test performance drops >15% on fully loaded lpar with SMT2 enabled
+132506	libvirt		FIX_BY_IBM	KVM guest becomes unresponsive after migration with the timeout option
+125447	network		FIX_BY_IBM	Some VLAN interfaces don't activate at boot time on Frobisher Beta 5
+126364	network		FIX_BY_IBM	uperf throughput on Kronos beta3.6 and beta6.6 degrades as nprocs increased from 50 to 250
+130017	network		FIX_BY_IBM	Kronos Networkmanager patches are not included in Vulcan
+132964	Unknown		DUPLICATE	Macaddress not visible at guest installation of SLES 12 SP1
+135488	upgrade		NOTABUG		Failure to upgrade lower version
+133989	QEMU	NOTABUG		BEAM: accessing beyond array bounds
+126111	BaseOS	NOTABUG		user error with ovs-ofctl show commands get logged with high priority
+131346	BaseOS	NOTABUG		lsqeth does not show bridge_role / bridge_state
+131998	Installe	FIX_BY_IBM	Custom partitioning, preselect just defined VG when adding a second LV
+131745	RAS		FIX_BY_IBM	sosreport plugin kvm is not in the active set
+125443	BaseOS	WILL_NOT_FIX	Message repeatedly logged - Failed to reset devices.list on /machine.slice: Invalid argument - after starting a guest
+128653	Build	FIX_BY_IBM	[R-Test]Frobisher initrd contains znetconf but not awk, getopt, etc
+133017	Installe	FIX_BY_IBM	example.log file stored in the kvmibm-installer log folder
+133662	kernel	FIX_BY_IBM	rcu_sched error on Kronos GM+FP1 host running autoframework test
+134034	BaseOS	NOTABUG		s390-utils sources required for backports
+130102	BaseOS	FIX_BY_IBM	Failed upgrade due to dependency resolution error
+129358	BaseOS	ENHANCEMENT		Unable to load standalone dump program on to disk - Segmentation fault (core dumped).
+128119	network		FIX_BY_IBM	starting 50 guests in parallel on ovs-osa config results in: internal error: Unable to add port vnet<x> to OVS bridge ovsbridge<x>
+127820	BaseOS	NOTABUG		Open vSwitch service stopped after not finding disk partition.
+129576	BaseOS	DUPLICATE	Message repeatedly logged - Failed to reset devices.list on /machine.slice: Invalid argument - after starting a guest
+131448	Document	DOCUMENTED	Openvswitch GRE tunnel to vulcan host not working (from other host)
+132089	kernel	FIX_BY_IBM	Vulcan Beta 3.2 rcu_sched detected stalls , Task dump for CPU 1
+125709	libvirt		FIX_BY_IBM	Migration of a busy guest via p2p-tunnelled was hanging and "paused" VM on target host disappeared.
+129998	BaseOS	DUPLICATE	Failed to upgrade kvmibm1_1_0-release-8-0.1509.el7_0.kvmibm.4.noarch
+129999	BaseOS	FIX_BY_IBM	Failed to upgrade kvmibm1_1_0-release-8-0.1509.el7_0.kvmibm.4.noarch
+127659	libvirt		FIX_BY_IBM	Live Guest Migration of 54 guests hangs
+128352	network		UNREPRODUCIBLE	IPv6 multicast being sent from within zFrobisher guest causes network failure
+127688	BaseOS	FIX_BY_IBM	Configuring LDAP authentication but no sssd package available
+131306	GPFS	NOTABUG		Error with "update_primary_asce(current)" function during module creation
+129246	HPM		UNREPRODUCIBLE	ra-display CLI fails with "Error during ra-display: zHPM dynamic-resource-adjustment returned a donor VS that is not associated with a WRG"
+121417	kernel	INSUFFICIENT_DATA	[CLONE] 97987 Dis-proportionate CPU shares in an overcommitted environment
+128329	BaseOS	FIX_BY_IBM	[R-Test] Network failure during install should get more helpful error message
+128523	BaseOS	FIX_BY_IBM	[R-Test] Folder without purpose
+129090	BaseOS	NOTABUG		[R-Test] installer stops system on error instead of providing a minimal login console
+131433	BaseOS	FIX_BY_IBM	Generating denied messages during SSH
+131898	BaseOS	ENHANCEMENT		GDB does not display the vector registers when info all-registers command is issued
+131985	Build	NOTABUG		base-rpm-config package does not provide redhat-rpm-config package information
+135419	GuestOS		UNREPRODUCIBLE	[GuestOS SLE 12-GMC3 driver] Undefined method `grep` for nil:NilClass
+125847	HPM		ENHANCEMENT		Usability improvement request to have adjustment-donor object return service class name
+128272	Installe	FIX_BY_IBM	Several error msg "kdumpctl: dracut-install: ERROR: installing ..." reported
+129097	Installe	WILL_NOT_FIX	[R-Test] Specifying absolute paths for inst.repo doesn't work
+129094	Installe	FIX_BY_IBM	[R-Test] Installer has kernel filename hardcoded
+131091	Installe	NOTABUG		legibility of installer messages
+128768	kernel	FIX_BY_IBM	Call home feature is conflicted with kdump in panic()
+131312	kernel	WILL_NOT_FIX	Change kernel config parameter TUN_READQ_SIZE to 2500
+131417	KVM		WILL_NOT_FIX	sysbench Threads workload regresses ~6% from Beta2.2 to Beta2.3 in heavily loaded guest
+127459	QEMU	FIX_BY_IBM	Change QEMU specfile to built with --enable-trace-backend=none
+131997	Installe	FIX_BY_IBM	User experience, setting up generic.prm in combination with Install Guide
+127205	QEMU	WILL_NOT_FIX	BEAM: Passing untrusted input to strcpy/strcat
+129095	BaseOS	WILL_NOT_FIX	[R-Test] ftp-server-password has a '@' included
+129096	BaseOS	ALT_SOLUTION_AVAIL	[R-test] Ask user to enter ftp address and login if inst.repo is invalid
+128467	Installe	UNREPRODUCIBLE	[R-Test] Inconsistent UI in the same steps
+128646	Installe	FIX_BY_IBM	[R-Test] Misplaced character in "Welcome to KVM for IBM z" Dialogue
+128163	BaseOS	WILL_NOT_FIX	KVM - lstape output on RHEL guest corrupted after SCSI attached tape added
+128901	Installe	UNREPRODUCIBLE	[R-Test] "Pane is dead" when FTP server is interrupted 
