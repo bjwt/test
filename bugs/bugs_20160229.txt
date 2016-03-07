@@ -1,0 +1,42 @@
+1 137585	Installe	P1	ASSIGNED	DNS specified during installer does not get set correctly on host
+	Will be fixed in FP2.
+2 137679	BaseOS	P1	ASSIGNED	sg_luns cannot display more than 1023 luns
+	Seems there is a workaround, now waiting for the reporter's verification.
+3 136487	SDK		P2	ASSIGNED	Wrong SDK ISO Image filename
+	Klaus, will this be included in FP2?
+4 136488	SDK		P2	ASSIGNED	SDK image 160129 contains 9 product packages which must be removed
+	Klaus, will this be included in FP2?
+5 136505	SDK		P2	ASSIGNED	New README file required
+	Klaus, will this be included in FP2?
+6 137250	KVM		P2	ASSIGNED	Cannot shutdown or destroy ICM 4.3 FP4 built guests on a zKVM RC1.4 partition
+	Michael, can you recreate the problem?
+7 137986	SDK		P2	OPEN	Vulcan SDK license file for Developer works on SDK ISO and for acceptance handling
+	Ralf, can you give feedback to Charles's question?
+8 137984	KVM		P2	OPEN	kernel.pid_max value set is not being used
+	Jens, can you have a look at this?
+9 133401	QEMU	P3	ASSIGNED	using watchdog-action=none nothing happens, after the watchdog bites, I cannot execute the watchdog-test code anymore, until I end the watchdog and restart it
+	Jens, what is the status of this bug, can you give some comment on BZ?
+10 134293	kernel	P3	ASSIGNED	During Kronos to Vulcan RC1 upgrade, get RTNL: assertion failed at net/core/dev.c (4577)
+	Michael, Can you perform this test on a kronos system?
+11 136377	KVM		P3	NEEDINFO	SVT/ST FP4_TESTING: Unable to add port on ovsbridge during concurrent migrations
+	Jens, seem that the patch for Bug 134081 is available, does it have any effect on this one?
+12 136828	libvirt		P3	FIXEDAWAITINGTEST	libvirt has O(n^2) complexity for macvtap devices
+	Stefan, I am not able to change the status of this bug which was cloned from bug #130825, could you add me to the CC list of bug #130825?
+13 136800	kernel	P3	ASSIGNED	mm: fix mlock accouting
+	Stefan, has this fix been included in FP1?
+14 136934	Document	P3	ASSIGNED	Remove xfsdump and xfsrestore tools from the product documentation
+	Michael, can you ask Mark to verify this update of documentation?
+15 137048	Document	P3	ASSIGNED	star tape/disk archive utility not included
+	Michael, can you ask Mark to verify this update of documentation?
+16 136999	Document	P3	ASSIGNED	sesearch command is missing, part of setools-console package
+	Michael, can you ask Mark to verify this update of documentation?
+17 137000	Document	P3	ASSIGNED	missing setrans related items
+	Michael, can you ask Mark to verify this update of documentation?
+18 137002	Document	P3	FIXEDAWAITINGTEST	missing ypserv package for NIS service
+	Michael, can you ask Mark to verify this update of documentation?
+19 137193	GuestOS		P3	OPEN	Guest reboot hangs when running memory workload
+	Holger, can you arrange someone in your team to verify this?
+20 137400	libvirt		P3	OPEN	Live guest migration and some virsh commands hang
+	Stefan, Can you have a look at this?
+21 137528	network		P3	NEEDINFO	macvtap guests attached to a VLAN interface hung off a bond interface lose connectivity for several minutes during bond failover
+	Michael, Can you try Gerhard's solution?

@@ -1,3 +1,78 @@
+1 137694	Build	P1	NEEDINFO	License files for FP1
+	LICR files might be attached latest by 8th March 2016.
+2 137679	BaseOS	P1	ASSIGNED	sg_luns cannot display more than 1023 luns
+	Will this bug be deferred to metis?
+3 136487	SDK		P2	ASSIGNED	Wrong SDK ISO Image filename
+	Klaus, what is the status of this bug?
+4 136488	SDK		P2	ASSIGNED	SDK image 160129 contains 9 product packages which must be removed
+	Klaus, What is the test ISO used for? Who will test this fix?
+5 136505	SDK		P2	ASSIGNED	New README file required
+	Klaus, What is the test ISO used for? Who will test this fix?
+6 137986	SDK		P2	ASSIGNED	Vulcan SDK license file for Developer works on SDK ISO and for acceptance handling
+	Klaus, What is the test ISO used for? Who will test this fix?
+7 136493	Installe	P2	ASSIGNED	Installation exited with error code: KVMIBMC002011
+	Will this bug be deferred to metis?
+8 136796	Document	P2	FIXEDAWAITINGTEST	abrt-cli not found
+	Who can contact Martha to confirm the update of this documentation?
+9 136799	BaseOS	P2	ASSIGNED	Running pvs -o pv_name command sometimes hung the entire system
+	Qing Yuan is working on this.
+10 136811	BaseOS	P2	ASSIGNED	Generation of SoS Report is getting hung with block plugin enabled
+	Qing Yuan could not reproduce this, waiting for Pawan's feedback.
+11 137250	KVM		P2	ASSIGNED	Cannot shutdown or destroy ICM 4.3 FP4 built guests on a zKVM RC1.4 partition
+	Michael, any update? Have you been able to recreate this?
+12 137984	kernel	P2	NEEDINFO	kernel.pid_max value set is not being used
+	Jens, seems that the reporter is expecting a fix eagerly, do you have any progress or plan?
+13 129359	Installe	P3	FIXEDAWAITINGTEST	Installer cannot install on DASD devices used by z/OS before
+	Holger, could you team verify this fix? Thanks.
+14 130716	BaseOS	P3	ASSIGNED	zipl command when 1st path to scsi is offline gets: Use of uninitialized value $blocksize in scalar chomp at /lib/s390-tools/zipl_helper.device-mapper line 518.
+	Michael, seems that you have verified the fix?
+15 136104	BaseOS	P3	ASSIGNED	systemd: Failed to register to bus: Did not receive a reply - when booting Vulcan RC2 in 9TB LPAR using eckd
+	Do we have some expert in systemd to have look at this?
+16 136629	BaseOS	P3	OPEN	zKVM:FC_HOST symbolic_name different when attached to Brocade or Cisco
+	Stefan, do you have any update?
+17 136791	BaseOS	P3	ASSIGNED	Error messages after restarting firewalld
+	Shuai Zhao is investigating this.
+18 136947	kernel	P3	OPEN	Temporary userspace hang-up under heavy load, interruption code 0x20001 in systemd-udevd
+	Jens, do you have any update?
+19 137184	BaseOS	P3	ASSIGNED	SCSI dasd partition missing after reboot
+	Zhi Guo is investigating this.
+20 137400	libvirt		P3	NEEDINFO	Live guest migration and some virsh commands hang
+	Stefan, do you have any update?
+21 137528	network		P3	NEEDINFO	macvtap guests attached to a VLAN interface hung off a bond interface lose connectivity for several minutes during bond failover
+	Michael, Can you try Gerhard's solution?
+22 138269	Unknown		P3	OPEN	unable to migrate virtual servers
+	Michael, do you have any update? 
+23 138342	kernel	P3	OPEN	Kernel stack overflow
+	Jens, can you have a look at this?
+24 136638	Build	P5	ASSIGNED	[R-Test] [RFC] s390-tools in installation initrd 
+	Zhi Guo is investigating this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 bugs to be fixed in FP1:
 136214	KVM		ASSIGNED	[R-Test] rcu sched timeouts with huge guests during managedsave 
 136486	KVM		ASSIGNED	[R-Test] qemu process doing managedsave cannot be killed for potentially a long time 
