@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} 订单详情 {% endblock %} 
+{% block css %}  <link rel="stylesheet" href="/static/css/orderstyle.css" />   {% endblock %} 
+{% autoescape on %}
+{% block content %}
+    
+    <div class="row-fluid">
+        
+        {% if submit %}
+            <h4><span class="red">{{order.user.username}},you buy !</span></h4>  
+        {% endif %}
+        
+        <div class="featurette">
+            <img class="featurette-image pull-left" src="/media/{{order.product.img}}">
+            <h2 class="featurette-heading">{{order.product.name}}</h2>
+            <h4><span class="red"> 价格：{{order.product.pric}}</span></h4>
+            <p class="lead">订购时间：{{order.odate|date:'Y-m-d h:m:s'}}</p>
+        </div>
+    </div>
+    
+{%endblock%}
+{% endautoescape %}

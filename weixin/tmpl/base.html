@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta name="baidu-tc-verification" content="f0db1b3ba3ee27aa03fcdbd5b8c249e2" />
+    <title>{% block title %} {% endblock %}</title>
+    
+    <style type="text/css">
+        body {
+          padding-top: 60px;
+          padding-bottom: 40px;
+          background-color:#b0c4de;
+        }
+        .sidebar-nav {
+          padding: 9px 0;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />  
+   
+    {% block css %} {% endblock %}
+    <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/static/admin/css/ie.css" /><![endif]-->
+    
+    <script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
+    <meta name="robots" content="NONE,NOARCHIVE" />
+</head>
+<body>
+{%include "nav.html"%}
+<div class="container-fluid">  
+   <div class="row-fluid">
+       <div class="col-md-3">
+            <div class="well sidebar-nav">
+               <ul class="nav nav-list">
+                    <li class="nav-header">test</li>
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="nav-header">test</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="nav-header">test</li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                  </ul>
+            </div><!--/.well -->
+       </div><!--col-md-3-->
+       <div class="col-md-9">
+        <!--conetnt-->
+        {%block content%}
+            
+        {%endblock%}
+        <!--end conetnt-->
+        </div><!--/col-md-9-->
+   </div>
+</div>
+</body>
+</html>

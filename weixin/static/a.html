@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bootstrap 实例 - 嵌套列</title>
+   <meta charset="UTF-8">
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <script src="css/jquery.min.js"></script>
+   <script src="css/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="row">
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+  <!-- Add the extra clearfix for only the required viewport -->
+  <div class="clearfix visible-xs-block"></div>
+
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+   <div class="col-xs-6 col-md-4"><abbr title="wutao">WT</abbr></div>
+</div>
+
+<div class="row">
+  <div class="col-xs-9">.col-xs-9</div>
+  <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this
+4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+  <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new
+line.</div>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1"
+placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1"
+placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+</body>
+</html>

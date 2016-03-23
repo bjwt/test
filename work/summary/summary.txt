@@ -1,3 +1,17 @@
+Python
+Bash
+Sed, AWK
+Data Structure
+Git
+Django
+SQL
+Linux
+Projects:
+	Installer
+	Wechat Project
+Interview
+
+
 1. Self introducion
    education back ground
    work experience
