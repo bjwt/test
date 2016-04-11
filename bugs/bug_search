@@ -1,3 +1,314 @@
+135267 135418 132959 133983 133985 135182 135468 136100 136185 136219 136358 136882 137293 137295 137621 138066 
+136476 138237 138371 136469 136855 138249 138372 138410 138490 138496 138894 138898 138909
+
+wok package update for metis-beta3 release
+qemu source package does not include libcacard package source
+initrd contains s390-tools but some dependencies for them are missing
+perl compilation problems in dracut for lsmem chmem and lsluns
+No repository found in the system
+Request zhpm package for metis-beta3.1 release
+
+Add virt-manager and virt-install
+[R-Test] kickstart file is a little bit messy after manual installation of Vulcan
+
+Need packages for OpenStack, HA and Perl
+Installer fails with new mcp 8.2 blivet package
+
+Add pcs, pacemaker,openssh-askpass and audipd-plugins
+Remove yum server reference from installer code
+Installation exited with error code: KVMIBMC002011 on unformated disk
+[R-Test] perl problems in dracut for zipl
+After manual install, ifcfg-script contains unpaired quotes resulting network device failure
+kvmibm-release package has wrong license and build information
+DNS specified during installer does not get set correctly on host
+reboot fails after installation on zFCP
+Add sendmail-cf,pacemaker-doc and dump tool
+Add python-blivet. Required for OpenStack "os-disk-config" function
+Define "DISTRIB_ID" for lsb-core package
+Add mt-st packages
+Installer can not handle partition size using new blivet pkg for metis beta3.2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+known_issue:
+
+
+
+ID▲		Comp	Resolution	Summary
+139625	Libvirt		---		Error when using --copy-storage-inc option for selective block migration
+139561	Installe	---		documentation regarding "install from DVD" is incomplete
+139403	Web-Inst	---		In web-installer interface Port field possible to input any symbols not only digital but any letters
+139402	Web-Inst	---		In web-installer interface Static IP, Netmask and Gateway fields do not support ***.***.***.*** mask
+139366	Installe	---		not possible to install on unformatted disk: KVMIBMCO03013
+139413	Web-Inst	FIX_BY_IBM	In web-installer interface on IPv4 configuration page after resizing the window all markups became unreadable
+139415	Web-Inst	FIX_BY_IBM	In web-installer interface on Activate device page after resizing the window all markups became unreadable
+139387	Unknown		---		Canceling out of virt-install from initial install pane puts guest being created into infinite loop.
+139367	PM	---		Request to ship an IBM provided python library in Metis for HA support
+139411	Web-Inst	FIX_BY_IBM	In web-installer interface on the IP configuration page DNS server field is missing but presents in the mockup
+139408	Web-Inst	ENHANCEMENT		In web-installer interface not possible to deactivate activated network device
+139409	Web-Inst	NOTABUG		In web-installer interface and in the mockup colors in storage/network/timezone/password pages are different
+139410	Web-Inst	NOTABUG		In web-installer interface in partitioning page data fields are different from the mockup
+139412	Web-Inst	ALT_SOLUTION_AVAIL	In web-installer interface field "Enable" rename to "Enable after installation" to make it clear
+139416	Web-Inst	FIX_BY_IBM	In web-installer interface on the Timezone page information how to easy find the timezone destination is missing but presents in the mockup
+139417	Web-Inst	NOTABUG		In web-installer interface in the Configuration summary in Network section some information is missing that presents in the mockup
+139332	Libvirt		---		Error when trying to migrate 5 or more non-shared disks using selective block migration
+139293	Libvirt		---		crash of guest, hangs virt-manager on host
+139319	Web-Inst	FIX_BY_IBM	Licensing screens numeration doesn't match with the mockup
+139181	PM	---		Kernel/libvirt/libvirt-python/qemu for metis-beta4.1 release
+139182	PM	---		Tracker bug for metis-beta4.1 release
+139286	HVM		---		Request wok code for metis-beta4.1 release
+139196	Network		UNREPRODUCIBLE	NetworkManager cannot handle empty GATEWAY value in ifcfg file
+139285	HPM		---		zhpm package for metis-beta4.1 release
+139035	Network		NOTABUG		Packets are not going through hipersockets when sent via macvtap
+139093	BaseOS	FIX_BY_IBM	zipl command when 1st path to scsi is offline gets: Use of uninitialized value $blocksize in scalar chomp at /lib/s390-tools/zipl_helper.device-mapper line 518.
+138902	BaseOS	NOTABUG		Installer render into dead pane using new blivet pkg
+138934	Installe	---		Installer partition summary shows swap partition, but it is not created
+138924	Network		---		uperf tcp_stream test regresses ~5% in metis beta 3.1 compared to metis beta 2.3
+138849	Installe	---		The installation fails with KVMIBMPR53412 for two network devices in the kickstart file
+138891	HVM		---		HVM:wok daemon Hygiene Overall logging clean up and enhancements
+138827	BaseOS	---		Sysbench Threads test regresses 7-8% on Metis Beta3.1 compared to Metis Beta2.3
+138828	BaseOS	---		sysbench oltp mysql regression on Metis beta3.1 when compared to Metis beta 2.3
+138687	HVM		---		HVM:STOR filter - filter on a non existing chars in stor list so No Results Found! Overwrite with blank chars and No Results Found
+138702	Network		---		uperf TCP_RR test regresses ~8% in Metis Beta 3.1
+138658	Installe	---		yum.log does not contain package install information
+138559	Kernel	FIX_BY_IBM	SCSI_Dump: Impossible to install the dump tool
+138561	Kernel	FIX_BY_COMMUNITY	assertion failed at net/ipv6/mcast.c when rebooting after Vulcan FP1 upgrade
+138553	Kernel	FIX_BY_COMMUNITY	mm: fix mlock accouting
+138557	Kernel	FIX_BY_COMMUNITY	During Kronos to Vulcan RC1 upgrade, get RTNL: assertion failed at net/core/dev.c (4577)
+138560	Kernel	FIX_BY_IBM	[R-Test] rcu sched timeouts with huge guests during managedsave
+138493	Libvirt		FIX_BY_IBM	Migration crashes libvirt when ovsbridge port is removed from guest
+138494	Libvirt		FIX_BY_IBM	VIrsh shutdown gets journal message: “nl_recv returned with error: No buffer space available”
+138495	Libvirt		FIX_BY_COMMUNITY	libvirt has O(n^2) complexity for macvtap devices
+138491	QEMU	FIX_BY_IBM	using watchdog-action=none nothing happens, after the watchdog bites, I cannot execute the watchdog-test code anymore, until I end the watchdog and restart it
+138470	BaseOS	---		sg_luns cannot display more than 1023 luns
+138403	Build	FIX_BY_IBM	SDL2-devel for the build system
+138250	BaseOS	---		Story 71322: PCR 71322 : including lsb_release support
+138266	Installe	---		read() on urllib2.urlopen() object fails intermittently when connecting to proftpd
+138301	HVM		---		HVM: Add Bond/vlan with existing name is allowed. Isn't it should notify that its already existing?
+138252	Upgrade		---		IPV6 set up lost after upgrade execution
+138079	Libvirt		FIX_BY_IBM	Guest Dump triggered by watchdog action not memory-only, so can't be processed by crash on the guest
+138072	KVM		FIX_BY_IBM	KVM: s390: fix mismatch between user and in-kernel guest limit
+138073	KVM		FIX_BY_IBM	[R-Test] qemu process doing managedsave cannot be killed for potentially a long time
+138076	Libvirt		FIX_BY_COMMUNITY	[R-Test] Race condition when sharing initrd between guests
+138032	Libvirt		---		Concurrent Migrations >=45 Fail to Vulcan RC1 with: error: End of file while reading data: Ncat: Invalid argument.: Input/output error
+138043	HVM		---		HVM: Concurrent Enable/disable Lun scan.
+138007	HVM		---		configuration backup UI enhancement.
+137989	HVM		FIX_BY_IBM	GUI creates ifcfg- file even after error is thrown
+137987	HVM		NOTABUG		HVM: Enable Lun Scan is disabled till data is not listed in Add FCP devices.
+137988	BaseOS	FIX_BY_IBM	pcs package include a Redhat log in WEB UI
+138006	HVM		FIX_BY_IBM	HVM: Documenation for suggested browser for HVM UI.
+137743	QEMU	FIX_BY_COMMUNITY	managedsave: kvm ignores signal, fails to exit
+137708	HVM		---		HVM[Updates]: Add Does not work
+137700	BaseOS	ENHANCEMENT		Request for inclusion of Nagios kvm plugin into product
+137691	KVM		FIX_BY_IBM	Kernel warning message while doing live guest migration on metis beta 3.1
+137627	HVM		---		HVM:[Updates] The interface for Actions under the Updates Panel is inconsistent and does not make sense
+137631	HVM		---		HVM[Updates]: Edit does not work on an existing repos
+137632	HVM		---		HVM[Updates]: Action->Add you have 2 info notes under options that refer to DEB repos. We are still on RHEL so yum
+137556	HVM		---		The activation of interface shows a successful message but is not activated in actual
+137449	Network		---		[NET1504]It takes a lot of time to add 2047 MAC to the OSA (the problem didn't exist at first)
+137490	Network		NOTABUG		After setting new mac address for a macvtap device, the gmac address is not changed automatically
+137506	HVM		---		HVM: Scalability: deletion of network interface message
+137327	HVM		---		HVM: Providing details about all the users logged in via UI, and each user active session info.
+137296	Libvirt		---		Duplicate guest SCSI disk addresses possible
+137245	Network		---		Some "ip link set" operations cause OSA interface failure
+137186	HVM		---		Usability issues with the 'Debug Reports' task (follow up from 135845)
+137243	HVM		---		HVM:The option to remove an iSCSI device is available to the user, but it really shouldn't be for Vulcan
+137160	HVM		---		HVM: On Reboot or shutdown from UI, the UI does not indicate if system got rebooted or not.
+137161	HVM		---		HVM: Remove luns sometime does not removes all the paths and have to perform multiple deletes
+137128	BaseOS	---		After installation, in ntp.conf there is mention about "centos"
+137127	Installe	NOTABUG		In manual installation process if you choose timezone and press ENTER, timezone remains default
+137109	HVM		---		HVM user in sudo group can do Admin tasks but GUI shows profile as kimchiuser
+137051	HVM		FIX_BY_IBM	Add user adds ID into an existing group (matching new uid) and creates duplicate gid in /etc/group
+136890	Web-Inst	FIX_ALREADY_AVAIL	Installation on scsi disks fails
+136914	HVM		---		bond interface gets a bootproto of DHCP
+136814	BaseOS	---		Pacemaker: Can ping only one node by floating IP in Active/Active conf
+136849	Web-Inst	ALT_SOLUTION_AVAIL	Table markup at Storage tab is wrong placing
+136798	Web-Inst	ENHANCEMENT		No button to switch between tabs
+136809	Web-Inst	ENHANCEMENT		in the license agreement screen not obvious what button to press "Next" or "Next licence"
+136810	Web-Inst	NOTABUG		for disk capacity 7 Gb swap wasn't created
+136812	Web-Inst	ENHANCEMENT		on Partitioning remove OK button after it was pressed once
+136854	Web-Inst	ENHANCEMENT		two-level navigation through the installation process makes impossible to go back or move forward to one single step
+136829	Libvirt		---		libvirt has O(n^2) complexity for macvtap devices
+136819	Installe	FIX_BY_IBM	Installation time for KVM on z is much higher than for other OS
+136851	Web-Inst	ALT_SOLUTION_AVAIL	show partitioning immediately after disks were selected and followed to partitioning page
+136806	HVM		---		IPV6 fields UI Validation needs to be done
+136727	Web-Inst	---		Parallel sessions are enabled for installer.
+136725	Web-Inst	FIX_BY_IBM	Installation can be start without accepting license agreement
+136731	Web-Inst	FIX_BY_IBM	should use fixed space between IBM and "z"
+136718	Web-Inst	NOTABUG		Excess design element for user selection.
+136719	Web-Inst	FIX_BY_IBM	Button position is not fixed.
+136720	Web-Inst	ENHANCEMENT		Additional color in the configuration.
+136721	Web-Inst	NOTABUG		No hint at hovering disabled button
+136723	Web-Inst	FIX_BY_IBM	Switch between sections enabled via URL
+136789	Web-Inst	ALT_SOLUTION_AVAIL	license agreements page has double scroll and hidden below buttons
+136659	Kernel	FIX_BY_IBM	[Limit-Test] Unable to boot Host with over 8TB Memory defined
+136669	Build	NOTABUG		Add pcs,pacemaker,openssh-askpass,pax, strongswan and other tools
+136632	Web-Inst	---		Disks description for scsi unclear
+136594	HVM		---		HVM: Storage Device listing shows "Not Record Found" till the time data is getting fetched.
+136621	BaseOS	FIX_BY_IBM	not able to load a guest with SLES12.1 on 1.1.2-beta3.1
+136500	HVM		---		HVM:Volume Group panel enhancement
+136582	HVM		---		IO / NW : When we remove and add network device with out bringing down the interface, NM is playing a role
+136503	HVM		---		HVM:Storage Devices panel enhancements
+136508	HVM		---		HVM:SAN Adapters panel enhancements
+136477	PM	---		Tracker bug for metis-beta3.2
+136492	BaseOS	FIX_BY_IBM	virt-manager connection failure - package openssh-askpass is not installed
+136471	HVM		---		Activation on orphan vlan interface should through an error message instead of successful message
+136384	BaseOS	FIX_BY_IBM	[R-Test] chccwdev man page contains obvious typo
+136351	KVM		FIX_BY_IBM	The guest on qcow2 image can't be launched
+136332	Upgrade		---		[R-Test] kvmibm-upgrade-system outputs 'RuntimeError: Could not find the license: license/LI_en'
+136237	Web-Inst	FIX_BY_IBM	License agreement check box typo
+136241	Installe	---		[R-Test] confusing configuration of multipathed zFCP disks
+136208	Web-Inst	ALT_SOLUTION_AVAIL	hover caption over the "Installation" button is misleading
+136209	Web-Inst	FIX_BY_IBM	web-installer use disks only from PRM file and discard user selection
+136091	Web-Inst	---		Installation failed due to Cyrillic password
+136104	BaseOS	FIX_BY_IBM	systemd: Failed to register to bus: Did not receive a reply - when booting Vulcan RC2 in 9TB LPAR using eckd
+136041	BaseOS	---		GDB does not display the vector registers when info all-registers command is issued
+136033	HVM		---		HVM: The SAN Adapter 'Symbolic Name' is not getting fully populated on all adapters
+135960	Web-Inst	---		Installer doesn't show unformatted disks.
+135956	Web-Inst	FIX_BY_IBM	Installer allows installation after resetting disks
+135871	Web-Inst	FIX_BY_IBM	Refresh needed to display partitioning info
+135880	Web-Inst	FIX_BY_IBM	Next and Reset buttons do not work under certain circumstances and the Storage tab is shorter
+135875	Kernel	FIX_BY_IBM	A potential host hang due to "BUG: sleeping function called from invalid context at mm/slub.c:1266" for guests using vector support
+135884	Kernel	FIX_BY_IBM	PSIRT #4576: SECURITY: COMMUNITY: kernel CVE-2016-0728
+135887	Build	---		httpd not able to start, blocked by new ssl config file
+135866	QEMU	FIX_BY_IBM	PSIRT #4549: SECURITY: COMMUNITY: qemu CVE-2015-8558 CVE-2015-7504 CVE-2015-7295 CVE-2015-7549 CVE-2015-8504 CVE-2015-8567 CVE-2015-8568 CVE-2015-8345
+135730	HVM		---		nfs mount fails with 500
+135731	HVM		---		mount file system fails
+135753	HVM		---		Create swap file fails
+135758	HVM		---		Delete physical volume fails with 500 status code
+135760	HVM		---		Reduce Volume Group fails with 500 status code.
+135761	HVM		---		extend volume group with pv which is part of another vg - fails with 500
+135762	HVM		---		Extend volume group fails
+135764	HVM		---		Delete volumegroup fails with 500
+135781	HVM		---		Create partition fails with 500
+135774	HVM		FIX_BY_IBM	NW: operation failed for cfginterface PUT with "BOOTPROTO":"autoip" for ipv4
+135772	HVM		FIX_BY_IBM	MemoryError: Delete operation for /dasdpartitions fails with 500
+135729	HVM		NOTABUG		unmount fails
+135692	HVM		---		Storage-> FC LUNS. The error message while deleting a FC LUN path with invalid value is misleading.
+135716	HVM		---		[UI] NW: Feature to support multiple activate and deactivate action on interface.
+135756	HVM		---		[UI] NW :- Feature to provide user flexibility to give VLAN name
+135738	HVM		---		[NW] Not able to restart the network
+135752	HVM		---		NW: Feature to cleanup of attributes which are not necessary in ifcfg file
+135778	HVM		---		firewall zones configuration for the network interfaces
+135796	HVM		---		Need to have new API call to list all avilable firewall zones
+135823	HVM		---		[Storage] HVM: Switch tab when formatting ECKD device going on shows incorrect information in "Storage Device' panel
+135777	HVM		FIX_BY_IBM	NW: Getting "Bootpro missing" for PUT operation for cfginterface
+135718	HVM		---		NW: Removal of libvirt from ginger.
+135795	HVM		---		Filter loopback(lo) and virtual bridge from network interfaces list
+135811	HVM		---		Ginger : Removal of libvirt dependency on interfaces
+135812	HVM		---		[TODO]: Listing correct slaves while creating Bond and VLAN from UI
+135801	HVM		---		Issue while performing GET or PUT operation, performed after PUT operation with any parameter as "" even with DEVICE
+135803	HVM		---		Issue while updating MTU in network interface file.
+135802	HVM		DUPLICATE	API Documentation, does not say what need to be done if user want to remove MTU parameter from network interface file
+135522	HVM		NOTABUG		test summery
+135571	HVM		---		HVM: ECKD Device - no formatting Options
+135520	HVM		DUPLICATE	[Plugin Gingers390x Issue #25] [Storage] FC LUNS. The error message while deleting a FC LUN path with invalid value is misleading.
+135572	HVM		---		HVM: No way visible to 'Blacklist' a storage device
+135422	BaseOS	FIX_BY_IBM	audisp-remote needs to be delivered/installed with product
+135269	PM	---		Tracker bug for Metis-beta3.1
+134985	BaseOS	---		lnxhc run does not fetch correct runlevel
+134386	PM	---		libvirt, libvirt-python, qemu, kernel patch track for metis-beta2.3
+134387	PM	NOTABUG		Tracker Bug for Metis-beta2.3
+134327	QEMU	FIX_BY_IBM	[54664,070,724] 3390-77 DASD causes QEMU error: cyls must be between 1 and 65535
+134318	PM	FIX_BY_IBM	Tracker Bug for metis-beta2.2
+134321	BaseOS	FIX_BY_IBM	Message repeatedly logged - Failed to reset devices.list on /machine.slice: Invalid argument - after starting a guest
+134248	Installe	FIX_BY_IBM	installer fails with error KVMIBMIN70500
+134251	Installe	FIX_BY_IBM	installer encrypted swap area has wrong name
+134250	Installe	FIX_BY_IBM	installer doesn't remember "encrypt swap partition" setting
+134213	Installe	FIX_BY_IBM	installer kdump can not disable "Kdump feature"
+134077	Installe	FIX_BY_IBM	installer kdump License pages are referring to the wrong driver
+134032	BaseOS	FIX_BY_IBM	Upgrade KVMIBM-1.1.0 to Metis using Upgrade Tool was not completed due to errors
+134037	Build	FIX_BY_IBM	Missing healthchecker rpm for Metis driver beta2.1
+133916	Installe	FIX_BY_IBM	installer IPv4 proceed when using a wrong format of network address, Gateway or Netmask
+133879	Installe	FIX_BY_IBM	Upgrade Tool documentation is missing update for Metis
+133888	BaseOS	---		GDB core dumps when trying to debug a KVM guest
+133885	QEMU	FIX_BY_IBM	Error when trying to debug KVM guest with GDB on Metis driver
+133829	QEMU	FIX_BY_IBM	Reenable address space layout randomization for QEMU binary (reenable pie)
+133712	Kernel	FIX_BY_IBM	Storage key optimization request for Vulcan
+133673	Build	FIX_BY_IBM	guest using F20_64-20151106 driver can not be accessed via SSH
+133659	Build	FIX_BY_IBM	Key size and digest algorithm of rpm signing key should be changed
+133632	Installe	FIX_BY_IBM	installer kdump proceed when using a wrong memory size or a digit
+133519	Build	FIX_BY_IBM	Add 'sdk' repo in /etc/yum.repos.d/ibm_zkvm.repo
+133477	PM	NOTABUG		libvirt, libvirt-python, qemu, kernel patch track for metis-beta2.1
+133476	PM	NOTABUG		Tracker Bug for metis-beta2.1
+133410	QEMU	NOTABUG		Provide qemu machine kvmibm-1.1.2 for Metis
+133342	Kernel	FIX_BY_IBM	Disable CONFIG_SCLP_CPI in kernel config
+133248	Libvirt		UNREPRODUCIBLE	[Limit] Attempting to start max supported guests, receiving abrt-hook-ccpp: Not saving repeating crash in '/usr/bin/qemu-system-s390x'
+133246	QEMU	FIX_BY_IBM	make check fails when building qemu on koji server
+133244	QEMU	FIX_BY_IBM	Change QEMU specfile to built with --enable-trace-backend=none
+133251	Libvirt		FIX_BY_IBM	Change default qemu.conf and default libvirtd.conf values to the zKVM recommended values
+133302	Build	FIX_BY_IBM	Add yum-plugin-aliases, man-pages-overrides and oprofile
+133250	Libvirt		FIX_BY_IBM	Error msg: systemd-sysctl: Overwriting earlier assignment of fs/aio-max-nr
+133237	QEMU	FIX_BY_IBM	Provide qemu machine kvmibm-1.1.2 for Metis
+133018	Kernel	FIX_BY_IBM	PSIRT #3925: SECURITY: kernel CVE-2014-9585 CVE-2014-9715 CVE-2015-1333 CVE-2015-2666 CVE-2015-2922 CVE-2015-3212 CVE-2015-3636 CVE-2015-4700 CVE-2015-5364 CVE-2015-5366
+132985	Kernel	FIX_BY_IBM	Update mcpsource to ibmsource
+132965	Kernel	FIX_BY_IBM	Identifier for Cryptocards on LPAR is wrong CEX4..... instead CEX5.....
+133012	Kernel	FIX_BY_IBM	Kernel signing key need to be changed from 4096 bits to 3072 bits
+133013	BaseOS	FIX_BY_IBM	Yum does not recognize the distro version. $releasever var is empty.
+133014	Build	FIX_BY_IBM	Frobisher initrd contains znetconf but not awk, getopt, etc
+132906	KVM		FIX_BY_IBM	Guest crashes while executing pfault managed save test
+132923	PM	---		Tracker Bug for Metis Kernel Configuration change
+132925	PM	---		Tracker Bug for Metis build env package change
+132894	PM	FIX_BY_IBM	libvirt, libvirt-python, qemu, kernel patch track for metis beta1
+132895	PM	NOTABUG		Tracker Bug for metis beta1.1
+132887	Build	FIX_BY_IBM	Replace kvmibm1_1_2-release package with kvmibm-release-1.1.2 package
+132737	Build	NOTABUG		Move disable of sendmail.service in post changes to rpm
+132559	Build	---		Move post changes of /etc/sysctl.conf to rpm package
+102873	Libvirt		NOTABUG		virsh cpu compare not matching with output of virsh capabilities 
+
+
+
+
+
+
+
 https://bugzilla.linux.ibm.com/query.cgi?bug_status=OPEN&bug_status=ASSIGNED&bug_status=REOPENED&bug_status=FIXEDAWAITINGTEST&bug_status=TESTED&bug_status=SUBMITTED&bug_status=ACCEPTED&bug_status=REJECTED&bug_status=DEFERRED&bug_status=NEEDINFO&classification=Frobisher%20Project&component=BaseOS&component=Build&component=Documentation&component=GPFS&component=HPM&component=Installer&component=kernel&component=KVM&component=libvirt&component=network&component=OpenStack&component=Project%20Management&component=QEMU&component=RAS&component=Unknown&email1=ELELUECK%40de.ibm.com&email2=MIHAJLOV%40de.ibm.com&emailreporter1=1&emailreporter2=1&emailtype1=notequals&emailtype2=notequals&product=Vulcan&query_format=advanced&known_name=Vulcan 
 
 https://ltc3.linux.ibm.com/wiki/Frobisher/Process/Bug_Support 
