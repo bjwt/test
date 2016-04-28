@@ -1,0 +1,31 @@
+
+
+p1 high Bug 139984 - Guests hang when attempting to reboot on Vulcan FP1 
+ patch is under internal review.
+Bug 139772 - chmem -d crashes a Vulcan FP1 system running in a DPM LPAR
+ test package from mcp, drive Michael to check if the package fixes the issue. it is a high priority bug.
+Bug 135658 - Getting Tainted Kernel messages against openvswitch - specific to ovs-gre guests 
+ Dirk suggests to document and close it, who will be the one to document it?
+Bug 136493 - Installation exited with error code: KVMIBMC002011 on unformated disk
+ status?
+
+
+139994 	s390-Too 	JFREI@de.ibm.com 	ASSIGNED 	P2 	normal 	zgetdump returns "No valid dump found" on SCSI dump device 
+  -->assigned to Jens
+140297 	kernel 	bjhwshen@cn.ibm.com 	OPEN 	P3      normal 	After upgrade to 4.4.6+ kernel and reboot, the virbr0 interface is not up and can't start with virsh net-start default 
+  -->MATTHEW spots something, asking him for suggestion
+140387 	BaseOS 	kamaleshb@in.ibm.com 	OPEN 	P3 	high 	makedumpfile --eppic fails with Zeus 
+  --> Klaus, assign it to you?
+140499 	Build 	xiewj@cn.ibm.com 	OPEN 	P3 	normal 	Tracker Bug for Zeus Kernel Configuration change 
+132475 	kernel 	bjhwshen@cn.ibm.com 	ASSIGNED 	P3 	normal 	fio random read test (8K, 1 job) regresses ~5% from beta2.3 to beta3.2 
+  -->cloned from vulcan, What is the version of kernel in Zeus? 4.4?
+140186 	kernel 	JFREI@de.ibm.com 	ASSIGNED 	P3 	normal 	Stopping firewalld causes openvswitch kernel modules to be unloaded 
+  -->assigned to Jens
+139731 	Build 	JFREI@de.ibm.com 	ASSIGNED 	P3 	normal 	Fedora kernel spec file requires higher linux-firmware and xfsprogs package versions as we have in Metis
+  -->assigned to Jens 
+140690 	BaseOS 	bjwt@cn.ibm.com 	ASSIGNED 	P3 	normal 	kdump broken with kernel 4.4 
+140626 	BaseOS 	gerhard.stenzel@de.ibm.com 	ASSIGNED 	P3 	normal 	NetworkManager user process faults when running openvswitch regression tes   ts 
+  --> assigned to Gerhard
+139959 	BaseOS 	qingyuan.hou@cn.ibm.com 	ASSIGNED 	P3 	high 	Genearation of debugreport failing on ubuntu kernel. 
+  --> assigned to qingyuan
+
