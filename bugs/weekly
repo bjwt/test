@@ -1,5 +1,7 @@
 LP15 /srv/html/ibm/stable
 
+48203546
+
 [root@ltczhyp1 ~]# cat /etc/resolv.conf 
 nameserver 9.152.120.241
 search boebenlingen.de.ibm.com
