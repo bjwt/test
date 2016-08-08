@@ -1,20 +1,19 @@
-1 138470	BaseOS	NEEDINFO	P1	high	sg_luns cannot display more than 1023 luns
-	--> Klaus has created a test version of package, waiting for the reporter to verify.
-2 139958	s390-Too	DEFERRED	P1	high	hardware performance counters and respective tools missing
-	--> Jens, do you have any update?
-3 139962	s390-Too	FIXEDAWAITINGTEST	P1	high	zgetdump returns "No valid dump found" on SCSI dump device
-	--> Jens, can we close this since the fix in Vulcan had been verified? Or still need testing?
-4 141359	QEMU	ASSIGNED	P1	high	Guests hang when attempting to reboot on Vulcan FP1
-	--> Jens, what is the fix plan?
-5 140978	Build	ASSIGNED	P1	ship issue	Following upgrade of Vulcan FP2 system to Metis, there are several packages at a higher level than a newly installed Metis system
-	--> Michael, do you have any update?
-6 137449	Network		REOPENED	P2	block	[NET1504]It takes a lot of time to add 2047 MAC to the OSA (the problem didn't exist at first)
-	--> Michael, do you have any update?
-7 141079	Libvirt		WORKING		P2	ship issue	Unable to open file: /var/log/libvirt/qemu/zs93k1g99157.log: Too many open files.
-   --> Jens, Could you please build a test package for the reporter to verify?
-8 141522	Installe	OPEN	P2	high	asked to encrypt swap without having a swap device
-   --> Just assigned to the developer.
-9 141094	KVM		OPEN	P2	high	Live Guest Migrate fails with - Cannot open log file: '/var/log/libvirt/qemu/<guest>.log': Device or resource busy
-   --> Jens, do you have any update? Is there anyone looking at this bug?
-10 141037	Network		OPEN	P2	high	After reboot of Metis Beta 4 system, default gateway is not set when using vlan & bond interfaces
-	--> Michael, do you have any update?
+To Waiki:
+	Bug 143751 - Newer packages in Metis RC1.5 as in Zeus Beta 2.2
+	Bug 143234 - tcpdump fails with error msg: tcpdump: can't mmap rx ring: Invalid argument
+		tcpdump-4.7.4(4.5.1)   --------    libpcap-1.7.4
+	Bug 143689 - SDK - Problem with 4.4 kernel headers
+	Bug 143425 - Add packages for HVM audit report
+	Bug 143394 - Add openslp package to the Zeus project
+
+To Michael:
+	Bug 142691 - With Vulcan FP4 Network Mgr rpms getting SELINUX denied messages trying to write to /sys
+		The fix has been included in the Beta 2.1 driver, please verify if it works, thanks!
+
+
+To Qing Yuan:
+	Bug 144263 - Few rpms were not installed as part of base os for the release zeus - beta 2.2
+
+
+To Mei:
+	Bug 132559 - Move post changes of /etc/sysctl.conf to rpm package
