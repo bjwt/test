@@ -7,8 +7,9 @@ Django
 SQL
 Linux
 Projects:
+	dtbl umproxy
 	Installer
-	Wechat Project
+	nginx
 Interview
 
 
@@ -254,3 +255,88 @@ git commit -v
 git commit -s -m "fix the path problem"
 git format-patch -M remotes/origin/zfrobisher
 git send-email --to  zfrobisher@lists.linux.ibm.com 0002-fix-the-path-problem.patch 
+
+
+
+
+c++ primer plus
+	mianshiti
+	dtbl
+	
+c primer plus
+	c xiandai
+	zhengfu c zhizhen
+
+apue
+unp
+
+nginx
+
+sql
+
+database
+
+linux 
+
+using each language:
+print to console
+write to file/ read from file
+
+c++ primer plus P240
+c++ primer plus P280
+c++ primer plus P339
+c++ primer plus P411
+
+gcc
+gdb
+gcov
+gprof
+strace
+cppunit
+ab
+tshark/tcpdump
+
+c/c++
+	nginx,dtbl,stl
+python
+	installer
+shell
+	grep,sed,awk
+	bash
+data structure
+linux
+	apue,unp
+sql
+debug,test,performance,
+
+
+	log, config, string
+
+
+	my c functions:
+
+
+functions:
+
+linux api:
+
+
+c:
+
+
+c++:
+
+
+python:
+
+bash:
+
+command:
+
+sql:
+
+
+sort by fields:
+string:
+file:
+io:
