@@ -1,15 +1,43 @@
-Python
-Bash
-Sed, AWK
-Data Structure
-Git
-Django
-SQL
+C/C++
 Linux
+	API
+	network programming
+	kernel
+	Bash
+	Sed, AWK
+Python
+	Django
+Data Structure
+SQL
+Tools
+	vi :h, read them all
+	git
+	make
+	gcc/gdb/gprof/gcov
+	tcpdump
+	cppunit
+	ab
 Projects:
 	dtbl umproxy
 	Installer
 	nginx
+English
+	NCE
+	Zoubianmeiguo
+	Words
+	NPR
+	TVs
+		friends
+		24
+		Desperate Housewives
+	Read masterpiece
+Todo list:
+
+words:
+phrase:
+functions:
+grammer:
+
 Interview
 
 
