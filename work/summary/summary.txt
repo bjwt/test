@@ -1,13 +1,77 @@
+Data Structure
 C/C++
+	C:
+	C++:
+		fundmental:
+		class:
+			构造函数和普通函数怎么区分
+				Stock second("he");
+				a function with second or a object initializing with "he" ?
+			隐式调用默认构造函数时，不要使用圆括号
+			cpp pp 10.6.2 作用域为类的enum
+			不要返回指向局部变量或者临时对象的引用
+		stl:
+		functions:
+Web Server:
+	nginx
+	apache
+	tomcat
+	lighttpd
 Linux
 	API
+		open
+			O_RDONLY, O_WRONLY, O_RDWR
+			O_CREAT, O_APPEND, O_TRANC, O_EXCL, O_DIRECTORY
+			why failed when O_RDWR on a dir?
+			openat() ?
+
+		read
+		write
+		lseek
+		close
+		pread
+		pwrite
+		dup
+		dup2
+		fcntl ?
+		ioctl ?
+		access
+		faccessat
+		umask
+		chmod
+		chown
+		trancate
+		link
+		unlink
+		remove
+		rename
+		symlink
+		readlink
+
+		getpwuid
+		getpwnam
+		getpwent
+		setpwent
+		endpwent
+
+		getspnam
+		getspent
+		setspent
+		endspent
+
+		getgrgid
+		getgrnam
+		getgrent
+		setgrent
+		endgrent
 	network programming
 	kernel
 	Bash
 	Sed, AWK
+
+
 Python
 	Django
-Data Structure
 SQL
 Tools
 	vi :h, read them all
@@ -17,6 +81,11 @@ Tools
 	tcpdump
 	cppunit
 	ab
+	pwd -P
+	mkdir -m
+	VBoxManage modifyvm "fedora25" --natpf1 "ssh,tcp,,2225,,22"
+	VBoxManage modifyvm "fedora25" --natpf1 "http,tcp,,8009,,8080"
+
 Projects:
 	dtbl umproxy
 	Installer
@@ -32,6 +101,8 @@ English
 		Desperate Housewives
 	Read masterpiece
 Todo list:
+	force reading system info doc
+	listen more, just do it
 
 words:
 phrase:
@@ -368,3 +439,27 @@ sort by fields:
 string:
 file:
 io:
+
+Words:
+		a third wheel
+		abdominal tenderness
+		abduct
+		aberration
+		abhorrent
+		ablution
+		abnomination
+		abruptly
+		abstention
+		abusive
+		abyss
+		accessorize
+		accessory
+		accommodate
+		accomplice
+		acoustic
+		acquittal
+		actuarial
+		acumen
+		acupuncture
+		Adam's apple
+		addled
