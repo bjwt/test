@@ -1,3 +1,27 @@
+Todo:
+
+collect configure files like .vimrc, .irssi.rc etc and upload them to cloud.
+
+mail, irssi,
+urls: python, django, bootstrap, git
+
+
+原来：
+
+import django.core.handlers.wsgi
+
+application = django.core.handlers.wsgi.WSGIHandler()
+
+	改成：
+
+	from django.core.wsgi import get_wsgi_application
+
+	application = get_wsgi_application()
+
+	重启一下uwsgi。
+
+	网上找来的解决办法，希望有帮助。
+
 Data Structure
 C/C++
 	C:
@@ -12,11 +36,19 @@ C/C++
 			不要返回指向局部变量或者临时对象的引用
 		stl:
 		functions:
+
+
 Web Server:
-	nginx
-	apache
-	tomcat
-	lighttpd
+	apache 8001
+	nginx 8002
+	tomcat 8003
+	lighttpd 8004
+		copy webserver/lighttpd-1.4.44/doc/config
+git repos:
+	django:
+	nginx:
+
+
 Linux
 	API
 		open
