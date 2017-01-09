@@ -1,9 +1,11 @@
 Todo:
 
+curl
+tcpdump
 collect configure files like .vimrc, .irssi.rc etc and upload them to cloud.
 
 mail, irssi,
-urls: python, django, bootstrap, git
+urls: python, django, bootstrap, git, github
 
 
 原来：
@@ -263,6 +265,7 @@ linux
       i n h H
     awk
   git:
+    Q: how to display the file in the staged status?
     push pull clone add commit reflog 
 	git tag
 	git reset --soft --mixed --hard
