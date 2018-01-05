@@ -342,6 +342,13 @@ cmd:
        	    uncomment the `altscreen on' in the `/etc/screenrc' file.
         pageup in gnu screen
         	C-A Esc
+在最初使用screen时，感觉最不舒服的就是它的闪屏。当移动到行首或者行尾时，再尝试移动屏幕就会闪烁一下，让人很不适应。关闭screen屏幕闪动的方法其实很简单，你只需要使用CTRL-a CTRL-g，也就是先输入CTRL + a，再输入CTRL + g。
+
+如果想永远关闭screen的闪屏功能，需要修改配置文件。在CentOS中可以修改/etc/screenrc，修改这个文件将对所有用户生效。Easwy一般只修改自己的配置文件。在$HOME/.screenrc中加入下面的话：
+
+
+vbell off 
+其实这与vi中的visualbell功能很是类似。在vi中关闭闪屏，是使用:set novisualbell命令。
     man-pages:
        if can not `man 2 open` etc, can exectue `sudo yum install man-pages`.
 	calibre:
@@ -498,3 +505,28 @@ Words:
 		acupuncture
 		Adam's apple
 		addled
+
+
+plan 17.11
+
+1. web
+	html/css/javascript
+	jquery/ajax/bootstrap
+
+	django
+	nginx
+
+2. git
+3. jenkins/redis
+4. charles/curl/postman
+5. python
+6. shell/grep/sed/awk
+7. php
+8. mysql
+
+
+url decode
+http://tool.chinaz.com/tools/urlencode.aspx
+
+json decode
+https://www.bejson.com/
