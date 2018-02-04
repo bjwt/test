@@ -1,28 +1,83 @@
-Todo:
+git python shell (sed awk) django bootstrap
+mysql curl tcpdump json 
+make re sort 
+nginx docker
+redis jekins zookeeper hadoop bigpipe
 
-curl
-tcpdump
-collect configure files like .vimrc, .irssi.rc etc and upload them to cloud.
+configure file:
+vi screen irssi
 
-mail, irssi,
-urls: python, django, bootstrap, git, github
+Think:
+	How to design a system?
+	How to test a system?
+	A web system?
+		mobile
+		pc
+
+nginx:
+	pointers on c
+	The linux programming interface
+	unp
+	http
+	nginx books
+	nginx src
+	nginx git 
+	tenginx
+
+GIT:
+    Q: how to display the file in the staged status?
+    push pull clone add commit reflog 
+	git tag
+	git reset --soft --mixed --hard
+    	git fetch -v
+	git merge 
+	git rebase
+	git add .
+	git add -A
+	git log --pretty=oneline --author --since
+	git stash pop/list/apply (use git add . first)
+	git shortlog -s -n (sort authors by commit)
+	git clean -f -x/-X/-e/-q
+	git clean -f -d (clean dirs)
+	git rev-parse HEAD (display commit id)
+
+	git clone https://git.duapp.com/appid4aa7frkod0
+	id: 13811803528
+	pswd: wutaosa...
+	yum install git-email 
+
+	git config --global user.name "Tao Wu"
+	git config --global user.email bjwt@linux.vnet.ibm.com
+	git config --global sendemail.smtpserver ap.relay.ibm.com
+	git config --list
+
+	git help reset
+	git reset --help
+	man git reset
+
+	#git or #github channel on the Freenode IRC server
+
+	git clone git@git.linux.ibm.com:zfrobisher/zfrobisher-installer.git
+	git clone git://github.com/schacon/grit.git mygrit
+	git checkout -b zfrobisher origin/zfrobisher
+
+	git rm --ceched
+
+	git format-patch -M master
+
+	git format-patch -M remotes/origin/zfrobisher
+
+	git commit -v
+
+	#git send-email --to zfrobisher@linux.vnet.ibm.com 0002-fix-the-path-problem.patch 
+	git commit -s -m "fix the path problem"
+	git format-patch -M remotes/origin/zfrobisher
+	git send-email --to  zfrobisher@lists.linux.ibm.com 0002-fix-the-path-problem.patch 
 
 
-原来：
 
-import django.core.handlers.wsgi
 
-application = django.core.handlers.wsgi.WSGIHandler()
 
-	改成：
-
-	from django.core.wsgi import get_wsgi_application
-
-	application = get_wsgi_application()
-
-	重启一下uwsgi。
-
-	网上找来的解决办法，希望有帮助。
 
 Data Structure
 C/C++
@@ -40,12 +95,6 @@ C/C++
 		functions:
 
 
-Web Server:
-	apache 8001
-	nginx 8002
-	tomcat 8003
-	lighttpd 8004
-		copy webserver/lighttpd-1.4.44/doc/config
 git repos:
 	django:
 	nginx:
@@ -138,10 +187,6 @@ Todo list:
 	force reading system info doc
 	listen more, just do it
 
-words:
-phrase:
-functions:
-grammer:
 
 Interview
 
@@ -264,23 +309,6 @@ linux
     sed
       i n h H
     awk
-  git:
-    Q: how to display the file in the staged status?
-    push pull clone add commit reflog 
-	git tag
-	git reset --soft --mixed --hard
-    git fetch -v
-	git merge 
-	git rebase
-	git add .
-	git add -A
-	git log --pretty=oneline --author --since
-	git stash pop/list/apply (use git add . first)
-	git shortlog -s -n (sort authors by commit)
-	git clean -f -x/-X/-e/-q
-	git clean -f -d (clean dirs)
-	git rev-parse HEAD (display commit id)
-
   tar: 
 	extract to other dir:   tar zxvf a.tar.gz -C path/to/dir
 
@@ -363,41 +391,6 @@ sudo yum install python-pip
 
 Access Key ID: fa990781e67f42b0b3b813c4f7ab398a
 Secret Access Key: edd5fcf75e0c4090a91668df84e80b4f
-
-git clone https://git.duapp.com/appid4aa7frkod0
-id: 13811803528
-pswd: wutaosa...
-yum install git-email 
-
-git config --global user.name "Tao Wu"
-git config --global user.email bjwt@linux.vnet.ibm.com
-git config --global sendemail.smtpserver ap.relay.ibm.com
-git config --list
-
-git help reset
-git reset --help
-man git reset
-
-#git or #github channel on the Freenode IRC server
-
-git clone git@git.linux.ibm.com:zfrobisher/zfrobisher-installer.git
-git clone git://github.com/schacon/grit.git mygrit
-git checkout -b zfrobisher origin/zfrobisher
-
-git rm --ceched
-
-git format-patch -M master
-
-git format-patch -M remotes/origin/zfrobisher
-
-git commit -v
-
-#git send-email --to zfrobisher@linux.vnet.ibm.com 0002-fix-the-path-problem.patch 
-git commit -s -m "fix the path problem"
-git format-patch -M remotes/origin/zfrobisher
-git send-email --to  zfrobisher@lists.linux.ibm.com 0002-fix-the-path-problem.patch 
-
-
 
 
 c++ primer plus
