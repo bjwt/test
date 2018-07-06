@@ -1,11 +1,50 @@
-git python shell (sed awk) django bootstrap
-mysql curl tcpdump json 
+git 
+python 
+shell (sed awk) 
+django 
+bootstrap
+mysql 
+curl 
+tshark tcpdump 
+json 
 make re sort 
-nginx docker
-redis jekins zookeeper hadoop bigpipe
+nginx 
+docker
+redis 
+jekins zookeeper hadoop bigpipe
+lighttpd
+tomcat
+java
+
+
+config:
+	vim
+	screen
+	git
+	irssi
+db:
+	
+
+
+
+
 
 configure file:
 vi screen irssi
+
+如果是在另一台电脑上web访问要用 python manage.py ip:port （一般使用8000）的形式；监听所有ip用0.0.0.0如下:
+
+python manage.py runserver 0.0.0.0:8000
+若另一台电脑访问还报错报错， 如下：
+
+解决办法：
+
+django中setting.py中有个限制访问域名的变量（如果你是直接从1.4或者更早版本升级而来，是没有这个的，所以只要将DEBUG从True改成False就报错了）可以自己在settings.py里面添加（要不只有本机可以web访问）
+
+ALLOWED_HOSTS = ['www.outofmemory.cn']
+                                也可以写成
+ALLOWED_HOSTS = ['*']
+                                这样就在任何域名下都可以生效了，不过django不推荐这么干
 
 Think:
 	How to design a system?
