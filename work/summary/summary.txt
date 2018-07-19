@@ -1,127 +1,14 @@
-git 
-python 
-shell (sed awk) 
-django 
-bootstrap
-mysql 
-curl 
-tshark tcpdump 
-json 
-make re sort 
-nginx 
-docker
-redis 
-jekins zookeeper hadoop bigpipe
-lighttpd
-tomcat
-java
+PYTHON
 
-
-config:
-	vim
-	screen
-	git
-	irssi
-db:
-	
-
-
-
-
-
-configure file:
-vi screen irssi
-
-如果是在另一台电脑上web访问要用 python manage.py ip:port （一般使用8000）的形式；监听所有ip用0.0.0.0如下:
-
-python manage.py runserver 0.0.0.0:8000
-若另一台电脑访问还报错报错， 如下：
-
-解决办法：
-
-django中setting.py中有个限制访问域名的变量（如果你是直接从1.4或者更早版本升级而来，是没有这个的，所以只要将DEBUG从True改成False就报错了）可以自己在settings.py里面添加（要不只有本机可以web访问）
-
-ALLOWED_HOSTS = ['www.outofmemory.cn']
-                                也可以写成
-ALLOWED_HOSTS = ['*']
-                                这样就在任何域名下都可以生效了，不过django不推荐这么干
-
-Think:
-	How to design a system?
-	How to test a system?
-	A web system?
-		mobile
-		pc
-
-nginx:
-	pointers on c
-	The linux programming interface
-	unp
-	http
-	nginx books
-	nginx src
-	nginx git 
-	tenginx
-
-GIT:
-    Q: how to display the file in the staged status?
-    push pull clone add commit reflog 
-	git tag
-	git reset --soft --mixed --hard
-    	git fetch -v
-	git merge 
-	git rebase
-	git add .
-	git add -A
-	git log --pretty=oneline --author --since
-	git stash pop/list/apply (use git add . first)
-	git shortlog -s -n (sort authors by commit)
-	git clean -f -x/-X/-e/-q
-	git clean -f -d (clean dirs)
-	git rev-parse HEAD (display commit id)
-
-	git clone https://git.duapp.com/appid4aa7frkod0
-	id: 13811803528
-	pswd: wutaosa...
-	yum install git-email 
-
-	git config --global user.name "Tao Wu"
-	git config --global user.email bjwt@linux.vnet.ibm.com
-	git config --global sendemail.smtpserver ap.relay.ibm.com
-	git config --list
-
-	git help reset
-	git reset --help
-	man git reset
-
-	#git or #github channel on the Freenode IRC server
-
-	git clone git@git.linux.ibm.com:zfrobisher/zfrobisher-installer.git
-	git clone git://github.com/schacon/grit.git mygrit
-	git checkout -b zfrobisher origin/zfrobisher
-
-	git rm --ceched
-
-	git format-patch -M master
-
-	git format-patch -M remotes/origin/zfrobisher
-
-	git commit -v
-
-	#git send-email --to zfrobisher@linux.vnet.ibm.com 0002-fix-the-path-problem.patch 
-	git commit -s -m "fix the path problem"
-	git format-patch -M remotes/origin/zfrobisher
-	git send-email --to  zfrobisher@lists.linux.ibm.com 0002-fix-the-path-problem.patch 
-
-
-
-
-
-
-Data Structure
 C/C++
-	C:
-	C++:
+gcc
+gdb
+gcov
+gprof
+strace
+cppunit
+ab
+tshark/tcpdump
 		fundmental:
 		class:
 			构造函数和普通函数怎么区分
@@ -133,13 +20,114 @@ C/C++
 		stl:
 		functions:
 
+	The C programming language, pointers on c, Expert C programming, C traps and pitfalls
+	1. Data
+	short: 2 Byte  -32768 ~ 32767
+	int : 4 Byte -2147483648 ~ 2147483647	
+	long: 8 Byte -9223372036854775808 ~ 9223372036854775807
+	long long: 8 Byte
+	float : 4 Byte
+	double: 8 Byte
+	char:	1Byte
+	unsigned
+	signed
+	_Bool
+	_Complex
+	_Imaginary
+	sizeof()
+  stack
+  heap
+  static
 
-git repos:
-	django:
-	nginx:
+
+JAVA
+
+LINUX
+cmd:
+	as bc dig objdump hexdump readelf strace cal df du ls date touch who last w
+	whoami yum uname
+
+	system managerment:
+		sysctl	
+	others:
+		grep -r abc *       #grep from all the sub directories
+		bc: obase=16;ibase=16 tips:must set obase first.
+			obase=16;ibase=A	  should be 'A' rather than '10'
+			scale=5				  3/5=.60000
+		pdftk nce4.pdf cat 1 5 output 2.pdf #extracting page 1 and page 5 from
+											#nce4.pdf into a new 2.pdf
+		netstat -natp
+		lsof -i :80
+    tshark:
+    	tshark -i br0 -w a.cap -f 'port 8080'
+    	tshark -xVr a.cap | less
+    vi:
+    	<C-o> + zz  "quickly draw screen to the middle"
+		display  at the end of files:
+			:e ++ff=unix %
+			or `cat -v file'
+		g0,g^,gm,gj,gk,n$,%,f,F,t,T,ctrl-o,ctrl-t,ctrl-],(,)
+		zz,zt,zb
+		H,M,L
+		ge,gE
+        :TOhtml
+    screen
+        set screen under `gnu screen' refresh after quitting from vim and some other tools.
+       	    uncomment the `altscreen on' in the `/etc/screenrc' file.
+        pageup in gnu screen
+        	C-A Esc
+在最初使用screen时，感觉最不舒服的就是它的闪屏。当移动到行首或者行尾时，再尝试移动屏幕就会闪烁一下，让人很不适应。关闭screen屏幕闪动的方法其实很简单，你只需要使用CTRL-a CTRL-g，也就是先输入CTRL + a，再输入CTRL + g。
+
+如果想永远关闭screen的闪屏功能，需要修改配置文件。在CentOS中可以修改/etc/screenrc，修改这个文件将对所有用户生效。Easwy一般只修改自己的配置文件。在$HOME/.screenrc中加入下面的话：
 
 
-Linux
+vbell off 
+其实这与vi中的visualbell功能很是类似。在vi中关闭闪屏，是使用:set novisualbell命令。
+    man-pages:
+       if can not `man 2 open` etc, can exectue `sudo yum install man-pages`.
+	calibre:
+		ebook-convert nce.html nce.mobi --authors 'Wu Tao' --cover nce4.jpg --share-not-sync --title "New Concept Englist" --mobi-toc-at-start --level1-toc '//h:h1' --level2-toc '//h:h2'
+		ebook-viewer nce.mobi
+
+  bash:
+	system administration
+    cp a.txt{,2}
+    tricks:
+    cd /var/log || { echo "Cannot change to necessary directory." >&2 ; exit $E_XCD;}
+    cd may fail
+    use { code block} > file   to redirect all output
+    command &>filename redirects both the stdout and the stderr of command to filename.
+    type bogus_command &>/dev/null
+    sed
+      i n h H
+    awk
+  tar: 
+	extract to other dir:   tar zxvf a.tar.gz -C path/to/dir
+
+  shell:
+    cursor jump back a word: Esc+B 
+    cursor jump forward a word: Esc+F 
+
+  api:
+
+    list the contents of rpm:
+		rpm -qpl *.rpm
+    extract rpm:
+		rpm2cpio *.rpm | cpio -div
+
+Tools
+	vi :h, read them all
+	git
+	make
+	gcc/gdb/gprof/gcov
+	tcpdump
+	cppunit
+	ab
+	pwd -P
+	mkdir -m
+	VBoxManage modifyvm "fedora25" --natpf1 "ssh,tcp,,2225,,22"
+	VBoxManage modifyvm "fedora25" --natpf1 "http,tcp,,8009,,8080"
+
 	API
 		open
 			O_RDONLY, O_WRONLY, O_RDWR
@@ -191,41 +179,141 @@ Linux
 	Bash
 	Sed, AWK
 
+在CENTOS 6.7中，top支持-a选项，不支持-o选项。-a选项可以按各进程内存占用从大到小排序。
+在CENTOS 7.3中，top不支持-a选项，支持-o选项。-o “%CPU”是按CPU使用率排序；-o “%MEM”是按内存占用排序，这个与6.7版本的-a含义相同。具体请参见如下附录。
+shell (sed awk) 
 
-Python
-	Django
-SQL
-Tools
-	vi :h, read them all
+Design Pattern:
+  six principles
+  tweenty three patterns
+
+
+NGINX 
+	pointers on c
+	The linux programming interface
+	unp
+	http
+	nginx books
+
+	nginx src
+	nginx git 
+	tenginx
+
+LIGHTTPD
+
+TOMCAT
+
+
+
+
+DJANGO 
+
+如果是在另一台电脑上web访问要用 python manage.py ip:port （一般使用8000）的形式；监听所有ip用0.0.0.0如下:
+
+python manage.py runserver 0.0.0.0:8000
+若另一台电脑访问还报错报错， 如下：
+
+解决办法：
+
+django中setting.py中有个限制访问域名的变量（如果你是直接从1.4或者更早版本升级而来，是没有这个的，所以只要将DEBUG从True改成False就报错了）可以自己在settings.py里面添加（要不只有本机可以web访问）
+
+ALLOWED_HOSTS = ['www.outofmemory.cn']
+                                也可以写成
+ALLOWED_HOSTS = ['*']
+                                这样就在任何域名下都可以生效了，不过django不推荐这么干
+
+
+
+
+
+HTML
+JAVASCRIPT
+BOOTSTRAP
+ANGULAR2
+
+GIT 
+	git tag
+	git reset --soft --mixed --hard
+    	git fetch -v
+	git merge 
+	git rebase
+	git add .
+	git add -A
+	git log --pretty=oneline --author --since
+	git stash pop/list/apply (use git add . first)
+	git shortlog -s -n (sort authors by commit)
+	git clean -f -x/-X/-e/-q
+	git clean -f -d (clean dirs)
+	git rev-parse HEAD (display commit id)
+
+	git clone https://git.duapp.com/appid4aa7frkod0
+	id: 13811803528
+	pswd: wutaosa...
+	yum install git-email 
+
+	git config --global user.name "Tao Wu"
+	git config --global user.email bjwt@linux.vnet.ibm.com
+	git config --global sendemail.smtpserver ap.relay.ibm.com
+	git config --list
+
+	git help reset
+	git reset --help
+	man git reset
+
+	#git or #github channel on the Freenode IRC server
+
+	git clone git@git.linux.ibm.com:zfrobisher/zfrobisher-installer.git
+	git clone git://github.com/schacon/grit.git mygrit
+	git checkout -b zfrobisher origin/zfrobisher
+
+	git rm --ceched
+
+	git format-patch -M master
+
+	git format-patch -M remotes/origin/zfrobisher
+
+	git commit -v
+
+	#git send-email --to zfrobisher@linux.vnet.ibm.com 0002-fix-the-path-problem.patch 
+	git commit -s -m "fix the path problem"
+	git format-patch -M remotes/origin/zfrobisher
+	git send-email --to  zfrobisher@lists.linux.ibm.com 0002-fix-the-path-problem.patch 
+
+DB
+MYSQL 
+REDIS
+MONGODB
+MEMCACHE
+
+curl 
+tshark tcpdump 
+json 
+make re sort 
+DOCKER
+JEKINS zookeeper hadoop bigpipe
+kafka
+
+
+config:
+	vim
+	screen
 	git
-	make
-	gcc/gdb/gprof/gcov
-	tcpdump
-	cppunit
-	ab
-	pwd -P
-	mkdir -m
-	VBoxManage modifyvm "fedora25" --natpf1 "ssh,tcp,,2225,,22"
-	VBoxManage modifyvm "fedora25" --natpf1 "http,tcp,,8009,,8080"
+	irssi
 
-Projects:
-	dtbl umproxy
-	Installer
-	nginx
-English
-	NCE
-	Zoubianmeiguo
-	Words
-	NPR
-	TVs
-		friends
-		24
-		Desperate Housewives
-	Read masterpiece
-Todo list:
-	force reading system info doc
-	listen more, just do it
 
+
+Think:
+	How to design a system?
+	How to test a system?
+	A web system?
+		mobile
+		pc
+
+
+
+
+
+SQL
 
 Interview
 
@@ -266,14 +354,6 @@ others:
 9. The plan for the next few years?
    A: Make personal technic and interest most match with department goal
 
-C -> C++
-Python
-[Shell, Sed and Awk]
-Linux API
-[Git, gdb, make]
-Data Structure
-Network
-
 
 Write programs:
 implement some built in functions in c or in python
@@ -298,70 +378,6 @@ data structure
      implement strcpy, strstr
 	KMP and BM
 
-Design Pattern:
-  six principles
-  tweenty three patterns
-
-C:
-	The C programming language, pointers on c, Expert C programming, C traps and pitfalls
-	1. Data
-	short: 2 Byte  -32768 ~ 32767
-	int : 4 Byte -2147483648 ~ 2147483647	
-	long: 8 Byte -9223372036854775808 ~ 9223372036854775807
-	long long: 8 Byte
-	float : 4 Byte
-	double: 8 Byte
-	char:	1Byte
-	unsigned
-	signed
-	_Bool
-	_Complex
-	_Imaginary
-	sizeof()
-  stack
-  heap
-  static
-
-python:
-	Learning Python, Core python programming, python cookbook
-  list
-  dict
-  tuple
-  copy- deep copy and shalow copy
-  decorator
-  class
-  yum install python-pip
-  libs:
-      blivet,django,scrapy
-
-
-linux 
-  bash:
-	system administration
-    cp a.txt{,2}
-    tricks:
-    cd /var/log || { echo "Cannot change to necessary directory." >&2 ; exit $E_XCD;}
-    cd may fail
-    use { code block} > file   to redirect all output
-    command &>filename redirects both the stdout and the stderr of command to filename.
-    type bogus_command &>/dev/null
-    sed
-      i n h H
-    awk
-  tar: 
-	extract to other dir:   tar zxvf a.tar.gz -C path/to/dir
-
-  shell:
-    cursor jump back a word: Esc+B 
-    cursor jump forward a word: Esc+F 
-
-  api:
-
-    list the contents of rpm:
-		rpm -qpl *.rpm
-    extract rpm:
-		rpm2cpio *.rpm | cpio -div
-
 
 projects:
   user ording system
@@ -376,52 +392,6 @@ English:
 
 	lash out at-	stay put-
 
-cmd:
-	as bc dig objdump hexdump readelf strace cal df du ls date touch who last w
-	whoami yum uname
-
-	system managerment:
-		sysctl	
-	others:
-		grep -r abc *       #grep from all the sub directories
-		bc: obase=16;ibase=16 tips:must set obase first.
-			obase=16;ibase=A	  should be 'A' rather than '10'
-			scale=5				  3/5=.60000
-		pdftk nce4.pdf cat 1 5 output 2.pdf #extracting page 1 and page 5 from
-											#nce4.pdf into a new 2.pdf
-		netstat -natp
-		lsof -i :80
-    tshark:
-    	tshark -i br0 -w a.cap -f 'port 8080'
-    	tshark -xVr a.cap | less
-    vi:
-    	<C-o> + zz  "quickly draw screen to the middle"
-		display  at the end of files:
-			:e ++ff=unix %
-			or `cat -v file'
-		g0,g^,gm,gj,gk,n$,%,f,F,t,T,ctrl-o,ctrl-t,ctrl-],(,)
-		zz,zt,zb
-		H,M,L
-		ge,gE
-        :TOhtml
-    screen
-        set screen under `gnu screen' refresh after quitting from vim and some other tools.
-       	    uncomment the `altscreen on' in the `/etc/screenrc' file.
-        pageup in gnu screen
-        	C-A Esc
-在最初使用screen时，感觉最不舒服的就是它的闪屏。当移动到行首或者行尾时，再尝试移动屏幕就会闪烁一下，让人很不适应。关闭screen屏幕闪动的方法其实很简单，你只需要使用CTRL-a CTRL-g，也就是先输入CTRL + a，再输入CTRL + g。
-
-如果想永远关闭screen的闪屏功能，需要修改配置文件。在CentOS中可以修改/etc/screenrc，修改这个文件将对所有用户生效。Easwy一般只修改自己的配置文件。在$HOME/.screenrc中加入下面的话：
-
-
-vbell off 
-其实这与vi中的visualbell功能很是类似。在vi中关闭闪屏，是使用:set novisualbell命令。
-    man-pages:
-       if can not `man 2 open` etc, can exectue `sudo yum install man-pages`.
-	calibre:
-		ebook-convert nce.html nce.mobi --authors 'Wu Tao' --cover nce4.jpg --share-not-sync --title "New Concept Englist" --mobi-toc-at-start --level1-toc '//h:h1' --level2-toc '//h:h2'
-		ebook-viewer nce.mobi
-
 
 C primer plus
 sudo yum install python-pip
@@ -432,45 +402,6 @@ Access Key ID: fa990781e67f42b0b3b813c4f7ab398a
 Secret Access Key: edd5fcf75e0c4090a91668df84e80b4f
 
 
-c++ primer plus
-	mianshiti
-	dtbl
-	
-c primer plus
-	c xiandai
-	zhengfu c zhizhen
-
-apue
-unp
-
-nginx
-
-sql
-
-database
-
-linux 
-
-using each language:
-print to console
-write to file/ read from file
-
-c++ primer plus P240
-c++ primer plus P280
-c++ primer plus P339
-c++ primer plus P411
-
-gcc
-gdb
-gcov
-gprof
-strace
-cppunit
-ab
-tshark/tcpdump
-
-c/c++
-	nginx,dtbl,stl
 python
 	installer
 shell
@@ -486,79 +417,19 @@ debug,test,performance,
 	log, config, string
 
 
-	my c functions:
-
-
-functions:
-
-linux api:
-
-
-c:
-
-
-c++:
-
-
-python:
-
-bash:
-
-command:
-
-sql:
-
-
 sort by fields:
 string:
 file:
 io:
-
-Words:
-		a third wheel
-		abdominal tenderness
-		abduct
-		aberration
-		abhorrent
-		ablution
-		abnomination
-		abruptly
-		abstention
-		abusive
-		abyss
-		accessorize
-		accessory
-		accommodate
-		accomplice
-		acoustic
-		acquittal
-		actuarial
-		acumen
-		acupuncture
-		Adam's apple
-		addled
-
-
-plan 17.11
-
-1. web
-	html/css/javascript
-	jquery/ajax/bootstrap
-
-	django
-	nginx
-
-2. git
-3. jenkins/redis
-4. charles/curl/postman
-5. python
-6. shell/grep/sed/awk
-7. php
-8. mysql
-
 
 url decode
 http://tool.chinaz.com/tools/urlencode.aspx
 
 json decode
 https://www.bejson.com/
+
+
+https://www.djangoproject.com/
+
+https://github.com/
+	bjwt
