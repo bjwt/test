@@ -1,0 +1,530 @@
+====
+pro_cpp
+pro_python
+pro_shell
+pro_php
+
+tool_
+
+db_memcached
+db_redis
+db_mysql
+
+
+tec_mq_kafka
+tec_jmeter
+tec_docker
+
+
+
+
+====
+
+tec_mq_kafka
+
+1. Installation
+	1) jdk
+		yum list java*
+		yum install java-1.8.0-openjdk*
+		# check 
+		# java -version
+	2) zookeeper
+		wget http://mirrors.hust.edu.cn/apache/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz
+		tar zxvf zookeeper-3.4.13.tar.gz
+		mv zookeeper-3.4.13 /opt/zookeeper
+		cp /opt/zookeeper/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg
+		vim zoo.cfg:
+			dataDir=/opt/zookeeper/data
+		vim /etc/profile
+			#添加如下内容
+			ZOOKEEPER_HOME=/opt/zookeeper
+			PATH=$PATH:ZOOKEEPER_HOME/bin
+			export ZOOKEEPER_HOME
+		cd /opt/zookeeper/bin
+		./zkServer.sh start
+	3) kafka
+		download binary version:
+		https://kafka.apache.org/downloads
+		http://mirrors.hust.edu.cn/apache/kafka/2.1.0/kafka_2.12-2.1.0.tgz
+		
+		# 解压
+		sudo tar -zxvf kafka_2.12-1.0.0.tgz
+		# 移动
+		sudo mv kafka_2.12-1 /opt/kafka
+		
+		#创建日志存放目录
+		cd /opt/kafka
+		mkdir -p log/kafka
+		#修改配置文件/opt/kafka/config/server.properties
+		sudo vim /opt/kafka/config/server.properties
+		#主要修改下面几项内容如下：
+		broker.id=181
+		#delete.topic.enable=true
+		listeners = PLAINTEXT://127.0.0.1:9092
+		log.dirs=/opt/kafka/log/kafka
+		zookeeper.connect=127.0.0.1:2181
+
+		sudo vim /etc/profile
+		#添加如下内容：
+		KAFKA_HOME=/opt/kafka
+		PATH=$PATH:$KAFKA_HOME/bin
+		export PATH KAFKA_HOME
+
+
+		启动kafka
+		./kafka-server-start.sh /opt/kafka/config/server.properties 
+
+		创建一个Topic (test)
+		./kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic test
+			
+		Producer向Topic发送消息
+		./kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic test
+		
+		Consumer读取Topic的消息
+		./kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 -topic test --from-beginning
+
+
+tec_jmeter:
+	Installation:
+	wget http://mirrors.shu.edu.cn/apache//jmeter/binaries/apache-jmeter-5.0.tgz
+	./jmeter.sh -n -t nginx.jmx -l jmeter.log
+
+
+
+PYTHON
+
+C/C++
+gcc
+gdb
+gcov
+gprof
+strace
+cppunit
+ab
+tshark/tcpdump
+		fundmental:
+		class:
+			构造函数和普通函数怎么区分
+				Stock second("he");
+				a function with second or a object initializing with "he" ?
+			隐式调用默认构造函数时，不要使用圆括号
+			cpp pp 10.6.2 作用域为类的enum
+			不要返回指向局部变量或者临时对象的引用
+		stl:
+		functions:
+
+	The C programming language, pointers on c, Expert C programming, C traps and pitfalls
+	1. Data
+	short: 2 Byte  -32768 ~ 32767
+	int : 4 Byte -2147483648 ~ 2147483647	
+	long: 8 Byte -9223372036854775808 ~ 9223372036854775807
+	long long: 8 Byte
+	float : 4 Byte
+	double: 8 Byte
+	char:	1Byte
+	unsigned
+	signed
+	_Bool
+	_Complex
+	_Imaginary
+	sizeof()
+  stack
+  heap
+  static
+
+
+JAVA
+
+LINUX
+cmd:
+	as bc dig objdump hexdump readelf strace cal df du ls date touch who last w
+	whoami yum uname
+
+	system managerment:
+		sysctl	
+	others:
+		grep -r abc *       #grep from all the sub directories
+		bc: obase=16;ibase=16 tips:must set obase first.
+			obase=16;ibase=A	  should be 'A' rather than '10'
+			scale=5				  3/5=.60000
+		pdftk nce4.pdf cat 1 5 output 2.pdf #extracting page 1 and page 5 from
+											#nce4.pdf into a new 2.pdf
+		netstat -natp
+		lsof -i :80
+    tshark:
+    	tshark -i br0 -w a.cap -f 'port 8080'
+    	tshark -xVr a.cap | less
+    vi:
+    	<C-o> + zz  "quickly draw screen to the middle"
+		display  at the end of files:
+			:e ++ff=unix %
+			or `cat -v file'
+		g0,g^,gm,gj,gk,n$,%,f,F,t,T,ctrl-o,ctrl-t,ctrl-],(,)
+		zz,zt,zb
+		H,M,L
+		ge,gE
+        :TOhtml
+    screen
+        set screen under `gnu screen' refresh after quitting from vim and some other tools.
+       	    uncomment the `altscreen on' in the `/etc/screenrc' file.
+        pageup in gnu screen
+        	C-A Esc
+	screen -x 另一个窗口 直接screen -x
+在最初使用screen时，感觉最不舒服的就是它的闪屏。当移动到行首或者行尾时，再尝试移动屏幕就会闪烁一下，让人很不适应。关闭screen屏幕闪动的方法其实很简单，你只需要使用CTRL-a CTRL-g，也就是先输入CTRL + a，再输入CTRL + g。
+
+如果想永远关闭screen的闪屏功能，需要修改配置文件。在CentOS中可以修改/etc/screenrc，修改这个文件将对所有用户生效。Easwy一般只修改自己的配置文件。在$HOME/.screenrc中加入下面的话：
+
+
+vbell off 
+其实这与vi中的visualbell功能很是类似。在vi中关闭闪屏，是使用:set novisualbell命令。
+    man-pages:
+       if can not `man 2 open` etc, can exectue `sudo yum install man-pages`.
+	calibre:
+		ebook-convert nce.html nce.mobi --authors 'Wu Tao' --cover nce4.jpg --share-not-sync --title "New Concept Englist" --mobi-toc-at-start --level1-toc '//h:h1' --level2-toc '//h:h2'
+		ebook-viewer nce.mobi
+
+  bash:
+	system administration
+    cp a.txt{,2}
+    tricks:
+    cd /var/log || { echo "Cannot change to necessary directory." >&2 ; exit $E_XCD;}
+    cd may fail
+    use { code block} > file   to redirect all output
+    command &>filename redirects both the stdout and the stderr of command to filename.
+    type bogus_command &>/dev/null
+    sed
+      i n h H
+    awk
+  tar: 
+	extract to other dir:   tar zxvf a.tar.gz -C path/to/dir
+
+  shell:
+    cursor jump back a word: Esc+B 
+    cursor jump forward a word: Esc+F 
+
+  api:
+
+    list the contents of rpm:
+		rpm -qpl *.rpm
+    extract rpm:
+		rpm2cpio *.rpm | cpio -div
+
+Tools
+	vi :h, read them all
+	git
+	make
+	gcc/gdb/gprof/gcov
+	tcpdump
+	cppunit
+	ab
+	pwd -P
+	mkdir -m
+	VBoxManage modifyvm "fedora25" --natpf1 "ssh,tcp,,2225,,22"
+	VBoxManage modifyvm "fedora25" --natpf1 "http,tcp,,8009,,8080"
+
+	API
+		open
+			O_RDONLY, O_WRONLY, O_RDWR
+			O_CREAT, O_APPEND, O_TRANC, O_EXCL, O_DIRECTORY
+			why failed when O_RDWR on a dir?
+			openat() ?
+
+		read
+		write
+		lseek
+		close
+		pread
+		pwrite
+		dup
+		dup2
+		fcntl ?
+		ioctl ?
+		access
+		faccessat
+		umask
+		chmod
+		chown
+		trancate
+		link
+		unlink
+		remove
+		rename
+		symlink
+		readlink
+
+		getpwuid
+		getpwnam
+		getpwent
+		setpwent
+		endpwent
+
+		getspnam
+		getspent
+		setspent
+		endspent
+
+		getgrgid
+		getgrnam
+		getgrent
+		setgrent
+		endgrent
+	network programming
+	kernel
+	Bash
+	Sed, AWK
+
+在CENTOS 6.7中，top支持-a选项，不支持-o选项。-a选项可以按各进程内存占用从大到小排序。
+在CENTOS 7.3中，top不支持-a选项，支持-o选项。-o “%CPU”是按CPU使用率排序；-o “%MEM”是按内存占用排序，这个与6.7版本的-a含义相同。具体请参见如下附录。
+shell (sed awk) 
+
+Design Pattern:
+  six principles
+  tweenty three patterns
+
+
+NGINX 
+	pointers on c
+	The linux programming interface
+	unp
+	http
+	nginx books
+
+	nginx src
+	nginx git 
+	tenginx
+
+LIGHTTPD
+
+TOMCAT
+
+
+
+
+DJANGO 
+
+如果是在另一台电脑上web访问要用 python manage.py ip:port （一般使用8000）的形式；监听所有ip用0.0.0.0如下:
+
+python manage.py runserver 0.0.0.0:8000
+若另一台电脑访问还报错报错， 如下：
+
+解决办法：
+
+django中setting.py中有个限制访问域名的变量（如果你是直接从1.4或者更早版本升级而来，是没有这个的，所以只要将DEBUG从True改成False就报错了）可以自己在settings.py里面添加（要不只有本机可以web访问）
+
+ALLOWED_HOSTS = ['www.outofmemory.cn']
+                                也可以写成
+ALLOWED_HOSTS = ['*']
+                                这样就在任何域名下都可以生效了，不过django不推荐这么干
+
+
+
+
+
+HTML
+JAVASCRIPT
+BOOTSTRAP
+ANGULAR2
+
+GIT 
+	git tag
+	git reset --soft --mixed --hard
+    	git fetch -v
+	git merge 
+	git rebase
+	git add .
+	git add -A
+	git log --pretty=oneline --author --since
+	git stash pop/list/apply (use git add . first)
+	git shortlog -s -n (sort authors by commit)
+	git clean -f -x/-X/-e/-q
+	git clean -f -d (clean dirs)
+	git rev-parse HEAD (display commit id)
+
+	git clone https://git.duapp.com/appid4aa7frkod0
+	id: 13811803528
+	pswd: wutaosa...
+	yum install git-email 
+
+	git config --global user.name "Tao Wu"
+	git config --global user.email bjwt@linux.vnet.ibm.com
+	git config --global sendemail.smtpserver ap.relay.ibm.com
+	git config --list
+
+	git help reset
+	git reset --help
+	man git reset
+
+	#git or #github channel on the Freenode IRC server
+
+	git clone git@git.linux.ibm.com:zfrobisher/zfrobisher-installer.git
+	git clone git://github.com/schacon/grit.git mygrit
+	git checkout -b zfrobisher origin/zfrobisher
+
+	git rm --ceched
+
+	git format-patch -M master
+
+	git format-patch -M remotes/origin/zfrobisher
+
+	git commit -v
+
+	#git send-email --to zfrobisher@linux.vnet.ibm.com 0002-fix-the-path-problem.patch 
+	git commit -s -m "fix the path problem"
+	git format-patch -M remotes/origin/zfrobisher
+	git send-email --to  zfrobisher@lists.linux.ibm.com 0002-fix-the-path-problem.patch 
+
+DB
+MYSQL 
+	distinct
+REDIS
+MONGODB
+MEMCACHE
+
+curl 
+tshark tcpdump 
+json 
+make re sort 
+DOCKER
+JEKINS zookeeper hadoop bigpipe
+kafka
+
+
+config:
+	vim
+	screen
+	git
+	irssi
+
+
+
+Think:
+	How to design a system?
+	How to test a system?
+	A web system?
+		mobile
+		pc
+
+
+
+
+
+SQL
+
+Interview
+
+
+1. Self introducion
+   education back ground
+   work experience
+   projects: frobisher eshop
+   technichs: python, linux, etc
+   
+2. Projects
+	frobisher
+	eshop
+3. Programming language: 
+    Python 
+    Shell esp:sed awk
+	SQL
+4. Data structure and Algorithms:
+	 LList:
+     String
+	 Bitree:
+     Sort
+     Search
+5. Design Pattern
+6. Linux *
+  common tools: gprof, gcov, make, gdb, gcc
+* familiar with linux system api
+  file:	open(), read()
+  question:  why fail to create a file with other write authority by open() and set S_IWOTH
+  answer: it also rely on the umask configure, which is defined in /etc/profile
+* multiply thread programming
+* socket programming
+
+others:
+6. The most impressive challenge
+7. The greatest contribution/ excellent work
+8. Describe the procedure of booting
+9. The plan for the next few years?
+   A: Make personal technic and interest most match with department goal
+
+
+Write programs:
+implement some built in functions in c or in python
+  implement strcpy() in c
+data structure
+  list:
+    revert a link list in python
+    determine whether a link-list has a loop
+    how to judge whether two linklists will cross?
+  tree:
+    in-order reverse of bi-tree
+    pre-order reverse of bi-tree
+    post-order reverse of bi-tree
+  sort:
+    insertion sort
+	shell sort
+	bubble sort
+	fast sort
+	selection sort
+	heap sort
+  string:
+     implement strcpy, strstr
+	KMP and BM
+
+
+projects:
+  user ording system
+  blivet - a python program to manage partition.
+
+
+English:
+	rebel stuffy stumble patriot traitor impede tamper condemn scandal stun
+	tragedy overtake distraught inconsolable honest farewell repatriate intact
+	bond sole decline recline cosy dispute standoff evacuate reformer dictator
+	sanction separatist unrest religion regional condolence casualty
+
+	lash out at-	stay put-
+
+
+C primer plus
+sudo yum install python-pip
+ pip install bae
+ bae login
+
+Access Key ID: fa990781e67f42b0b3b813c4f7ab398a
+Secret Access Key: edd5fcf75e0c4090a91668df84e80b4f
+
+
+python
+	installer
+shell
+	grep,sed,awk
+	bash
+data structure
+linux
+	apue,unp
+sql
+debug,test,performance,
+
+
+	log, config, string
+
+
+sort by fields:
+string:
+file:
+io:
+
+url decode
+http://tool.chinaz.com/tools/urlencode.aspx
+
+json decode
+https://www.bejson.com/
+
+
+https://www.djangoproject.com/
+
+https://github.com/
+	bjwt
