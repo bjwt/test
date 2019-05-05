@@ -12,6 +12,7 @@ systemctl start docker
 docker run -d -p 8080:80 nginx
 
 ##docker run -d centos
+docker run -itd   docker.io/centos /usr/sbin/init
 docker run -itd centos /bin/bash
 docker exec -it cff6eacc1397 /bin/bash
 
