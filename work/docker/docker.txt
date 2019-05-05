@@ -1,0 +1,12 @@
+1. installation
+yum install -y docke
+#yum list installed | grep docker
+tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://bbg714na.mirror.aliyuncs.com"]
+}
+EOF
+systemctl start docker
+
+2. usage
+docker run -d -p 8080:80 nginx
