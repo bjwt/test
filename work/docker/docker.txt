@@ -1,5 +1,5 @@
 1. installation
-yum install -y docke
+yum install -y docker
 #yum list installed | grep docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
@@ -10,3 +10,9 @@ systemctl start docker
 
 2. usage
 docker run -d -p 8080:80 nginx
+
+##docker run -d centos
+docker run -itd centos /bin/bash
+docker exec -it cff6eacc1397 /bin/bash
+
+docker start cff6eacc1397
