@@ -92,15 +92,6 @@ tec_jmeter:
 
 
 PYTHON
-
-C/C++
-gcc
-gdb
-gcov
-gprof
-strace
-cppunit
-ab
 tshark/tcpdump
 		fundmental:
 		class:
