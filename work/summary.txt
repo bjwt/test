@@ -1,5 +1,5 @@
 ====
-pro_cpp
+pro_java
 pro_python
 pro_shell
 pro_php
@@ -14,6 +14,7 @@ db_mysql
 tec_mq_kafka
 tec_jmeter
 tec_docker
+tec_redis
 
 
 
