@@ -1,0 +1,2 @@
+Q1: 设置开机密码不能少于4个字符，如何取消限制？
+A: 1.sudo pwpolicy -clearaccountpolicies, 2.用户群组---点击 用户密码，修改即可
